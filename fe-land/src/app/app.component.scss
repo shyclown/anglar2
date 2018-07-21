@@ -1,0 +1,32 @@
+.title{
+  height: 100px;
+  overflow: hidden;
+}
+h1{
+  color:  rebeccapurple;
+  padding: 1rem;
+  font-weight: 100;
+
+  font-family: 'Roboto','Raleway', sans-serif;
+  height: 100px;
+}
+.mainNav{
+  height: 3rem;
+  background-color: #dfdfdf;
+  a{
+
+    color: #FFF;
+    padding: 1rem;
+    background-color: rebeccapurple;
+
+    display:inline-block;
+    text-decoration: none;
+    line-height: 1rem;
+    font-family: 'Roboto', 'Raleway', sans-serif;
+
+  }
+}
+.included{
+  height: calc(100vh - 164px);
+  background-color: #c4d3df;
+}

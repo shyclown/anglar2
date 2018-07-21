@@ -1,0 +1,32 @@
+$white : white;
+$color-brand: rebeccapurple;
+
+$margin-base: 1rem;
+$padding-base: 1rem;
+
+.explorerWrap{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: [start] 160px [mid] calc( 100vw - 160px ) [end];
+  grid-template-rows: [row-start]100%[row-end];
+  grid-template-areas: "folderTree folderContent";
+
+  .explorerTree{
+    /*Windows like folder tree structure*/
+    grid-area: folderTree;
+    background-color: $white;
+    overflow-y: scroll;
+    padding: $padding-base;
+  }
+
+  .explorerContent{
+    grid-area: folderContent;
+    background-color: $white;
+    overflow-y: scroll;
+    padding: $padding-base;
+  }
+
+}
