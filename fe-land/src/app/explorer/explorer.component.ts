@@ -23,9 +23,12 @@ export class ExplorerComponent implements OnInit {
 
 
 
+
     this.data = ExplorerService;
 
-    this.data.getsomething();
+
+
+
     this.data.explorerState.subscribe( data =>
     {
         this.currentState = data;
@@ -33,6 +36,8 @@ export class ExplorerComponent implements OnInit {
         this.currentFolderID = this.currentState.currentFolderID;
     });
   }
-  ngOnInit() {}
+  ngOnInit() {
+      this.data.getsomething();
+  }
 
 }

@@ -3,6 +3,8 @@ import { BehaviorSubject } from "rxjs/internal/BehaviorSubject";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {catchError, tap} from "rxjs/operators";
 import {Folder} from "../../folder";
+import {Observable} from "rxjs/internal/Observable";
+import {CookieService} from "ngx-cookie-service";
 
 const httpOptions = {
     headers: new HttpHeaders({
@@ -15,6 +17,7 @@ const httpOptions = {
 export class ExplorerService {
 
     constructor(
+        private cookieService: CookieService,
         private http: HttpClient
     ) { }
 
@@ -32,9 +35,17 @@ export class ExplorerService {
   });
 
   public getsomething = function() {
-      this.http.post("/be-land/public/mock", [], httpOptions).subscribe((data)=>{
-          console.log(data);
-      });
+      setTimeout(()=>{
+          const csrfToken = this.cookieService.check('XSRF-TOKEN');
+          console.log(this.cookieService.get('XSRF-TOKEN'));
+          if(csrfToken){
+              this.http.post("/be-land/public/mock", [], httpOptions).subscribe((data)=>{
+                  console.log(data);
+              });
+          }
+      }, 500);
+
+
 
   }
 
