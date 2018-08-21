@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --deploy-url /client/ --base-href /client/ --public-host http://localhost:4200/sockjs-node",
     "build": "ng build",
     "local": "ng build --base-href /client/ --watch",
     "test": "ng test",

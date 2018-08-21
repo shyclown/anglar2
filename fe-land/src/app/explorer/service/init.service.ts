@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CookieService } from "ngx-cookie-service";
 
 
+
 const httpOptions = {
     headers: new HttpHeaders({
         'Content-Type':  'application/json',
@@ -14,15 +15,18 @@ const httpOptions = {
 
 @Injectable({ providedIn: 'root' })
 export class InitService {
+
+    public API : string;
+
     constructor( private http: HttpClient, private cookieService:CookieService ) {
-        const csrfToken = this.cookieService.check('XSRF-TOKEN');
-        if(!csrfToken){
-            this.http.get<any>("/be-land/public/api", httpOptions).subscribe(
-            (res)=>{
-                //this.cookieService.set('XSRF-TOKEN', res.token, 500, '/');
-                    console.log(res.token);
-                }
-            );
-        }
+        /*const csrfToken = this.cookieService.check('XSRF-TOKEN');*/
+        this.API = '';//http://landfield.localhost';
+    }
+
+
+
+    public setToken(){
+        console.log(this.API);
+        return this.http.get<any>(this.API + "/api", httpOptions);
     }
 }

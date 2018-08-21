@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from "rxjs/internal/BehaviorSubject";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import {catchError, tap} from "rxjs/operators";
+import {catchError, subscribeOn, tap} from "rxjs/operators";
 import {Folder} from "../../folder";
 import {Observable} from "rxjs/internal/Observable";
 import {CookieService} from "ngx-cookie-service";
+import {InitService} from "./init.service";
+
+
 
 const httpOptions = {
     headers: new HttpHeaders({
@@ -18,7 +21,8 @@ export class ExplorerService {
 
     constructor(
         private cookieService: CookieService,
-        private http: HttpClient
+        private http: HttpClient,
+        private api: InitService
     ) { }
 
   private explorerData = new BehaviorSubject<any>({
@@ -34,19 +38,16 @@ export class ExplorerService {
     ]
   });
 
-  public getsomething = function() {
-      setTimeout(()=>{
-          const csrfToken = this.cookieService.check('XSRF-TOKEN');
-          console.log(this.cookieService.get('XSRF-TOKEN'));
-          if(csrfToken){
-              this.http.post("/be-land/public/mock", [], httpOptions).subscribe((data)=>{
-                  console.log(data);
-              });
-          }
-      }, 500);
+  public saveNewFolder = (name) => {
+      console.log(this.api);
 
-
-
+      this.http.post( this.api.API+"/save_folder",
+          { 'name' :  name },httpOptions).subscribe((data)=>{
+          console.log(data);
+      });
+      this.http.post( this.api.API+"/mock", [], httpOptions).subscribe((data)=>{
+          console.log(data);
+      });
   }
 
   

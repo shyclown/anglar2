@@ -23,6 +23,47 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/_services/resolve-api.ts":
+/*!******************************************!*\
+  !*** ./src/app/_services/resolve-api.ts ***!
+  \******************************************/
+/*! exports provided: ResolveApi */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResolveApi", function() { return ResolveApi; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _explorer_service_init_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../explorer/service/init.service */ "./src/app/explorer/service/init.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ResolveApi = /** @class */ (function () {
+    function ResolveApi(initService) {
+        this.initService = initService;
+    }
+    ResolveApi.prototype.resolve = function () {
+        return this.initService.setToken();
+    };
+    ResolveApi = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_explorer_service_init_service__WEBPACK_IMPORTED_MODULE_1__["InitService"]])
+    ], ResolveApi);
+    return ResolveApi;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/about/about.component.html":
 /*!********************************************!*\
   !*** ./src/app/about/about.component.html ***!
@@ -103,15 +144,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blog_blog_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../blog/blog.component */ "./src/app/blog/blog.component.ts");
 /* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../about/about.component */ "./src/app/about/about.component.ts");
 /* harmony import */ var _explorer_explorer_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../explorer/explorer.component */ "./src/app/explorer/explorer.component.ts");
-/* harmony import */ var _explorer_service_init_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../explorer/service/init.service */ "./src/app/explorer/service/init.service.ts");
+/* harmony import */ var _services_resolve_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../_services/resolve-api */ "./src/app/_services/resolve-api.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
 
@@ -127,19 +165,17 @@ var routes = [
     { path: 'side', component: _sidenav_sidenav_component__WEBPACK_IMPORTED_MODULE_2__["SidenavComponent"] },
     { path: 'blog', component: _blog_blog_component__WEBPACK_IMPORTED_MODULE_4__["BlogComponent"] },
     { path: 'about', component: _about_about_component__WEBPACK_IMPORTED_MODULE_5__["AboutComponent"] },
-    { path: 'explorer', component: _explorer_explorer_component__WEBPACK_IMPORTED_MODULE_6__["ExplorerComponent"] }
+    { path: 'explorer', component: _explorer_explorer_component__WEBPACK_IMPORTED_MODULE_6__["ExplorerComponent"], resolve: { 'token': _services_resolve_api__WEBPACK_IMPORTED_MODULE_7__["ResolveApi"] } }
 ];
 var AppRoutingModule = /** @class */ (function () {
-    function AppRoutingModule(InitService) {
-        this.InitService = InitService;
+    function AppRoutingModule() {
     }
-    ;
     AppRoutingModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
-            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
-        }),
-        __metadata("design:paramtypes", [_explorer_service_init_service__WEBPACK_IMPORTED_MODULE_7__["InitService"]])
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]],
+            providers: [_services_resolve_api__WEBPACK_IMPORTED_MODULE_7__["ResolveApi"]]
+        })
     ], AppRoutingModule);
     return AppRoutingModule;
 }());
@@ -233,12 +269,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./about/about.component */ "./src/app/about/about.component.ts");
 /* harmony import */ var _explorer_explorer_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./explorer/explorer.module */ "./src/app/explorer/explorer.module.ts");
 /* harmony import */ var _directives_directives_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./directives/directives.module */ "./src/app/directives/directives.module.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -271,7 +309,8 @@ var AppModule = /** @class */ (function () {
                 _app_routing_app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
                 angular_font_awesome__WEBPACK_IMPORTED_MODULE_8__["AngularFontAwesomeModule"],
                 _explorer_explorer_module__WEBPACK_IMPORTED_MODULE_11__["ExplorerModule"],
-                _directives_directives_module__WEBPACK_IMPORTED_MODULE_12__["DirectivesModule"]
+                _directives_directives_module__WEBPACK_IMPORTED_MODULE_12__["DirectivesModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_13__["FormsModule"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
@@ -505,7 +544,7 @@ var LogOnClickDirective = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"explorerWrap\">\n<div class=\"explorerTree\">\n  <app-folder-tree-line></app-folder-tree-line>\n\n\n</div>\n<div class=\"explorerContent\" logOnClick >Current folder ID: {{currentFolderID}}</div>\n</div>\n"
+module.exports = "\n<div class=\"explorerWrap\">\n  <div [ngClass]=\"['popup']\">\n    <div [ngClass]=\"'body'\">\n    <label>name:\n      <input [(ngModel)]=\"name\" placeholder=\"name\">\n      {{name}}\n      <button (click)=\"saveNewFolder(name)\">Save new folder </button>\n    </label>\n    </div>\n  </div>\n<div class=\"explorerTree\">\n  <app-folder-tree-line></app-folder-tree-line>\n\n\n</div>\n\n<div class=\"explorerContent\" logOnClick >Current folder ID: {{currentFolderID}}</div>\n\n</div>\n"
 
 /***/ }),
 
@@ -516,7 +555,7 @@ module.exports = "\n<div class=\"explorerWrap\">\n<div class=\"explorerTree\">\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".explorerWrap {\n  box-sizing: border-box;\n  width: 100%;\n  height: 100%;\n  display: -ms-grid;\n  display: grid;\n      -ms-grid-columns: [start] 160px [mid] calc( 100vw - 160px) [end];\n      grid-template-columns: [start] 160px [mid] calc( 100vw - 160px) [end];\n      -ms-grid-rows: [row-start] 100% [row-end];\n      grid-template-rows: [row-start] 100% [row-end];\n      grid-template-areas: \"folderTree folderContent\"; }\n  .explorerWrap .explorerTree {\n    /*Windows like folder tree structure*/\n    -ms-grid-row: 1;\n    -ms-grid-column: 1;\n    grid-area: folderTree;\n    background-color: white;\n    overflow-y: scroll;\n    padding: 1rem; }\n  .explorerWrap .explorerContent {\n    -ms-grid-row: 1;\n    -ms-grid-column: 2;\n    grid-area: folderContent;\n    background-color: white;\n    overflow-y: scroll;\n    padding: 1rem; }\n"
+module.exports = ".explorerWrap {\n  box-sizing: border-box;\n  width: 100%;\n  height: 100%;\n  display: -ms-grid;\n  display: grid;\n      -ms-grid-columns: [start] 160px [mid] calc( 100vw - 160px) [end];\n      grid-template-columns: [start] 160px [mid] calc( 100vw - 160px) [end];\n      -ms-grid-rows: [row-start] 100% [row-end];\n      grid-template-rows: [row-start] 100% [row-end];\n      grid-template-areas: \"folderTree folderContent\"; }\n  .explorerWrap .explorerTree {\n    /*Windows like folder tree structure*/\n    -ms-grid-row: 1;\n    -ms-grid-column: 1;\n    grid-area: folderTree;\n    background-color: white;\n    overflow-y: scroll;\n    padding: 1rem; }\n  .explorerWrap .explorerContent {\n    -ms-grid-row: 1;\n    -ms-grid-column: 2;\n    grid-area: folderContent;\n    background-color: white;\n    overflow-y: scroll;\n    padding: 1rem; }\n  .popup {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 100vh;\n  background-color: rgba(0, 0, 0, 0.5); }\n  .popup .body {\n    position: relative;\n    width: 50vw;\n    margin: 0 auto;\n    margin-top: 40vh;\n    padding: 1rem;\n    background-color: white;\n    border: rebeccapurple 1px solid; }\n"
 
 /***/ }),
 
@@ -547,6 +586,7 @@ var ExplorerComponent = /** @class */ (function () {
     function ExplorerComponent(ExplorerService) {
         var _this = this;
         this.ExplorerService = ExplorerService;
+        this.saveNewFolder = function (name) { _this.data.saveNewFolder(name); };
         this.data = ExplorerService;
         this.data.explorerState.subscribe(function (data) {
             _this.currentState = data;
@@ -554,8 +594,11 @@ var ExplorerComponent = /** @class */ (function () {
             _this.currentFolderID = _this.currentState.currentFolderID;
         });
     }
+    /*
+    deleteFolder = (folder)=>{ this.data.deleteFolder(name);}
+    */
     ExplorerComponent.prototype.ngOnInit = function () {
-        this.data.getsomething();
+        /*this.data.getsomething();*/
     };
     ExplorerComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -590,12 +633,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _directives_directives_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../directives/directives.module */ "./src/app/directives/directives.module.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/index.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _http_xsrfinterceptor__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../http-xsrfinterceptor */ "./src/app/http-xsrfinterceptor.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -613,6 +661,7 @@ var ExplorerModule = /** @class */ (function () {
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
                 _directives_directives_module__WEBPACK_IMPORTED_MODULE_5__["DirectivesModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormsModule"]
             ],
             exports: [
                 _explorer_component__WEBPACK_IMPORTED_MODULE_1__["ExplorerComponent"],
@@ -622,7 +671,11 @@ var ExplorerModule = /** @class */ (function () {
                 _explorer_component__WEBPACK_IMPORTED_MODULE_1__["ExplorerComponent"],
                 _folder_tree_line_folder_tree_line_component__WEBPACK_IMPORTED_MODULE_2__["FolderTreeLineComponent"]
             ],
-            providers: [_service_explorer_service__WEBPACK_IMPORTED_MODULE_4__["ExplorerService"], ngx_cookie_service__WEBPACK_IMPORTED_MODULE_7__["CookieService"]],
+            providers: [
+                _service_explorer_service__WEBPACK_IMPORTED_MODULE_4__["ExplorerService"],
+                ngx_cookie_service__WEBPACK_IMPORTED_MODULE_7__["CookieService"],
+                { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HTTP_INTERCEPTORS"], useClass: _http_xsrfinterceptor__WEBPACK_IMPORTED_MODULE_9__["HttpXsrfInterceptor"], multi: true }
+            ],
             bootstrap: [_explorer_component__WEBPACK_IMPORTED_MODULE_1__["ExplorerComponent"]]
         })
     ], ExplorerModule);
@@ -755,6 +808,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_internal_BehaviorSubject__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_BehaviorSubject__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/index.js");
+/* harmony import */ var _init_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./init.service */ "./src/app/explorer/service/init.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -768,6 +822,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var httpOptions = {
     headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
         'Content-Type': 'application/json',
@@ -775,9 +830,11 @@ var httpOptions = {
     })
 };
 var ExplorerService = /** @class */ (function () {
-    function ExplorerService(cookieService, http) {
+    function ExplorerService(cookieService, http, api) {
+        var _this = this;
         this.cookieService = cookieService;
         this.http = http;
+        this.api = api;
         this.explorerData = new rxjs_internal_BehaviorSubject__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"]({
             currentFolderID: 0,
             folders: [
@@ -790,17 +847,14 @@ var ExplorerService = /** @class */ (function () {
                 { id: 7, name: 'folder7', parent: 2 }
             ]
         });
-        this.getsomething = function () {
-            var _this = this;
-            setTimeout(function () {
-                var csrfToken = _this.cookieService.check('XSRF-TOKEN');
-                console.log(_this.cookieService.get('XSRF-TOKEN'));
-                if (csrfToken) {
-                    _this.http.post("/be-land/public/mock", [], httpOptions).subscribe(function (data) {
-                        console.log(data);
-                    });
-                }
-            }, 500);
+        this.saveNewFolder = function (name) {
+            console.log(_this.api);
+            _this.http.post(_this.api.API + "/save_folder", { 'name': name }, httpOptions).subscribe(function (data) {
+                console.log(data);
+            });
+            _this.http.post(_this.api.API + "/mock", [], httpOptions).subscribe(function (data) {
+                console.log(data);
+            });
         };
         this.explorerState = this.explorerData.asObservable();
     }
@@ -808,7 +862,8 @@ var ExplorerService = /** @class */ (function () {
     ExplorerService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({ providedIn: 'root' }),
         __metadata("design:paramtypes", [ngx_cookie_service__WEBPACK_IMPORTED_MODULE_3__["CookieService"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"],
+            _init_service__WEBPACK_IMPORTED_MODULE_4__["InitService"]])
     ], ExplorerService);
     return ExplorerService;
 }());
@@ -852,14 +907,13 @@ var InitService = /** @class */ (function () {
     function InitService(http, cookieService) {
         this.http = http;
         this.cookieService = cookieService;
-        var csrfToken = this.cookieService.check('XSRF-TOKEN');
-        if (!csrfToken) {
-            this.http.get("/be-land/public/api", httpOptions).subscribe(function (res) {
-                //this.cookieService.set('XSRF-TOKEN', res.token, 500, '/');
-                console.log(res.token);
-            });
-        }
+        /*const csrfToken = this.cookieService.check('XSRF-TOKEN');*/
+        this.API = ''; //http://landfield.localhost';
     }
+    InitService.prototype.setToken = function () {
+        console.log(this.API);
+        return this.http.get(this.API + "/api", httpOptions);
+    };
     InitService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({ providedIn: 'root' }),
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], ngx_cookie_service__WEBPACK_IMPORTED_MODULE_2__["CookieService"]])
@@ -928,6 +982,53 @@ var HeaderComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], HeaderComponent);
     return HeaderComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/http-xsrfinterceptor.ts":
+/*!*****************************************!*\
+  !*** ./src/app/http-xsrfinterceptor.ts ***!
+  \*****************************************/
+/*! exports provided: HttpXsrfInterceptor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpXsrfInterceptor", function() { return HttpXsrfInterceptor; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var HttpXsrfInterceptor = /** @class */ (function () {
+    function HttpXsrfInterceptor(tokenExtractor) {
+        this.tokenExtractor = tokenExtractor;
+    }
+    HttpXsrfInterceptor.prototype.intercept = function (req, next) {
+        var headerName = 'XSRF-TOKEN';
+        var respHeaderName = 'X-XSRF-TOKEN';
+        var token = this.tokenExtractor.getToken();
+        if (token !== null && !req.headers.has(headerName)) {
+            req = req.clone({ headers: req.headers.set(respHeaderName, token) });
+        }
+        return next.handle(req);
+    };
+    HttpXsrfInterceptor = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpXsrfTokenExtractor"]])
+    ], HttpXsrfInterceptor);
+    return HttpXsrfInterceptor;
 }());
 
 

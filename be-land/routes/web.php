@@ -10,29 +10,38 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/api', function (){
-
     return response()->json([]);
+});
+
+Route::post('/save_folder', function (Request $request){
+
+    $post = $request->post();
+
+    if($name = $post['name']?: 'Unknown'){
+        $newFolder = new \App\Folder;
+        $newFolder->name = $name;
+        $newFolder->save();
+    }
+
+    return response()->json([
+        $post
+    ]);
+
 });
 
 
 Route::post('/mock', function (){
 
-    $rand = rand(0,100000);
-
-    $new_folder = new \App\Folder;
-    $new_folder->name = "newFolder_{$rand}";
-    $new_folder->save();
-
     $folders = \App\Folder::all();
-
     return response()->json([
-        'folders' => $folders
+        'folder'=> $folders[(count($folders)-1)]
     ]);
 
 });

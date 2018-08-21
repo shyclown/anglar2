@@ -9,9 +9,8 @@ import { BlogComponent } from "../blog/blog.component";
 import { AboutComponent } from "../about/about.component";
 
 import { ExplorerComponent } from "../explorer/explorer.component";
-import {InitService} from "../explorer/service/init.service";
-import {parseCookieValue} from "@angular/common/src/cookie";
-import {ɵparseCookieValue} from "@angular/common";
+
+import {ResolveApi} from "../_services/resolve-api";
 
 const routes : Routes =[
     {path: '', redirectTo: '/side', pathMatch: 'full' },
@@ -19,20 +18,15 @@ const routes : Routes =[
     {path: 'side', component: SidenavComponent },
     {path: 'blog', component: BlogComponent },
     {path: 'about', component: AboutComponent },
-    {path: 'explorer', component: ExplorerComponent }
+    {path: 'explorer', component: ExplorerComponent , resolve: { 'token': ResolveApi } }
 ];
 
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  exports: [ RouterModule ],
+  providers: [ ResolveApi ]
 })
 export class AppRoutingModule {
 
-    constructor( private InitService: InitService ){
-
-
-
-
-    };
 }
 

@@ -17,6 +17,7 @@ import { AboutComponent } from './about/about.component';
 
 import {ExplorerModule} from "./explorer/explorer.module";
 import {DirectivesModule} from "./directives/directives.module";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {DirectivesModule} from "./directives/directives.module";
     AppRoutingModule,
     AngularFontAwesomeModule,
     ExplorerModule,
-    DirectivesModule
+    DirectivesModule,
+    FormsModule
   ],
   bootstrap: [AppComponent]
 })

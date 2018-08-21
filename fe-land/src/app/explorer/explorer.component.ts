@@ -16,6 +16,9 @@ export class ExplorerComponent implements OnInit {
     data: ExplorerService;
     currentFolderID: number;
 
+
+    name:string;
+
   constructor(
       private ExplorerService: ExplorerService
   ) {
@@ -36,8 +39,12 @@ export class ExplorerComponent implements OnInit {
         this.currentFolderID = this.currentState.currentFolderID;
     });
   }
-  ngOnInit() {
-      this.data.getsomething();
-  }
+    saveNewFolder =(name)=>{  this.data.saveNewFolder(name); }
+    /*
+    deleteFolder = (folder)=>{ this.data.deleteFolder(name);}
+    */
+    ngOnInit() {
+        /*this.data.getsomething();*/
+    }
 
 }

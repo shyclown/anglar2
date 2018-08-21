@@ -8,13 +8,17 @@ import { ExplorerService } from "./service/explorer.service";
 import { DirectivesModule } from "../directives/directives.module";
 import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from "ngx-cookie-service";
+import {FormsModule} from "@angular/forms";
 
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import { HttpXsrfInterceptor } from "../http-xsrfinterceptor";
 
 @NgModule({
   imports: [
       BrowserModule,
       DirectivesModule,
       HttpClientModule,
+      FormsModule
   ],
   exports:[
       ExplorerComponent,
@@ -25,7 +29,11 @@ import { CookieService } from "ngx-cookie-service";
       ExplorerComponent,
       FolderTreeLineComponent
   ],
-    providers:[ ExplorerService, CookieService ],
+    providers:[
+        ExplorerService,
+        CookieService,
+        { provide: HTTP_INTERCEPTORS, useClass: HttpXsrfInterceptor, multi: true }
+    ],
     bootstrap: [ ExplorerComponent ]
 })
 export class ExplorerModule { }
