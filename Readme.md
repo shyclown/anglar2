@@ -8,6 +8,7 @@ Setting up the project
 
 ##Install Laravel
 ```
+php composer global require "laravel/installer"
 php composer install
 ```
 
