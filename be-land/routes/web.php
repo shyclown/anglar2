@@ -20,6 +20,13 @@ Route::get('/api', function (){
     return response()->json([]);
 });
 
+Route::get('/db_debug', function  (){
+
+
+
+    return response()->json([]);
+});
+
 Route::post('/save_folder', function (Request $request){
 
     $post = $request->post();
@@ -40,8 +47,9 @@ Route::post('/save_folder', function (Request $request){
 Route::post('/mock', function (){
 
     $folders = \App\Folder::all();
+
     return response()->json([
-        'folder'=> $folders[(count($folders)-1)]
+        'folders'=> $folders
     ]);
 
 });

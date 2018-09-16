@@ -17,7 +17,6 @@ class CreateFoldersTable extends Migration
             $table->increments('id');
             $table->string('name', 64);
             $table->integer('parent_folder_id')->unsigned()->nullable();
-            $table->timestamps();
         });
         Schema::table('folders', function (Blueprint $table) {
             $table->foreign('parent_folder_id')->references('id')->on('folders');

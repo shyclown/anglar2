@@ -10,7 +10,7 @@ $padding-base: 1rem;
   height: 100%;
 
   display: grid;
-  grid-template-columns: [start] 160px [mid] calc( 100vw - 160px ) [end];
+  grid-template-columns: [start] 260px [mid] calc( 100vw - 260px ) [end];
   grid-template-rows: [row-start]100%[row-end];
   grid-template-areas: "folderTree folderContent";
 

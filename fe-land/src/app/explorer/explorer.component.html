@@ -1,7 +1,7 @@
 
 <div class="explorerWrap">
 
-  <div [ngClass]="['popup']">
+  <div [ngClass]="['popup']" *ngIf="selected">
     <div [ngClass]="'body'">
     <label>name:
       <input [(ngModel)]="name" placeholder="name">

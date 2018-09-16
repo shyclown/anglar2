@@ -13,12 +13,20 @@ class CreateItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('items', function (Blueprint $table) {
+        Schema::create('items', function (Blueprint $table)
+        {
+
             $table->increments('id');
-            $table->integer('item_type');
-            $table->integer( 'item_id')->unsigned();
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->morphs('item');
+
+            /* Manage timestamps for items */
             $table->timestamps();
+            $table->softDeletes(); // Add soft delete to items
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
+
     }
 
     /**

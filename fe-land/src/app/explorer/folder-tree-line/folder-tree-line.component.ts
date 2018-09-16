@@ -27,8 +27,13 @@ export class FolderTreeLineComponent implements OnInit {
   }
 
   getCurrentFolders(){
-      if(this.currentState.folders){
-      return this.currentState.folders.filter( item => item.parent == this.folder.id );
+      if(this.data.folders.value){
+          let parent = this.folder.id == 0 ?  null : this.folder.id;
+            return this.data.folders.value.folders.filter( item => {
+            return item.parent_folder_id == parent
+      }
+      );
+
       }
   }
 
