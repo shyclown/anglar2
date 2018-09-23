@@ -1,8 +1,17 @@
+
   <div class="title"><h1>
       <i class="fa fa-globe"></i> {{ title }}
+      <button mat-raised-button (click)="openDialog()">Pick one</button>
   </h1></div>
-<nav class="mainNav" logOnClick>
-  <a routerLink="/blog">Blog</a>
+
+    <mat-toolbar>
+      <span>left</span>
+      <span class="fill"></span>
+<span>My App</span>
+
+    </mat-toolbar>
+  <nav class="mainNav" logOnClick>
+    <a routerLink="/blog">Blog</a>
   <a routerLink="/about">About</a>
     <a routerLink="/header">header</a>
     <a routerLink="/side"> side</a>

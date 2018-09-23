@@ -14,10 +14,17 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BlogComponent } from './blog/blog.component';
 import { AboutComponent } from './about/about.component';
 
-
+/* Material UI */
+import { MatToolbarModule } from "@angular/material";
+import { MatButtonModule } from "@angular/material";
 import {ExplorerModule} from "./explorer/explorer.module";
 import {DirectivesModule} from "./directives/directives.module";
 import {FormsModule} from "@angular/forms";
+import { AppBarComponent } from './_components/app-bar/app-bar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateFolderDialogModule } from './_components/create-folder-dialog/create-folder-dialog.module';
+import {CreateFolderDialogComponent} from "./_components/create-folder-dialog/create-folder-dialog.component";
+
 
 @NgModule({
   declarations: [
@@ -27,15 +34,24 @@ import {FormsModule} from "@angular/forms";
     DataComponent,
     BlogComponent,
     AboutComponent,
+    AppBarComponent,
   ],
+    entryComponents: [
+      CreateFolderDialogComponent
+    ],
+
   imports: [
+    CreateFolderDialogModule,
+    MatToolbarModule,
+    MatButtonModule,
     BrowserModule,
     CommonModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
     ExplorerModule,
     DirectivesModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
   ],
   bootstrap: [AppComponent]
 })
