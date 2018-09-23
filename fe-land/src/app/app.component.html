@@ -1,13 +1,20 @@
 
   <div class="title"><h1>
       <i class="fa fa-globe"></i> {{ title }}
-      <button mat-raised-button (click)="openDialog()">Pick one</button>
-  </h1></div>
+      </h1></div>
 
     <mat-toolbar>
-      <span>left</span>
-      <span class="fill"></span>
-<span>My App</span>
+        <button mat-raised-button color="accent" (click)="openDialog()">Pick one</button>
+
+        <span class="fill"></span>
+<button
+        mat-icon-button class="avatar"
+        style="width: 40px; height: 40px;
+        background-image:url('assets/test.jpg');
+        background-size: contain;"
+>
+
+</button>
 
     </mat-toolbar>
   <nav class="mainNav" logOnClick>

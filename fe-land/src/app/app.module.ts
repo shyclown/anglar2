@@ -20,7 +20,6 @@ import { MatButtonModule } from "@angular/material";
 import {ExplorerModule} from "./explorer/explorer.module";
 import {DirectivesModule} from "./directives/directives.module";
 import {FormsModule} from "@angular/forms";
-import { AppBarComponent } from './_components/app-bar/app-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateFolderDialogModule } from './_components/create-folder-dialog/create-folder-dialog.module';
 import {CreateFolderDialogComponent} from "./_components/create-folder-dialog/create-folder-dialog.component";
@@ -34,7 +33,6 @@ import {CreateFolderDialogComponent} from "./_components/create-folder-dialog/cr
     DataComponent,
     BlogComponent,
     AboutComponent,
-    AppBarComponent,
   ],
     entryComponents: [
       CreateFolderDialogComponent
