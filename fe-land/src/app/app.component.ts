@@ -11,8 +11,10 @@ import {CreateFolderDialogComponent} from "./_components/create-folder-dialog/cr
 
 export class AppComponent {
 
-    constructor(public dialog: MatDialog) {
+    cardClasses: { root : string }
 
+    constructor(public dialog: MatDialog) {
+        this.cardClasses = { root: 'rootStyle' }
     }
 
     openDialog(): void {

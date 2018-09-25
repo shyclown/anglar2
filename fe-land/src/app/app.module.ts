@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
@@ -17,12 +17,16 @@ import { AboutComponent } from './about/about.component';
 /* Material UI */
 import { MatToolbarModule } from "@angular/material";
 import { MatButtonModule } from "@angular/material";
-import {ExplorerModule} from "./explorer/explorer.module";
-import {DirectivesModule} from "./directives/directives.module";
-import {FormsModule} from "@angular/forms";
+import { ExplorerModule} from "./explorer/explorer.module";
+import { DirectivesModule} from "./directives/directives.module";
+import { FormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateFolderDialogModule } from './_components/create-folder-dialog/create-folder-dialog.module';
-import {CreateFolderDialogComponent} from "./_components/create-folder-dialog/create-folder-dialog.component";
+import { CreateFolderDialogComponent } from "./_components/create-folder-dialog/create-folder-dialog.component";
+
+import { MatCardModule } from "@angular/material/card";
+import { CardModule } from './_components/card/card.module';
+
 
 
 @NgModule({
@@ -39,6 +43,7 @@ import {CreateFolderDialogComponent} from "./_components/create-folder-dialog/cr
     ],
 
   imports: [
+    CardModule,
     CreateFolderDialogModule,
     MatToolbarModule,
     MatButtonModule,
@@ -51,7 +56,9 @@ import {CreateFolderDialogComponent} from "./_components/create-folder-dialog/cr
     FormsModule,
     BrowserAnimationsModule,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
+  schemas:[ NO_ERRORS_SCHEMA ],
 })
 export class AppModule {
 
