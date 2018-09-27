@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ExplorerService } from "./service/explorer.service";
+import { ExplorerService } from "./../service/explorer.service";
 import {catchError, tap} from "rxjs/operators";
-import {Folder} from "../folder";
-import {InitService} from "./service/init.service";
+import {Folder} from "../../../folder";
+import {InitService} from "../service/init.service";
 
 @Component({
   selector: 'app-explorer',
@@ -16,7 +16,6 @@ export class ExplorerComponent implements OnInit {
     data: ExplorerService;
     currentFolderID: number;
     selected:boolean;
-
 
     name:string;
 

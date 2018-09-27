@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ExplorerService } from "../service/explorer.service";
+import { MatDialogRef } from "@angular/material";
 
 @Component({
   selector: 'app-folder-tree-line',
@@ -16,7 +17,10 @@ export class FolderTreeLineComponent implements OnInit {
   @Input() folder : any;
 
 
-  constructor( private ExplorerService: ExplorerService ){
+  constructor(
+      private ExplorerService: ExplorerService,
+
+  ){
       this.data = ExplorerService;
       this.data.explorerState.subscribe( data => { this.currentState = data } );
   }

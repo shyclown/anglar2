@@ -17,15 +17,21 @@ import { AboutComponent } from './about/about.component';
 /* Material UI */
 import { MatToolbarModule } from "@angular/material";
 import { MatButtonModule } from "@angular/material";
-import { ExplorerModule} from "./explorer/explorer.module";
+import { ExplorerModule} from "./views/explorer/explorer.module";
 import { DirectivesModule} from "./directives/directives.module";
 import { FormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CreateFolderDialogModule } from './_components/create-folder-dialog/create-folder-dialog.module';
-import { CreateFolderDialogComponent } from "./_components/create-folder-dialog/create-folder-dialog.component";
+
+import { CreateFolderDialogModule } from './views/in-dialog/create-folder-dialog/create-folder-dialog.module';
+import { CreateFolderDialogComponent } from "./views/in-dialog/create-folder-dialog/create-folder-dialog.component";
 
 import { MatCardModule } from "@angular/material/card";
 import { CardModule } from './_components/card/card.module';
+
+import { InDialogComponent } from "./views/in-dialog/in-dialog.component"; //ADDED
+import { InDialogModule } from "./views/in-dialog/in-dialog.module";
+import {FolderTreeLineComponent} from "./views/explorer/folder-tree-line/folder-tree-line.component";
+import {CreateFolderFormComponent} from "./views/explorer/create-folder-form/create-folder-form.component"; //ADDED
 
 
 
@@ -39,12 +45,16 @@ import { CardModule } from './_components/card/card.module';
     AboutComponent,
   ],
     entryComponents: [
-      CreateFolderDialogComponent
+      CreateFolderDialogComponent,
+      InDialogComponent,
+        FolderTreeLineComponent,
+       // CreateFolderFormComponent
     ],
 
   imports: [
     CardModule,
     CreateFolderDialogModule,
+    InDialogModule,
     MatToolbarModule,
     MatButtonModule,
     BrowserModule,
@@ -56,7 +66,8 @@ import { CardModule } from './_components/card/card.module';
     FormsModule,
     BrowserAnimationsModule,
   ],
-  bootstrap: [AppComponent],
+
+  bootstrap: [ AppComponent ],
 
   schemas:[ NO_ERRORS_SCHEMA ],
 })

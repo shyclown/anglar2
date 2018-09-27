@@ -8,7 +8,7 @@ import { HeaderComponent } from "../header/header.component";
 import { BlogComponent } from "../blog/blog.component";
 import { AboutComponent } from "../about/about.component";
 
-import { ExplorerComponent } from "../explorer/explorer.component";
+import { ExplorerComponent } from "../views/explorer/explorer/explorer.component";
 
 import {ResolveApi} from "../_services/resolve-api";
 

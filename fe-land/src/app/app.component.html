@@ -19,6 +19,7 @@
 
 </button>
 
+
     </mat-toolbar>
   <nav class="mainNav" logOnClick>
     <a routerLink="/blog">Blog</a>
@@ -30,29 +31,12 @@
 </nav>
 
 
+
+  <ng-template #inDialog ngClass="test">
+      <app-create-folder-form></app-create-folder-form>
+  </ng-template>
+
 <div class="included">
-    <app-card [classes]="cardClasses">
-        <!-- header -->
-        <card-header>
-            New <strong>header</strong>
-        </card-header>
 
-        <!-- body -->
-        <card-body ngClass="rootStyle">
-        <div >
-            <h4 >You can put any content here</h4>
-            <h4 >You can put any content here</h4>
-
-            <p >For example this line of text and</p>
-
-            <a href="#">This button</a>
-        </div>
-         </card-body>
-
-        <!-- footer -->
-        <card-footer>
-            New <strong>footer</strong>
-        </card-footer>
-    </app-card>
 <router-outlet ></router-outlet>
 </div>

@@ -1,7 +1,11 @@
-import { Component } from '@angular/core';
-import {MatDialog} from '@angular/material';
-import {CreateFolderDialogModule} from "./_components/create-folder-dialog/create-folder-dialog.module";
-import {CreateFolderDialogComponent} from "./_components/create-folder-dialog/create-folder-dialog.component";
+import {Component, TemplateRef, ViewChild} from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+
+import {CreateFolderDialogComponent} from "./views/in-dialog/create-folder-dialog/create-folder-dialog.component";
+import {InDialogComponent } from "./views/in-dialog/in-dialog.component";
+import {FolderTreeLineComponent} from "./views/explorer/folder-tree-line/folder-tree-line.component";
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,13 +17,18 @@ export class AppComponent {
 
     cardClasses: { root : string }
 
-    constructor(public dialog: MatDialog) {
+    @ViewChild('inDialog') inDialog: TemplateRef<any>;
+
+    constructor( public dialog: MatDialog ) {
         this.cardClasses = { root: 'rootStyle' }
     }
 
     openDialog(): void {
-        const dialogRef = this.dialog.open(CreateFolderDialogComponent, {
-            width: '250px',
+        const dialogRef = this.dialog.open(
+            this.inDialog, {
+                panelClass: 'customDialog',
+                width: '250px',
+
             data: {}
         });
 
@@ -28,6 +37,18 @@ export class AppComponent {
 
         });
     }
+/*
+    openDialog2(): void {
+        const dialogRef2 = this.dialog.open(InDialogComponent, {
+            width: '250px',
+            data: {}
+        });
 
+        dialogRef2.afterClosed().subscribe(result => {
+            console.log('The dialog was closed');
+
+        });
+    }
+*/
   title = 'Landfield';
 }
