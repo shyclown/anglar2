@@ -27,7 +27,7 @@ export class AppComponent {
         const dialogRef = this.dialog.open(
             this.inDialog, {
                 panelClass: 'customDialog',
-                width: '250px',
+                maxWidth: '250px',
 
             data: {}
         });
