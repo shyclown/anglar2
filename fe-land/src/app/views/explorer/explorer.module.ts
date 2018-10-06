@@ -23,6 +23,7 @@ import { FormsModule } from "@angular/forms";
 import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { HttpXsrfInterceptor} from "../../http-xsrfinterceptor";
 import { MatDialogModule } from "@angular/material/dialog";
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -37,7 +38,9 @@ import { MatDialogModule } from "@angular/material/dialog";
     MatFormFieldModule,
     MatSelectModule,
       MatInputModule,
-      MatDialogModule
+      MatDialogModule,
+      MatButtonModule
+
   ],
     exports:[
         ExplorerComponent,
@@ -48,7 +51,6 @@ import { MatDialogModule } from "@angular/material/dialog";
         ExplorerComponent,
         FolderTreeLineComponent,
         CreateFolderFormComponent,
-
     ],
     providers:[
         ExplorerService,

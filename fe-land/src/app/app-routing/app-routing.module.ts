@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
 
 
 import { SidenavComponent } from "../sidenav/sidenav.component";
@@ -10,7 +10,7 @@ import { AboutComponent } from "../about/about.component";
 
 import { ExplorerComponent } from "../views/explorer/explorer/explorer.component";
 
-import {ResolveApi} from "../_services/resolve-api";
+import {ResolveApi} from "../services/resolve-api";
 
 const routes : Routes =[
     {path: '', redirectTo: '/side', pathMatch: 'full' },
@@ -18,6 +18,7 @@ const routes : Routes =[
     {path: 'side', component: SidenavComponent },
     {path: 'blog', component: BlogComponent },
     {path: 'about', component: AboutComponent },
+    /* Resolve API before loading route */
     {path: 'explorer', component: ExplorerComponent , resolve: { 'token': ResolveApi } }
 ];
 

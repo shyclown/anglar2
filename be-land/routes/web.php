@@ -21,9 +21,6 @@ Route::get('/api', function (){
 });
 
 Route::get('/db_debug', function  (){
-
-
-
     return response()->json([]);
 });
 
@@ -56,5 +53,14 @@ Route::post('/mock', function (){
 
 
 Auth::routes();
+
+Route::middleware('auth')->get('/folder', function (){
+
+    $folders = \App\Folder::all();
+    return response()->json([
+        'folders'=> $folders
+    ]);
+
+});
 
 Route::get('/home', 'HomeController@index')->name('home');

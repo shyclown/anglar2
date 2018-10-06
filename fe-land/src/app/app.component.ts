@@ -37,18 +37,6 @@ export class AppComponent {
 
         });
     }
-/*
-    openDialog2(): void {
-        const dialogRef2 = this.dialog.open(InDialogComponent, {
-            width: '250px',
-            data: {}
-        });
 
-        dialogRef2.afterClosed().subscribe(result => {
-            console.log('The dialog was closed');
-
-        });
-    }
-*/
   title = 'Landfield';
 }

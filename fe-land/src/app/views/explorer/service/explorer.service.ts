@@ -20,7 +20,6 @@ class Folder{
     parent_folder_id: number;
     created_at: string;
     updated_at: string;
-
 }
 
 class Folders{
@@ -34,27 +33,41 @@ export class ExplorerService {
     constructor(
         private cookieService: CookieService,
         private http: HttpClient,
-        private api: InitService
+        private api: InitService,
+
     ) {
         this.getFolders();
     }
 
-    private explorerData = new BehaviorSubject<any>({
-    currentFolderID: 0,
-    folders: [],
+
+
+    private explorerData = new BehaviorSubject<Folders>({
+        folders: [],
     });
 
     public folders = new BehaviorSubject<Folders>(
         { folders: [] }
     );
 
-    public getFolders = () => {
-        this.http.post(this.api.API+"/mock",[],httpOptions).subscribe(
-            (response : Folders)=>{
-                this.folders.next( response );
-            },()=>{} ,()=>{ console.log(this.folders.value);
+    public getFolders = (): void => {
+        this.http.get(this.api.API+"/folder",httpOptions)
+        .subscribe(
+            (response : Folders)=>{ this.folders.next( response ) },
+            (): void =>{  } ,
+            (): void =>{  }
+        )
+    };
+
+    public getFolder = (folderId) => {
+        this.http.get( this.api.API+"/folder/"+folderId, httpOptions).subscribe(
+            (response: Folder)=>{
+                return response;
             }
         )
+    };
+
+    public createFolder = () => {
+
     };
 
     public saveNewFolder = (name) => {

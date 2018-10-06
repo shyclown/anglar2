@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/be-land/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/be-land/app" isTestSource="false" packagePrefix="App\" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/defuse/php-encryption" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/dnoegel/php-xdg-base-dir" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/doctrine/instantiator" />
@@ -14,13 +15,21 @@
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/erusev/parsedown" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/fideloper/proxy" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/firebase/php-jwt" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/fzaninotto/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/hamcrest/hamcrest-php" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/jakub-onderka/php-console-color" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/jakub-onderka/php-console-highlighter" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/laravel/passport" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/lcobucci/jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/league/event" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/league/oauth2-server" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/myclabs/deep-copy" />
@@ -33,6 +42,7 @@
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/phpdocumentor/reflection-common" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/phpdocumentor/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/phpseclib/phpseclib" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/phpspec/prophecy" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/phpunit/php-code-coverage" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/phpunit/php-file-iterator" />
@@ -41,6 +51,7 @@
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/phpunit/php-token-stream" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/phpunit/phpunit" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/psy/psysh" />
@@ -68,6 +79,7 @@
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/symfony/polyfill-php72" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/symfony/psr-http-message-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/symfony/routing" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/symfony/translation" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/symfony/var-dumper" />
@@ -75,6 +87,7 @@
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/tijsverkoyen/css-to-inline-styles" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/be-land/vendor/zendframework/zend-diactoros" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

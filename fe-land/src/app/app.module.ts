@@ -23,15 +23,9 @@ import { FormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CreateFolderDialogModule } from './views/in-dialog/create-folder-dialog/create-folder-dialog.module';
-import { CreateFolderDialogComponent } from "./views/in-dialog/create-folder-dialog/create-folder-dialog.component";
-
-import { MatCardModule } from "@angular/material/card";
 import { CardModule } from './_components/card/card.module';
-
-import { InDialogComponent } from "./views/in-dialog/in-dialog.component"; //ADDED
 import { InDialogModule } from "./views/in-dialog/in-dialog.module";
-import {FolderTreeLineComponent} from "./views/explorer/folder-tree-line/folder-tree-line.component";
-import {CreateFolderFormComponent} from "./views/explorer/create-folder-form/create-folder-form.component"; //ADDED
+import { LoginComponent } from './_views/login/login.component';
 
 
 
@@ -43,12 +37,9 @@ import {CreateFolderFormComponent} from "./views/explorer/create-folder-form/cre
     DataComponent,
     BlogComponent,
     AboutComponent,
+    LoginComponent,
   ],
     entryComponents: [
-      CreateFolderDialogComponent,
-      InDialogComponent,
-        FolderTreeLineComponent,
-       // CreateFolderFormComponent
     ],
 
   imports: [

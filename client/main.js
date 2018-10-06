@@ -25,7 +25,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ "./src/app/_services/resolve-api.ts":
 /*!******************************************!*\
-  !*** ./src/app/_services/resolve-api.ts ***!
+  !*** ./src/app/services/resolve-api.ts ***!
   \******************************************/
 /*! exports provided: ResolveApi */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -144,7 +144,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blog_blog_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../blog/blog.component */ "./src/app/blog/blog.component.ts");
 /* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../about/about.component */ "./src/app/about/about.component.ts");
 /* harmony import */ var _explorer_explorer_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../explorer/explorer.component */ "./src/app/explorer/explorer.component.ts");
-/* harmony import */ var _services_resolve_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../_services/resolve-api */ "./src/app/_services/resolve-api.ts");
+/* harmony import */ var _services_resolve_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../services/resolve-api */ "./src/app/services/resolve-api.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);

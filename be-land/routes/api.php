@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
+/* App public routes */
+Route::get('/', function (Request $request) {
+    return $request;
+});
+
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
@@ -23,6 +29,40 @@ Route::get('/folder', function (){
     $folders = \App\Folder::all();
     return response()->json([
         'folders'=> $folders
+    ]);
+
+});
+
+Route::get('/convert/{nr}/{base}', function ($nr, $base){
+
+    $result = null;
+    $X = $nr;
+    $Y = $base;
+    $Z = [];
+    $M = -1;
+    $A = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+        for ($i = $X; 0 < $i; $i = floor($i / $Y)) {
+            if($i % $Y >= 10) {
+                $Z[] = $A[$i % $Y - 10];
+            } else {
+                $Z[] = $i % $Y;
+            }
+            $M = $M + 1;
+        }
+
+        $result = '';
+        for ($j = $M; $j >= 0; $j--) {
+            $result = $result . strval( $Z[$j] );
+        }
+
+
+
+
+    return response()->json([
+        'nr'=> $nr,
+        'base'=> $base,
+        'result'=> $result
     ]);
 
 });
