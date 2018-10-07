@@ -22,7 +22,9 @@ export class AppComponent {
     constructor( public dialog: MatDialog ) {
         this.cardClasses = { root: 'rootStyle' }
     }
-
+    clickProfile(event) : void {
+        console.log(event);
+    }
     openDialog(): void {
         const dialogRef = this.dialog.open(
             this.inDialog, {

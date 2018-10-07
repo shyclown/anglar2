@@ -54,12 +54,41 @@ Route::post('/mock', function (){
 
 Auth::routes();
 
-Route::middleware('auth')->get('/folder', function (){
+Route::middleware('auth')->group(function () {
 
-    $folders = \App\Folder::all();
-    return response()->json([
-        'folders'=> $folders
-    ]);
+    /* Create new folder */
+    Route::post('/folder', function (Request $request){
+        return response($request);
+        $newFolder = new \App\Folder;
+        $newFolder->name = $request->post()['name'] ?: 'New Folder';
+        return $newFolder->save();
+    });
+    /* Test */
+    Route::get('/folder/new/{name}', function (Request $request, $name){
+    var_dump($name);
+        $newFolder = new \App\Folder;
+        $newFolder->name = $name;
+        $newFolder->insert();
+        var_dump($newFolder);die();
+    });
+
+    /* All Folders */
+    Route::get('/folder', function (){
+        return \App\Folder::all();
+    });
+
+    /* Single Folder */
+    Route::get('/folder/{id}', function ($id){
+        return \App\Folder::where('id' , $id)->get();
+    });
+
+
+    /* Update folder */
+    Route::put('/folder/{id}', function (Request $request, $id){
+        $updatedFolder = \App\Folder::find($id);
+        $updatedFolder->name = $request->post()['name'];
+        return $updatedFolder->save();
+    });
 
 });
 

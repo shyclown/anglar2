@@ -1,37 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0366fb9d-41bd-4f08-9db8-47a0ca358a82" name="Default" comment="init src material">
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/_views/login/login.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/_views/login/login.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/_views/login/login.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/_views/login/login.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/guards/auth.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/guards/role.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/services/auth.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/services/init.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/37369eba-5761-4bf7-83fa-f1b3163024af.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/37369eba-5761-4bf7-83fa-f1b3163024af.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/landfield.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/landfield.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="0366fb9d-41bd-4f08-9db8-47a0ca358a82" name="Default" comment="init src">
+      <change afterPath="$PROJECT_DIR$/be-land/app/Http/Controllers/FolderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be-land/app/Folder.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/Folder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be-land/app/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/Item.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/be-land/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/_services/resolve-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/services/resolve-api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/app.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe-land/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe-land/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/explorer/create-folder-form/create-folder-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/explorer/create-folder-form/create-folder-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/explorer/create-folder-form/create-folder-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/explorer/create-folder-form/create-folder-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/explorer/explorer.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/explorer/explorer.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/explorer/service/explorer.service.spec.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/explorer/service/explorer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/explorer/service/explorer.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/explorer/service/init.service.spec.ts" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +54,28 @@
         <item name="landfield@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="landfield: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="folders: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="landfield@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="landfield: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="items: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="landfield@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="landfield: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="password_resets: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="landfield@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="landfield: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="taggables: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -92,18 +93,18 @@
         <counts>
           <entry key="project.closed" value="9" />
           <entry key="project.open.time.10" value="9" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.8" value="10" />
           <entry key="project.open.time.9" value="7" />
-          <entry key="project.opened" value="30" />
+          <entry key="project.opened" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="Angular2LanguageService" value="25" />
+          <entry key="Angular2LanguageService" value="26" />
           <entry key="TypeScriptServerServiceImpl" value="1" />
         </counts>
       </usages-collector>
@@ -111,72 +112,76 @@
         <counts>
           <entry key="browserslist" value="1" />
           <entry key="css" value="2" />
-          <entry key="folders" value="2" />
+          <entry key="folders" value="3" />
           <entry key="gitattributes" value="1" />
           <entry key="gitignore" value="4" />
-          <entry key="html" value="47" />
+          <entry key="html" value="48" />
           <entry key="ico" value="1" />
           <entry key="item_tag" value="2" />
-          <entry key="items" value="2" />
+          <entry key="items" value="3" />
           <entry key="items_item_type_item_id_index" value="1" />
           <entry key="jpg" value="1" />
           <entry key="js" value="2" />
           <entry key="json" value="14" />
           <entry key="md" value="1" />
-          <entry key="migrations" value="2" />
+          <entry key="migrations" value="3" />
+          <entry key="oauth_access_tokens" value="1" />
           <entry key="oauth_clients" value="1" />
           <entry key="oauth_personal_access_clients" value="1" />
           <entry key="oauth_refresh_tokens" value="1" />
           <entry key="password_resets" value="2" />
-          <entry key="php" value="90" />
+          <entry key="php" value="128" />
           <entry key="rnc" value="1" />
-          <entry key="scss" value="39" />
+          <entry key="scss" value="40" />
           <entry key="sql" value="1" />
           <entry key="tag_relations" value="2" />
-          <entry key="taggables" value="1" />
+          <entry key="taggables" value="2" />
           <entry key="tags" value="2" />
-          <entry key="ts" value="188" />
+          <entry key="ts" value="194" />
           <entry key="users" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="Database Element" value="19" />
-          <entry key="HTML" value="47" />
+          <entry key="Database Element" value="24" />
+          <entry key="HTML" value="48" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="13" />
           <entry key="JavaScript" value="2" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="90" />
+          <entry key="PHP" value="128" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="RNG Compact" value="1" />
-          <entry key="SCSS" value="39" />
+          <entry key="SCSS" value="40" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="1" />
-          <entry key="TypeScript" value="188" />
+          <entry key="TypeScript" value="194" />
           <entry key="tsconfig" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="cell" value="36" />
           <entry key="gitignore" value="8" />
-          <entry key="html" value="1285" />
+          <entry key="html" value="1681" />
           <entry key="md" value="630" />
-          <entry key="php" value="3846" />
-          <entry key="scss" value="530" />
-          <entry key="ts" value="6165" />
+          <entry key="php" value="5162" />
+          <entry key="scss" value="712" />
+          <entry key="ts" value="6357" />
           <entry key="txt" value="182" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1285" />
+          <entry key="HTML" value="1680" />
+          <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="630" />
-          <entry key="PHP" value="3846" />
+          <entry key="PHP" value="5162" />
           <entry key="PLAIN_TEXT" value="190" />
-          <entry key="SCSS" value="530" />
-          <entry key="TypeScript" value="6165" />
+          <entry key="SCSS" value="712" />
+          <entry key="Scratch" value="36" />
+          <entry key="TypeScript" value="6357" />
         </counts>
       </usages-collector>
     </session>
@@ -184,19 +189,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/be-land/routes/api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="26" selection-start-line="26" selection-end-line="33" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/explorer/service/explorer.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="52" column="32" lean-forward="true" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+            <state relative-caret-position="444">
+              <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
                 <element signature="e#273#325#0" expanded="true" />
@@ -205,53 +201,57 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1081">
+              <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#58#0" expanded="true" />
+                <element signature="e#677#730#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/explorer/service/init.service.ts">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+            <state relative-caret-position="184">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/be-land/app/Providers/AuthServiceProvider.php">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="253">
+              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
               <folding>
-                <element signature="e#33#63#0#PHP" expanded="true" />
+                <element signature="e#0#64#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/be-land/app/Http/Kernel.php">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/be-land/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-207">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+            <state relative-caret-position="253">
+              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#mat-toolbar#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/directives/logonclick/log-on-click.directive.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -259,22 +259,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/be-land/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+            <state relative-caret-position="230">
+              <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/be-land/app/Providers/AppServiceProvider.php">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/explorer/create-folder-form/create-folder-form.component.ts">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/be-land/config/auth.php">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/explorer/explorer/explorer.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="-414">
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/items">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -310,14 +321,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/fe-land/src/app/explorer/explorer.component.scss" />
-        <option value="$PROJECT_DIR$/be-land/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/be-land/database/migrations/2018_09_15_144814_create_tag_item_relation.php" />
         <option value="$PROJECT_DIR$/be-land/database/migrations/2018_09_14_164832_tags_relaitons.php" />
         <option value="$PROJECT_DIR$/be-land/database/migrations/2018_07_14_191111_create_folders_table.php" />
         <option value="$PROJECT_DIR$/be-land/app/Tag.php" />
-        <option value="$PROJECT_DIR$/be-land/app/Folder.php" />
-        <option value="$PROJECT_DIR$/be-land/app/Item.php" />
         <option value="$PROJECT_DIR$/be-land/database/migrations/2018_07_15_090323_create_items_table.php" />
         <option value="$PROJECT_DIR$/be-land/database/migrations/2018_07_15_124844_create_tags_table.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -339,17 +346,12 @@
         <option value="$PROJECT_DIR$/fe-land/src/app/views/in-dialog/in-dialog.module.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/explorer/folder-tree-line/folder-tree-line.component.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/styles.scss" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/app.component.scss" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/explorer/create-folder-form/create-folder-form.component.scss" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/explorer/explorer.module.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/explorer/create-folder-form/create-folder-form.component.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/explorer/create-folder-form/create-folder-form.component.html" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/_services/init.service.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/views/explorer/service/explorer.service.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/guards/auth.guard.spec.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/_views/login/login.component.html" />
         <option value="$PROJECT_DIR$/fe-land/src/app/_views/login/login/login.module.ts" />
@@ -360,7 +362,16 @@
         <option value="$PROJECT_DIR$/be-land/config/auth.php" />
         <option value="$PROJECT_DIR$/be-land/routes/api.php" />
         <option value="$PROJECT_DIR$/be-land/app/Providers/AuthServiceProvider.php" />
+        <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/FoldersController.php" />
+        <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/FolderController.php" />
+        <option value="$PROJECT_DIR$/be-land/app/Folder.php" />
+        <option value="$PROJECT_DIR$/be-land/app/Item.php" />
         <option value="$PROJECT_DIR$/be-land/routes/web.php" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/views/explorer/service/explorer.service.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/app.component.scss" />
       </list>
     </option>
   </component>
@@ -470,11 +481,9 @@
       <path value="$PROJECT_DIR$/be-land/vendor/guzzlehttp/psr7" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-72" />
-    <option name="y" value="-21" />
-    <option name="width" value="1655" />
-    <option name="height" value="1051" />
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1125" />
+    <option name="height" value="1160" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -506,6 +515,20 @@
               <item name="landfield" type="462c0819:PsiDirectoryNode" />
               <item name="be-land" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Console" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="be-land" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="be-land" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -530,21 +553,31 @@
               <item name="landfield" type="462c0819:PsiDirectoryNode" />
               <item name="be-land" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Middleware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
-              <item name="landfield" type="462c0819:PsiDirectoryNode" />
-              <item name="be-land" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Providers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
               <item name="landfield" type="462c0819:PsiDirectoryNode" />
               <item name="be-land" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="be-land" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="be-land" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="be-land" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
@@ -557,27 +590,6 @@
               <item name="landfield" type="462c0819:PsiDirectoryNode" />
               <item name="be-land" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
-              <item name="landfield" type="462c0819:PsiDirectoryNode" />
-              <item name="be-land" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
-              <item name="landfield" type="462c0819:PsiDirectoryNode" />
-              <item name="be-land" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
-              <item name="landfield" type="462c0819:PsiDirectoryNode" />
-              <item name="be-land" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
@@ -899,7 +911,8 @@
       <workItem from="1538812411067" duration="262000" />
       <workItem from="1538812690623" duration="568000" />
       <workItem from="1538813279167" duration="79000" />
-      <workItem from="1538813375826" duration="14985000" />
+      <workItem from="1538813375826" duration="15391000" />
+      <workItem from="1538899608497" duration="16905000" />
     </task>
     <task id="LOCAL-00001" summary="init src">
       <created>1532195183376</created>
@@ -992,16 +1005,23 @@
       <option name="project" value="LOCAL" />
       <updated>1538085061285</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="init src">
+      <created>1538857743831</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1538857743831</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289740000" />
+    <option name="totallyTimeSpent" value="307051000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="0" y="0" width="1125" height="1160" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18763326" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25633803" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4977778" weight="0.32941177" />
@@ -1014,15 +1034,15 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4632196" visible="true" weight="0.17058824" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.46197182" visible="true" weight="0.17330678" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4989339" weight="0.31764707" />
       <window_info anchor="bottom" id="TypeScript" order="12" weight="0.3297244" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.53678036" side_tool="true" visible="true" weight="0.17058824" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5380282" side_tool="true" visible="true" weight="0.17330678" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32968128" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.14658849" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.04976526" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1071,177 +1091,11 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/fe-land/client" />
     </ignored-roots>
-    <MESSAGE value="init src" />
     <MESSAGE value="init src material" />
-    <option name="LAST_COMMIT_MESSAGE" value="init src material" />
+    <MESSAGE value="init src" />
+    <option name="LAST_COMMIT_MESSAGE" value="init src" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/guards/auth.guard.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/node_modules/@angular/router/src/router_state.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="178" column="21" selection-start-line="178" selection-start-column="21" selection-end-line="178" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_views/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/explorer/create-folder-form/create-folder-form.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/explorer/explorer.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="35" selection-start-line="35" selection-end-line="39" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#103#158#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_views/login/login/login.module.spec.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_views/login/login.component.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_views/login/login.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/guards/role.guard.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/guards/auth.guard.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/explorer/create-folder-form/create-folder-form.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/services/auth.service.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_views/login/login.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/services/auth.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Providers/BroadcastServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Middleware/TrustProxies.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/vendor/laravel/framework/src/Illuminate/Foundation/Auth/ResetsPasswords.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/vendor/laravel/passport/src/Passport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/vendor/laravel/passport/src/HasApiTokens.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/routes/console.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/password_resets">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/tags">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/oauth_refresh_tokens">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/oauth_personal_access_clients">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/oauth_clients">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1249,7 +1103,167 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/Auth/ForgotPasswordController.php">
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/services/resolve-api.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/routes/channels.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Providers/RouteServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-996" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Providers/AuthServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#33#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1219">
+          <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/explorer/service/init.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="26" selection-start-line="26" selection-end-line="33" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/Auth/ResetPasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Middleware/TrimStrings.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Middleware/VerifyCsrfToken.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Exceptions/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-490" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="179" column="48" selection-start-line="179" selection-start-column="48" selection-end-line="179" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/config/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/config/broadcasting.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/config/cache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-345" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-605" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Middleware/EncryptCookies.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Middleware/RedirectIfAuthenticated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="53" lean-forward="true" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Authenticatable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Middleware/TrustProxies.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/bootstrap/app.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/config/logging.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1173" />
+      </provider>
+    </entry>
+    <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/folders">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Tag.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/be-land/app/User.php">
@@ -1262,127 +1276,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/Auth/ForgotPasswordController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/Auth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-897" />
+        <state relative-caret-position="-414" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/services/resolve-api.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3066">
-          <caret line="52" column="6" lean-forward="true" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/config/broadcasting.php">
+    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Middleware/TrimStrings.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Middleware/EncryptCookies.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Middleware/RedirectIfAuthenticated.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Middleware/VerifyCsrfToken.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/Auth/ResetPasswordController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        <state relative-caret-position="345">
+          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/Auth/LoginController.php">
+    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/FolderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="322">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/routes/channels.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Providers/RouteServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-996" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Providers/AuthServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#33#63#0#PHP" expanded="true" />
-          </folding>
+    <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/taggables">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
+    <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/oauth_access_tokens">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+    <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/migrations">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/config/auth.php">
+    <entry file="file://$PROJECT_DIR$/be-land/app/Folder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="207">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/routes/api.php">
+    <entry file="file://$PROJECT_DIR$/be-land/app/Item.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="26" selection-start-line="26" selection-end-line="33" selection-end-column="3" />
+        <state relative-caret-position="483">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/be-land/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+        <state relative-caret-position="230">
+          <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts">
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/explorer/create-folder-form/create-folder-form.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/explorer/explorer/explorer.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+        <state relative-caret-position="-414">
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/explorer/service/explorer.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="52" column="32" lean-forward="true" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+        <state relative-caret-position="444">
+          <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
             <element signature="e#273#325#0" expanded="true" />
@@ -1390,10 +1366,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/explorer/service/init.service.ts">
+    <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/items">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/directives/logonclick/log-on-click.directive.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        <state relative-caret-position="46">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1081">
+          <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#677#730#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#button#1;n#mat-toolbar#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
         </state>
       </provider>
     </entry>

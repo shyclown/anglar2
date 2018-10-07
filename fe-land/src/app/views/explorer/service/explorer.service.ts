@@ -23,7 +23,7 @@ class Folder{
 }
 
 class Folders{
-    folders:Array<Folder>;
+    folders : Array<Folder>;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -46,20 +46,23 @@ export class ExplorerService {
     });
 
     public folders = new BehaviorSubject<Folders>(
-        { folders: [] }
+        { folders: [ ] }
     );
 
     public getFolders = (): void => {
-        this.http.get(this.api.API+"/folder",httpOptions)
+        this.http.get(this.api.API+"/folder", httpOptions )
         .subscribe(
-            (response : Folders)=>{ this.folders.next( response ) },
+            ( response : Array<Folder> )=>{
+                this.folders.next(  { folders: response } )
+            },
             (): void =>{  } ,
             (): void =>{  }
         )
     };
 
     public getFolder = (folderId) => {
-        this.http.get( this.api.API+"/folder/"+folderId, httpOptions).subscribe(
+        this.http.get( this.api.API+"/folder/"+folderId, httpOptions)
+        .subscribe(
             (response: Folder)=>{
                 return response;
             }

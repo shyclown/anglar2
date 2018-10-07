@@ -1,34 +1,42 @@
 
-  <div class="title"><h1>
 
-
-      <i class="fa fa-globe"></i> {{ title }}
-      </h1></div>
 
     <mat-toolbar>
-        <button mat-raised-button color="accent" (click)="openDialog()">Pick one</button>
 
+    <button mat-raised-button color="accent" (click)="openDialog()">Pick one</button>
 
+        <span><i class="fa fa-globe"></i>{{ title }}</span>
         <span class="fill"></span>
-<button
+    <button
+        mat-button [matMenuTriggerFor]="menu"
         mat-icon-button class="avatar"
         style="width: 40px; height: 40px;
         background-image:url('assets/test.jpg');
         background-size: contain;"
->
+    >
+    </button>
 
-</button>
+    <mat-menu ngClass="userMenu" #menu="matMenu">
+        <mat-nav-list class="userMenuList">
+            <mat-list-item class="userInfo" (click)="clickProfile($event)">
+                <img matListAvatar src="assets/test.jpg" alt="...">
+                <h3 matLine> User Name </h3>
+                <p mat-line> email </p>
+            </mat-list-item>
+            <mat-list-item> Items </mat-list-item>
+            <mat-list-item> LogOut </mat-list-item>
+            <mat-list-item> Settings </mat-list-item>
+        </mat-nav-list>
+    </mat-menu>
 
-
-    </mat-toolbar>
-  <nav class="mainNav" logOnClick>
-    <a routerLink="/blog">Blog</a>
-  <a routerLink="/about">About</a>
-    <a routerLink="/header">header</a>
-    <a routerLink="/side"> side</a>
-  <a routerLink="/explorer"> explorer</a>
-
-</nav>
+</mat-toolbar>
+    <nav class="mainNav" logOnClick>
+        <a routerLink="/blog">Blog</a>
+        <a routerLink="/about">About</a>
+        <a routerLink="/header">header</a>
+        <a routerLink="/side"> side</a>
+        <a routerLink="/explorer"> explorer</a>
+    </nav>
 
 
 
@@ -37,6 +45,5 @@
   </ng-template>
 
 <div class="included">
-
-<router-outlet ></router-outlet>
+<router-outlet></router-outlet>
 </div>

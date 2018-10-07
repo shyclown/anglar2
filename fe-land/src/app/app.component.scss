@@ -2,6 +2,23 @@
   height: 100px;
   overflow: hidden;
 }
+
+.userMenu{
+
+
+& .userMenuList {
+
+}
+}
+  .mat-list-item.userInfo {
+    width: 280px;
+    background-color: #EAEAEA !important;
+
+}
+.mat-menu-content{
+    background-color: red;
+}
+
 h1{
   color:  rebeccapurple;
   padding: 1rem;

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class Folder extends Model
@@ -10,27 +11,26 @@ class Folder extends Model
     protected $table = "folders";
     protected $with = ["item"];
     public $timestamps = false;
-    //
 
-    public function insert(){
-
+    public function insert() {
         if(DB::transaction( function(){
             $this->save(); // Save Folder
             $item = new Item;
-            $item->insert($this, Item::FOLDER_ITEM); // Save Item
+            $item->user_id = Auth::id();
+            $this->item()->save($item); // Add new Item to Folder
         })){
-
             return $this;
         };
-
+        // Failed to save the Folder or add folder to the Item Model
+        return null;
     }
 
+    /* Folder has One User Item */
     public function item(){
-        return $this
-            ->hasMany('App\Item', 'item_id','id')
-            ->where('item_type', Item::FOLDER_ITEM );
+        return $this->morphOne(Item::class, 'item');
     }
 
+    /* Folder can have many Tags */
     public function tags(){
         return $this->item()->tags();
     }

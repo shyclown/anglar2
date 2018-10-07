@@ -26,8 +26,8 @@ import { CreateFolderDialogModule } from './views/in-dialog/create-folder-dialog
 import { CardModule } from './_components/card/card.module';
 import { InDialogModule } from "./views/in-dialog/in-dialog.module";
 import { LoginComponent } from './_views/login/login.component';
-
-
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -56,6 +56,8 @@ import { LoginComponent } from './_views/login/login.component';
     DirectivesModule,
     FormsModule,
     BrowserAnimationsModule,
+      MatMenuModule,
+      MatListModule
   ],
 
   bootstrap: [ AppComponent ],
