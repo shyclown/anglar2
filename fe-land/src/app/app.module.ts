@@ -15,19 +15,24 @@ import { BlogComponent } from './blog/blog.component';
 import { AboutComponent } from './about/about.component';
 
 /* Material UI */
+import { MatCardModule } from "@angular/material";
+
 import { MatToolbarModule } from "@angular/material";
 import { MatButtonModule } from "@angular/material";
 import { ExplorerModule} from "./views/explorer/explorer.module";
 import { DirectivesModule} from "./directives/directives.module";
-import { FormsModule} from "@angular/forms";
+import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CreateFolderDialogModule } from './views/in-dialog/create-folder-dialog/create-folder-dialog.module';
+
 import { CardModule } from './_components/card/card.module';
 import { InDialogModule } from "./views/in-dialog/in-dialog.module";
 import { LoginComponent } from './_views/login/login.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
+import { UserMenuComponent } from './user-menu/user-menu.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -38,12 +43,15 @@ import { MatListModule } from '@angular/material/list';
     BlogComponent,
     AboutComponent,
     LoginComponent,
+    UserMenuComponent,
+    LoginFormComponent,
   ],
     entryComponents: [
     ],
 
   imports: [
     CardModule,
+      MatCardModule,
     CreateFolderDialogModule,
     InDialogModule,
     MatToolbarModule,

@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class CreateFolderFormComponent implements OnInit {
 
   constructor(
-  ) { console.log('create'); }
+  ) {  }
 
   ngOnInit() {
   }

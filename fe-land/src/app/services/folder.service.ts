@@ -40,7 +40,7 @@ export class FolderService {
 
     getFolders (): Observable<Folder[]> {
         return this.http.get<Folder[]>(apiUrl).pipe(
-            tap(() => console.log('fetched products')),
+            tap(() => console.log('fetched folders')),
             catchError(this.handleError('getFolders', []))
         );
     }
@@ -48,14 +48,14 @@ export class FolderService {
     getFolder(id: number): Observable<Folder> {
         const url = `${apiUrl}/${id}`;
         return this.http.get<Folder>(url).pipe(
-            tap(() => console.log(`fetched product id=${id}`)),
+            tap(() => console.log(`fetched folder id=${id}`)),
             catchError(this.handleError<Folder>(`getFolder id=${id}`))
         );
     }
 
     addFolder (folder): Observable<Folder> {
         return this.http.post<Folder>(apiUrl, folder, httpOptions).pipe(
-            tap((folder: Folder) => console.log(`added product w/ id=${folder.id}`)),
+            tap((folder: Folder) => console.log(`added folder w/ id=${folder.id}`)),
             catchError(this.handleError<Folder>('addFolder'))
         );
     }
@@ -68,11 +68,11 @@ export class FolderService {
         );
     }
 
-    deleteProduct (id): Observable<Folder> {
+    deleteFolder (id): Observable<Folder> {
         const url = `${apiUrl}/${id}`;
 
         return this.http.delete<Folder>(url, httpOptions).pipe(
-            tap(_ => console.log(`deleted product id=${id}`)),
+            tap(_ => console.log(`deleted folder id=${id}`)),
             catchError(this.handleError<Folder>('deleteFolder'))
         );
     }
