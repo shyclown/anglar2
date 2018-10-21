@@ -32,7 +32,8 @@ import { LoginComponent } from './_views/login/login.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { UserMenuComponent } from './user-menu/user-menu.component';
-import { LoginFormComponent } from './login-form/login-form.component';
+import { LoginFormComponent } from './auth/login-form/login-form.component';
+import { SignInFormComponent } from './auth/sign-in-form/sign-in-form.component';
 
 @NgModule({
   declarations: [
@@ -45,13 +46,14 @@ import { LoginFormComponent } from './login-form/login-form.component';
     LoginComponent,
     UserMenuComponent,
     LoginFormComponent,
+    SignInFormComponent,
   ],
-    entryComponents: [
-    ],
+  entryComponents: [
+  ],
 
   imports: [
     CardModule,
-      MatCardModule,
+    MatCardModule,
     CreateFolderDialogModule,
     InDialogModule,
     MatToolbarModule,
@@ -64,8 +66,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
     DirectivesModule,
     FormsModule,
     BrowserAnimationsModule,
-      MatMenuModule,
-      MatListModule
+    MatMenuModule,
+    MatListModule
   ],
 
   bootstrap: [ AppComponent ],

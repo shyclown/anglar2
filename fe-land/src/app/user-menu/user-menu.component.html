@@ -1,0 +1,12 @@
+<mat-menu ngClass="userMenu" #menu="matMenu">
+  <mat-nav-list class="userMenuList">
+    <mat-list-item class="userInfo" (click)="clickProfile($event)">
+      <img matListAvatar src="assets/test.jpg" alt="...">
+      <h3 matLine> User Name </h3>
+      <p mat-line> email </p>
+    </mat-list-item>
+    <mat-list-item (click)="clickItems($event)"> Items </mat-list-item>
+    <mat-list-item (click)="clickLogOut($event)"> LogOut </mat-list-item>
+    <mat-list-item (click)="clickSettings($event)"> Settings </mat-list-item>
+  </mat-nav-list>
+</mat-menu>

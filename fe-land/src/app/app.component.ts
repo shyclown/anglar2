@@ -1,6 +1,6 @@
 import {Component, TemplateRef, ViewChild} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import {LoginFormComponent} from "./login-form/login-form.component";
+import {LoginFormComponent} from "./auth/login-form/login-form.component";
 
 @Component({
   selector: 'app-root',
