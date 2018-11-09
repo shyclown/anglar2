@@ -8,10 +8,30 @@ import {MatCard} from "@angular/material";
 })
 export class LoginFormComponent implements OnInit {
 
-    @ViewChild(MatCard) menu: MatCard;
+    password: string;
+    login: string;
+    staySigned: boolean;
+
+    constructor(
+    ) {
+
+    }
+
+    logIn(){
+        console.log('login', this)
+    }
+
+    signIn(){
+        console.log('login', this)
+    }
+
+    ngOnInit() {
+    }
+/*
+  @ViewChild(MatCard) menu: MatCard;
   constructor() { }
 
   ngOnInit() {
   }
-
+*/
 }

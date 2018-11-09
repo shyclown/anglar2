@@ -1,6 +1,6 @@
 import {Component, TemplateRef, ViewChild} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import {LoginFormComponent} from "./auth/login-form/login-form.component";
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ export class AppComponent {
     cardClasses: { root : string };
 
     @ViewChild('inDialog') inDialog: TemplateRef<any>;
-    @ViewChild('loginFormDialog') loginFormDialog: TemplateRef<LoginFormComponent>;
+    @ViewChild('loginFormDialog') loginFormDialog: TemplateRef<any>;
 
     constructor( public dialog: MatDialog ) {
         this.cardClasses = { root: 'rootStyle' }
@@ -37,6 +37,8 @@ export class AppComponent {
         });
     }
 
+
+
     openDialog(): void {
         const dialogRef = this.dialog.open(
             this.inDialog, {
@@ -50,6 +52,10 @@ export class AppComponent {
             console.log('The dialog was closed');
 
         });
+    }
+
+    ngOnInit() {
+        this.openLoginDialog();
     }
 
   title = 'Landfield';

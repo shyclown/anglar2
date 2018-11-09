@@ -56,18 +56,7 @@ h1{
 
 
 
-.card{
-  & .rootStyle{
-    background-color: #0b2e13;
-  }
-  & card-content{
-    background-color: #0b2e13;
-  }
-}
 
-card > .rootStyle{
-  background-color: red;
-}
 .bodyStyle{
   background-color: yellow;
 }
