@@ -32,13 +32,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CardModule } from './_components/card/card.module';
 import { InDialogModule } from "./views/in-dialog/in-dialog.module";
-import { LoginComponent } from './_views/login/login.component';
+
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { UserMenuComponent } from './user-menu/user-menu.component';
-
-import { SignInFormComponent } from './auth/sign-in-form/sign-in-form.component';
-import {LoginFormComponent} from "./auth/login-form/login-form.component";
 
 @NgModule({
   declarations: [

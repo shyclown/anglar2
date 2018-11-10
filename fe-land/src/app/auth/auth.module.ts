@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SignInFormComponent } from "./sign-in-form/sign-in-form.component";
 import { LoginFormComponent } from "./login-form/login-form.component";
-
-
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
@@ -19,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { DirectivesModule } from "../directives/directives.module";
 import { MatTabsModule } from "@angular/material";
 import { MatCheckboxModule } from "@angular/material";
+import  UserService  from "../services/user.service";
 
 @NgModule({
   imports: [
@@ -35,17 +33,18 @@ import { MatCheckboxModule } from "@angular/material";
       MatDialogModule,
       MatButtonModule,
       MatTabsModule,
-      MatCheckboxModule
+      MatCheckboxModule,
+      //UserService,
   ],
 
   exports:[
       //MatCardModule,
-      SignInFormComponent,
+
       LoginFormComponent
   ],
 
   declarations: [
-      SignInFormComponent,
+
       LoginFormComponent
   ]
 })

@@ -1,11 +1,13 @@
-<mat-tab-group>
 
-      <mat-tab label="Login">
+<mat-tab-group
+        mat-stretch-tabs
+>
+
+      <mat-tab ngClass="auth" label="Login"  mat-stretch-tabs>
         <mat-card>
           <mat-form-field ngClass="full">
               <input
                       [(ngModel)]="login"
-                      (keyup)="usernameInput()"
                       matInput
                       name="login"
                       placeholder="Username"
@@ -37,8 +39,9 @@
         </mat-card>
       </mat-tab>
 
-      <mat-tab label="Sign In">
+      <mat-tab ngClass="auth" label="Sign In"  mat-stretch-tabs>
         <mat-card>
+
           <mat-form-field ngClass="full">
               <input
                       matInput
@@ -46,6 +49,14 @@
                       placeholder="Username"
               >
           </mat-form-field>
+            <mat-form-field ngClass="full">
+                <input
+                        matInput
+                        name="email"
+                        type="email"
+                        placeholder="Email"
+                >
+            </mat-form-field>
           <mat-form-field ngClass="full">
               <input
                       matInput
@@ -54,7 +65,7 @@
                       placeholder="Password"
               >
           </mat-form-field>
-          <mat-card-content>
+            <mat-card-content>
             Login form information text
           </mat-card-content>
           <mat-card-actions align="right">

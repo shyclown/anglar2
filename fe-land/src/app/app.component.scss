@@ -11,7 +11,7 @@
 }
 }
   .mat-list-item.userInfo {
-    width: 280px;
+    width: 300px;
     background-color: #EAEAEA !important;
 
 }
@@ -32,29 +32,53 @@ h1{
   background-color: #dfdfdf;
   a{
 
-    color: #FFF;
-    padding: 1rem;
-    background-color: rebeccapurple;
+       color: #FFF;
+       padding: 1rem;
+       background-color: rebeccapurple;
 
-    display:inline-block;
-    text-decoration: none;
-    line-height: 1rem;
-    font-family: 'Roboto', 'Raleway', sans-serif;
+       display:inline-block;
+       text-decoration: none;
+       line-height: 1rem;
+       font-family: 'Roboto', 'Raleway', sans-serif;
 
-  }
+     }
+      button{
+
+        color: #FFF;
+        padding: 1rem;
+        background-color: rebeccapurple;
+
+        display:inline-block;
+        text-decoration: none;
+        line-height: 1rem;
+        font-family: 'Roboto', 'Raleway', sans-serif;
+
+      }
 }
 .included{
   height: calc(100vh - 164px);
   background-color: #c4d3df;
 }
+.faIcon{
+  font-size: 16px;
+  line-height: 16px;
+  height: 16px;
 
+  i{
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
 .fill{ flex: 1 1 auto; }
 
 .avatar{
   overflow: hidden;
 }
 
-
+.mat-tab-label {
+  width: 50%;
+  color: red;
+}
 
 
 .bodyStyle{

@@ -1,3 +1,22 @@
 .full{
   width: 100%;
 }
+.mat-tab-label {
+  width: 50%;
+  color: blue;
+}
+
+.mat-tab-header-pagination.mat-tab-header-pagination-disabled {
+  display: none !important;
+}
+
+.mat-tab-group  {
+  overflow-y: hidden;
+  .mat-card{
+    height: calc(100% - 32px);
+    overflow-y: hidden;
+  }
+
+
+  //margin-bottom: 48px;
+}

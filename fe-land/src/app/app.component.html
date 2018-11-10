@@ -1,19 +1,12 @@
 <!-- App Component -->
-
-
     <mat-toolbar>
-
-    <button mat-raised-button color="accent" (click)="openDialog()">Pick one</button>
-    <button mat-raised-button color="accent" (click)="openLoginDialog()">Login</button>
-
-        <span><i class="fa fa-globe"></i>{{ title }}</span>
+        <span><i class="fa fa-globe"></i>{{' '}}{{ title }}</span>
         <span class="fill"></span>
-
     <button
         mat-button [matMenuTriggerFor]="userMenu.menu"
         mat-icon-button class="avatar"
         style="width: 40px; height: 40px;
-        background-image:url('assets/test.jpg');
+        background-image: url('assets/test.jpg');
         background-size: contain;"
     >
     </button>
@@ -21,23 +14,27 @@
 
 </mat-toolbar>
 
-    <nav class="mainNav" logOnClick>
-        <a routerLink="/blog">Blog</a>
-        <a routerLink="/about">About</a>
-        <a routerLink="/header">header</a>
-        <a routerLink="/side"> side</a>
-        <a routerLink="/explorer"> explorer</a>
-    </nav>
+<nav logOnClick>
 
+        <button
+                mat-icon-button
+                (click)="openLoginDialog()"
+        >
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <a mat-button routerLink="/blog">Blog</a>
+        <a mat-button routerLink="/about">About</a>
+        <a mat-button routerLink="/header">Header</a>
+        <a mat-button routerLink="/side"> Side</a>
+        <a mat-button routerLink="/explorer"> Explorer</a>
+
+</nav>
 
 
 <ng-template #loginFormDialog >
     <app-login-form></app-login-form>
 </ng-template>
-
-  <ng-template #inDialog ngClass="test">
-      <app-create-folder-form></app-create-folder-form>
-  </ng-template>
 
 <div class="included">
 <router-outlet></router-outlet>

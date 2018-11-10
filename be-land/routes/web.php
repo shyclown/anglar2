@@ -51,7 +51,7 @@ Route::post('/mock', function (){
 
 });
 
-
+/* Routes used for auth */
 Auth::routes();
 
 Route::middleware('auth')->group(function () {
