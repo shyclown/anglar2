@@ -37,20 +37,34 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware('guest')->except('logout');
+       $this->middleware('guest')->except('logout');
+    }
+
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->regenerate();
+
+        if (!$request->ajax()) {
+            return redirect('/');
+        }
     }
 
     protected function sendLoginResponse(Request $request)
     {
         $request->session()->regenerate();
+
         $this->clearLoginAttempts($request);
+
         if ($request->ajax()) {
-            return response()->json($this->guard()->user(), 200);
+            return $this->authenticated($request, $this->guard()->user());
+
         }
-        /*
-        return $this->authenticated($request, $this->guard()->user())
-            ?: redirect()->intended($this->redirectPath());
-        */
+
+            return $this->authenticated($request, $this->guard()->user())
+                ?: redirect()->intended($this->redirectPath());
+
     }
     protected function sendFailedLoginResponse(Request $request)
     {

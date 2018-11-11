@@ -10,7 +10,7 @@ export class LogIn{
     password: string;
 }
 export class LogOut{
-    _token: string;
+
 }
 
 export class Register{
@@ -23,8 +23,14 @@ export class Register{
 }
 
 const httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json'})
+    headers: new HttpHeaders(
+        {
+            'Content-Type': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+        )
 };
+
 const logInUrl = "/login";
 const logOutUrl = "/logout";
 const registerUrl = "/register";
@@ -62,7 +68,7 @@ export default class UserService {
                     console.log(`User logged out!`);
                 }
             ),
-            catchError(this.handleError<LogOut>('logOut'))
+            catchError(this.handleError<LogOut>('LogOut'))
         );
     };
 
@@ -77,9 +83,9 @@ export default class UserService {
                     console.log(`Logged in user with email = ${data.email}`);
                 }
             ),
-            catchError(this.handleError<LogIn>('signIn'))
+            catchError(this.handleError<LogIn>('LogIn'))
         );
-    }
+    };
 
     public register = (data: Register): any => {
         return this.http.post<any>(
@@ -92,7 +98,7 @@ export default class UserService {
                 console.log(`Added user w/ id=${data.name}`);
              }
             ),
-            catchError(this.handleError<Register>('signIn'))
+            catchError(this.handleError<Register>('Register'))
         );
     };
 

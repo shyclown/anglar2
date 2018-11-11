@@ -35,14 +35,16 @@ export class UserMenuComponent implements OnInit {
         console.log(this.controllerName, 'clickProfile',[event]);
     }
     clickItems(event) : void {
-        console.log('requesting');
-        this.userService.logOut(this.logOutData).subscribe((r)=>
-            console.log(r)
-        );
+
 
         console.log(this.controllerName, 'clickItems',[event]);
     }
     clickLogOut(event) : void {
+        this.logOutData = {};
+        this.userService.logOut(this.logOutData).subscribe((response)=> {
+            console.log(response);
+           // window.location.reload()
+        });
         console.log(this.controllerName, 'clickLogOut',[event]);
     }
     clickSettings(event) : void {
