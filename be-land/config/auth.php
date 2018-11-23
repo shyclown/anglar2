@@ -42,7 +42,7 @@ return [
         ],
 
         'api' => [
-            'driver' => 'token', // use passport is available and already installed ('driver'=>'passport)
+            'driver' => 'passport',
             'provider' => 'users',
         ],
     ],

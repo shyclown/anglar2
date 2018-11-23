@@ -13,15 +13,22 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::post('login', 'UserController@login');
+Route::post('register', 'UserController@register');
+
+Route::group(['middleware' => 'auth:api'], function(){
+    Route::post('detail', 'UserController@details');
+});
+
 /* App public routes */
 Route::get('/', function (Request $request) {
     return $request;
 });
 
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/user', function() {
+    return 'a';
+})->middleware('auth:api');
 
 
 Route::get('/folder', function (){

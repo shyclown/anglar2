@@ -23,10 +23,10 @@ export class InitService {
         this.API = '';//http://landfield.localhost';
     }
 
-
-
     public setToken(){
         console.log(this.API);
-        return this.http.get<any>(this.API + "/api", httpOptions);
+        return this.http
+            .get<any>("/api", httpOptions)
+            .subscribe(r => console.log(r));
     }
 }

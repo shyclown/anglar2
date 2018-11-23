@@ -5,6 +5,11 @@ import { catchError, tap, map } from 'rxjs/operators';
 
 /**/
 /**/
+export class User{
+    id: number;
+    name: string;
+}
+
 export class LogIn{
     email: string;
     password: string;
@@ -34,6 +39,8 @@ const httpOptions = {
 const logInUrl = "/login";
 const logOutUrl = "/logout";
 const registerUrl = "/register";
+
+const userDataUrl = "/api/user";
 
 @Injectable({  providedIn: 'root' })
 export default class UserService {
@@ -70,6 +77,19 @@ export default class UserService {
             ),
             catchError(this.handleError<LogOut>('LogOut'))
         );
+    };
+
+    public userData = (): any => {
+        return this.http.get<any>(
+            userDataUrl,
+            httpOptions
+        ).pipe(
+            tap((r) =>{
+                    console.log(`data = ${r}`);
+                }
+            ),
+            catchError(this.handleError<LogIn>('LogIn'))
+        )
     };
 
     public logIn = (data: LogIn): any => {
