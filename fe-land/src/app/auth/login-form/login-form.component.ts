@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatCard} from "@angular/material";
 import UserService, { LogIn, Register } from "../../services/user.service";
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-login-form',
@@ -19,6 +20,7 @@ export class LoginFormComponent implements OnInit {
 
     constructor(
         private userService: UserService,
+        private authService: AuthService
 
     ) {
 
@@ -30,11 +32,13 @@ export class LoginFormComponent implements OnInit {
             password : this.password
         };
 
-
-        this.userService.logIn( this.loginData ).subscribe((response)=>{
-            console.log(response)
+        this.authService.login(
+            this.loginData.email,
+            this.loginData.password
+        ).subscribe((response)=>{
+            console.log('login: ', response)
         });
-        console.log('login', this)
+
     }
 
     signIn(){

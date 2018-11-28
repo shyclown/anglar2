@@ -13,7 +13,7 @@ export class ErrorInterceptor implements HttpInterceptor {
     ) { }
 
     intercept(
-        request: HttpRequest,
+        request: HttpRequest<any>,
         next: HttpHandler
     ): Observable<HttpEvent<any>>
     {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewChild } from "@angular/core";
 import { MatMenu } from "@angular/material"
-import  UserService, { LogOut }  from "../services/user.service";
+import { AuthService }  from "../services/auth.service";
 import {ExplorerService} from "../views/explorer/service/explorer.service";
 
 @Component({
@@ -15,16 +15,13 @@ export class UserMenuComponent implements OnInit {
     @ViewChild(MatMenu) menu: MatMenu;
 
     controllerName:string;
-    logOutData: LogOut;
+
 
 
     constructor(
-        private userService : UserService
+        private authService : AuthService
     ){
-        //this.userService = UserService;
         this.controllerName = 'userMenu';
-
-        console.log(this.userService)
     }
 
     ngOnInit() {
@@ -40,12 +37,8 @@ export class UserMenuComponent implements OnInit {
         console.log(this.controllerName, 'clickItems',[event]);
     }
     clickLogOut(event) : void {
-        this.logOutData = {};
-        this.userService.logOut(this.logOutData).subscribe((response)=> {
-            console.log(response);
-           // window.location.reload()
-        });
-        console.log(this.controllerName, 'clickLogOut',[event]);
+        console.log(this.controllerName, 'clickItems',[event]);
+        this.authService.logout();
     }
     clickSettings(event) : void {
         console.log(this.controllerName, 'clickSettings',[event]);

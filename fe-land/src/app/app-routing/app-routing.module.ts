@@ -7,11 +7,14 @@ import { HeaderComponent } from "../header/header.component";
 import { BlogComponent } from "../blog/blog.component";
 import { AboutComponent } from "../about/about.component";
 
+import {LoginViewComponent} from "../views/login-view/login-view.component";
+
 import { ExplorerComponent } from "../views/explorer/explorer/explorer.component";
 
 import { ResolveApi } from "../services/resolve-api";
 
 import { AuthGuard } from "../guards/auth.guard";
+
 
 const routes : Routes =[
     {
@@ -21,6 +24,11 @@ const routes : Routes =[
         data: {
             role: 'admin'
         }
+    },
+    {
+        path: 'login',
+        component: LoginViewComponent,
+        pathMatch: 'full',
     },
     {
         path: 'header',

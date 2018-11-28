@@ -18,13 +18,17 @@ export class RoleGuard implements CanActivate {
     state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean {
 
-    const user = this.theAuthService.decode();
-
-    if (user.role === next.data.role){
-      return true;
+    //const user = this.theAuthService.decode();
+/*
+    if(user){
+      if (user.role === next.data.role){
+        return true;
+      }
     }
-
+*/
     this.theRouter.navigate(['/404']);
+
     return false;
   }
+
 }

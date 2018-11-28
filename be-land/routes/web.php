@@ -12,6 +12,10 @@
 */
 use Illuminate\Http\Request;
 
+Route::post('login', 'UserController@login');
+Route::post('register', 'UserController@register');
+Route::get('logout', 'UserController@logout');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -52,7 +56,7 @@ Route::post('/mock', function (){
 });
 
 /* Routes used for auth */
-Auth::routes();
+//Auth::routes();
 
 Route::middleware('auth')->group(function () {
 

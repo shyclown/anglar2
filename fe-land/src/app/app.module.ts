@@ -31,11 +31,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { CreateFolderDialogModule } from './views/in-dialog/create-folder-dialog/create-folder-dialog.module';
 
 import { CardModule } from './_components/card/card.module';
-import { InDialogModule } from "./views/in-dialog/in-dialog.module";
-
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { UserMenuComponent } from './user-menu/user-menu.component';
+
+import {LoginViewComponent} from "./views/login-view/login-view.component";
 
 @NgModule({
   declarations: [
@@ -45,9 +45,8 @@ import { UserMenuComponent } from './user-menu/user-menu.component';
     DataComponent,
     BlogComponent,
     AboutComponent,
-
     UserMenuComponent,
-
+      LoginViewComponent
   ],
   entryComponents: [
     //  LoginFormComponent
@@ -58,7 +57,6 @@ import { UserMenuComponent } from './user-menu/user-menu.component';
     CardModule,
    // MatCardModule,
    // CreateFolderDialogModule,
-    InDialogModule,
     MatToolbarModule,
     MatButtonModule,
     BrowserModule,
@@ -66,6 +64,7 @@ import { UserMenuComponent } from './user-menu/user-menu.component';
     AppRoutingModule,
     AngularFontAwesomeModule,
     ExplorerModule,
+      AuthModule,
 
     DirectivesModule,
     FormsModule,

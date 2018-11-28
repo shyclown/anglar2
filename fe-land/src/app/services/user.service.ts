@@ -36,7 +36,8 @@ const httpOptions = {
         )
 };
 
-const logInUrl = "/login";
+const logInUrl = "/api/login";
+
 const logOutUrl = "/logout";
 const registerUrl = "/register";
 
