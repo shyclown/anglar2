@@ -6,8 +6,9 @@ import {catchError, map, tap} from 'rxjs/operators';
 import {Observable, BehaviorSubject, of} from "rxjs";
 
 import { User } from '../_models/user.model';
-import { LogOut } from "./user.service";
+
 import { HttpHeaders } from "@angular/common/http";
+
 
 const httpOptions = {
     headers: new HttpHeaders(
@@ -51,13 +52,19 @@ export class AuthService {
 
     login( email: string, password: string ){
         return this.http.post<any>(`/login`, { email, password })
-            .pipe( map( user => {
+            .pipe(
+                tap(()=>{ console.log('trying log in...')}),
+                map( user => {
                 if (user && user.token) {
                     AuthService.removeUser();
                     AuthService.setUser(user)
                 }
                 return user;
-            }))
+                }),
+                catchError(this.handleError<any>('Login: Could not log in!'))
+            )
+
+
     }
 
     logout(){
@@ -72,11 +79,21 @@ export class AuthService {
 
     };
 
-    static isAuthenticated(){ return AuthService.getUser() !== null }
-    static removeUser(){ localStorage.removeItem("loggedInUser") }
-    static setUser(user: string) { localStorage.setItem("loggedInUser", JSON.stringify(user)) }
-    static getUser(){ return JSON.parse(localStorage.getItem("loggedInUser")) }
-    static getToken() { return AuthService.getUser().token }
+    static isAuthenticated(){
+        return AuthService.getUser() !== null
+    }
+    static removeUser(){
+        localStorage.removeItem("loggedInUser")
+    }
+    static setUser(user: string) {
+        localStorage.setItem("loggedInUser", JSON.stringify(user))
+    }
+    static getUser(){
+        return JSON.parse(localStorage.getItem("loggedInUser"))
+    }
+    static getToken() {
+        return AuthService.getUser().token
+    }
 
 
 

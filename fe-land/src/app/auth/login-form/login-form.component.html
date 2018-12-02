@@ -1,83 +1,76 @@
-
-<mat-tab-group
-        mat-stretch-tabs
->
-
-      <mat-tab ngClass="auth" label="Login"  mat-stretch-tabs>
+<mat-tab-group mat-stretch-tabs>
+    <mat-tab ngClass="auth" label="Login" mat-stretch-tabs>
         <mat-card>
-          <mat-form-field ngClass="full">
-              <input
-                      [(ngModel)]="login"
-                      matInput
-                      name="login"
-                      placeholder="Username"
-              >
-          </mat-form-field>
-          <mat-form-field ngClass="full">
-              <input
-                      [(ngModel)]="password"
-                      matInput
-                      name="password"
-                      type="password"
-                      placeholder="Password"
-              >
-          </mat-form-field>
-
-
-          <mat-card-content>
-          <mat-checkbox  [(ngModel)]="staySigned" >Stay signed in</mat-checkbox>
-          </mat-card-content>
-          <mat-card-actions align="right">
-            <button
-                    mat-button
-                    color="primary"
-                    (click)="logIn()"
-            >
-              Log In
-            </button>
-          </mat-card-actions>
-        </mat-card>
-      </mat-tab>
-
-      <mat-tab ngClass="auth" label="Sign In"  mat-stretch-tabs>
-        <mat-card>
-
-          <mat-form-field ngClass="full">
-              <input
-                      matInput
-                      name="login"
-                      placeholder="Username"
-              >
-          </mat-form-field>
             <mat-form-field ngClass="full">
                 <input
-                        matInput
-                        name="email"
-                        type="email"
-                        placeholder="Email"
+                    [(ngModel)]="login"
+                    matInput
+                    name="login"
+                    placeholder="Username"
                 >
             </mat-form-field>
-          <mat-form-field ngClass="full">
-              <input
-                      matInput
-                      name="password"
-                      type="password"
-                      placeholder="Password"
-              >
-          </mat-form-field>
+            <mat-form-field ngClass="full">
+                <input
+                    [(ngModel)]="password"
+                    matInput
+                    name="password"
+                    type="password"
+                    placeholder="Password"
+                >
+            </mat-form-field>
             <mat-card-content>
-            Login form information text
-          </mat-card-content>
-          <mat-card-actions align="right">
-            <button
+                <mat-checkbox [(ngModel)]="staySigned" >
+                    Stay signed in
+                </mat-checkbox>
+            </mat-card-content>
+            <mat-card-actions align="right">
+                <button
                     mat-button
-                    (click)="signIn()"
-            >
-              Sign In
-            </button>
-          </mat-card-actions>
+                    color="primary"
+                    (click)="loginUser()"
+                >
+                    Log In
+                </button>
+            </mat-card-actions>
         </mat-card>
-      </mat-tab>
-
+    </mat-tab>
+    <mat-tab ngClass="auth" label="Sign In"  mat-stretch-tabs>
+        <mat-card>
+            <mat-form-field ngClass="full">
+                <input
+                    matInput
+                    name="login"
+                    placeholder="Username"
+                >
+            </mat-form-field>
+            <mat-form-field ngClass="full">
+                <input
+                    matInput
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                >
+            </mat-form-field>
+            <mat-form-field ngClass="full">
+                <input
+                    matInput
+                    name="password"
+                    type="password"
+                    placeholder="Password"
+                >
+            </mat-form-field>
+            <mat-card-content>
+                Login form information text
+            </mat-card-content>
+            <mat-card-actions align="right">
+                <button
+                    mat-button
+                    (click)="registerUser()"
+                >
+                    Register
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-tab>
 </mat-tab-group>
 

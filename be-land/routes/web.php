@@ -44,17 +44,6 @@ Route::post('/save_folder', function (Request $request){
 
 });
 
-
-Route::post('/mock', function (){
-
-    $folders = \App\Folder::all();
-
-    return response()->json([
-        'folders'=> $folders
-    ]);
-
-});
-
 /* Routes used for auth */
 //Auth::routes();
 

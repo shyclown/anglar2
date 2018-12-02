@@ -1,5 +1,5 @@
-import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
-import {MatDialog} from "@angular/material/dialog";
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { MatDialog } from "@angular/material/dialog";
 
 @Component({
   selector: 'app-login-view',
@@ -10,15 +10,13 @@ export class LoginViewComponent implements OnInit {
 
   constructor(
       public dialog: MatDialog
-  ) { }
+  ) {}
 
   @ViewChild('loginFormDialog') loginFormDialog: TemplateRef<any>;
   ngOnInit() {
     /*  */
     setTimeout(() => this.openLoginDialog(),100);
   }
-
-
 
   openLoginDialog(): void {
       const dialogRef = this.dialog.open(

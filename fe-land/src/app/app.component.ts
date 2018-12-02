@@ -1,6 +1,7 @@
 import {Component, TemplateRef, ViewChild} from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import {AuthService} from "./services/auth.service";
+import {Router} from "@angular/router";
+import {InitService} from "./services/init.service";
 
 
 @Component({
@@ -15,13 +16,19 @@ export class AppComponent {
     user:{};
     title = 'Landfield';
 
-    constructor() {
-        this.user = AuthService.getUser().user;
-        console.log(this.user);
+    constructor(
+        private initService: InitService,
+        private theRoute: Router
+    ) {
+        /* to receive token */
+        this.initService.setToken();
     }
 
     ngOnInit() {
-
+        this.user = AuthService.getUser();
+        if(!this.user){
+            this.theRoute.navigate(["login"]);
+        }
     }
 
 }

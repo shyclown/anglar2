@@ -1,6 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatCard} from "@angular/material";
-import UserService, { LogIn, Register } from "../../services/user.service";
+import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../../services/auth.service";
 
 @Component({
@@ -13,20 +11,17 @@ export class LoginFormComponent implements OnInit {
     password: string;
     login: string;
     staySigned: boolean;
-
-
-    loginData: LogIn;
-    registerData: Register;
+    loginData: {
+        email: string,
+        password: string
+    };
 
     constructor(
-        private userService: UserService,
         private authService: AuthService
+    ) { }
 
-    ) {
-
-    }
-
-    logIn(){
+    loginUser()
+    {
         this.loginData = {
             email : this.login,
             password : this.password
@@ -38,20 +33,12 @@ export class LoginFormComponent implements OnInit {
         ).subscribe((response)=>{
             console.log('login: ', response)
         });
-
     }
 
-    signIn(){
+    registerUser(){
         console.log('login', this)
     }
 
     ngOnInit() {
     }
-/*
-  @ViewChild(MatCard) menu: MatCard;
-  constructor() { }
-
-  ngOnInit() {
-  }
-*/
 }

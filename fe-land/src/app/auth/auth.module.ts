@@ -16,7 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { DirectivesModule } from "../directives/directives.module";
 import { MatTabsModule } from "@angular/material";
 import { MatCheckboxModule } from "@angular/material";
-import  UserService  from "../services/user.service";
+
 
 @NgModule({
   imports: [
