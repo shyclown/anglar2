@@ -19,6 +19,7 @@ import { MatListModule } from '@angular/material/list';
 import { UserMenuComponent } from './user-menu/user-menu.component';
 import { LoginViewComponent } from "./views/login-view/login-view.component";
 import { HomeViewComponent } from './views/home-view/home-view.component';
+import { PublicViewComponent } from './views/public-view/public-view.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HomeViewComponent } from './views/home-view/home-view.component';
       DataComponent,
       UserMenuComponent,
       LoginViewComponent,
-      HomeViewComponent
+      HomeViewComponent,
+      PublicViewComponent
   ],
   entryComponents: [
     //  LoginFormComponent
@@ -53,6 +55,4 @@ import { HomeViewComponent } from './views/home-view/home-view.component';
   schemas:[ NO_ERRORS_SCHEMA ],
 })
 export class AppModule {
-
-
 }

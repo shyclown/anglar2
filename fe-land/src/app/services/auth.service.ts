@@ -1,12 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import {catchError, map, tap} from 'rxjs/operators';
+import {
+    catchError,
+    map,
+    tap
+} from 'rxjs/operators';
 
-import {Observable, BehaviorSubject, of} from "rxjs";
-
-import { User } from '../_models/user.model';
-
+import {
+    Observable,
+    //BehaviorSubject,
+    of
+} from "rxjs";
 import { HttpHeaders } from "@angular/common/http";
 
 
@@ -25,18 +30,16 @@ const httpOptions = {
 })
 export class AuthService {
 
-    private currentUserSubject: BehaviorSubject<User>;
-    public currentUser: Observable<User>;
+    //private currentUserSubject: BehaviorSubject<User>;
+    //public currentUser: Observable<User>;
+
+    returnUrl: string;
 
     constructor(
         private http: HttpClient,
-        private theRoute: Router
-    ) {
-        this.currentUserSubject = new BehaviorSubject<User>(
-            JSON.parse(localStorage.getItem('currentUser'))
-        );
-        this.currentUser = this.currentUserSubject.asObservable();
-    }
+        private theRouter: Router,
+        private theRoute: ActivatedRoute,
+    ) {  }
 
     private handleError<T> (operation = 'operation', result?: T)
     {
@@ -50,18 +53,35 @@ export class AuthService {
         };
     }
 
-    login( email: string, password: string ){
-        return this.http.post<any>(`/login`, { email, password })
+    login(
+        email: string,
+        password: string
+    ){
+        return this.http.post<any>(
+                `/login`,
+                { email, password }
+            )
             .pipe(
-                tap(()=>{ console.log('trying log in...')}),
-                map( user => {
-                if (user && user.token) {
-                    AuthService.removeUser();
-                    AuthService.setUser(user)
-                }
-                return user;
+                tap(()=>{
+                    console.log('trying log in...')
                 }),
-                catchError(this.handleError<any>('Login: Could not log in!'))
+                map( user => {
+                    if (user && user.token)
+                    {
+                        AuthService.removeUser();
+                        AuthService.setUser(user);
+
+                        this.returnUrl = this.theRoute.snapshot.queryParams['returnUrl'] || '/';
+                        console.log(this.returnUrl);
+                        this.theRouter.navigateByUrl(this.returnUrl);
+                    }
+                    return user;
+                }),
+                catchError(
+                    this.handleError<any>(
+                        'Login: Could not log in!'
+                    )
+                )
             )
 
 
@@ -70,9 +90,8 @@ export class AuthService {
     logout(){
         this.http.get( `/logout`).subscribe(
             () => {
-                console.log(`User logged out!`);
                 AuthService.removeUser();
-                this.theRoute.navigate(["login"]);
+                this.theRouter.navigate(["home"]);
                 return {};
             }
         );

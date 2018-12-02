@@ -8,14 +8,12 @@ import { MatDialog } from "@angular/material/dialog";
 })
 export class LoginViewComponent implements OnInit {
 
-  constructor(
-      public dialog: MatDialog
-  ) {}
+  constructor( public dialog: MatDialog ) { }
 
-  @ViewChild('loginFormDialog') loginFormDialog: TemplateRef<any>;
+  @ViewChild('loginFormDialog')
+  loginFormDialog: TemplateRef<any>;
   ngOnInit() {
-    /*  */
-    setTimeout(() => this.openLoginDialog(),100);
+      setTimeout(() => this.openLoginDialog(),100);
   }
 
   openLoginDialog(): void {
@@ -27,11 +25,10 @@ export class LoginViewComponent implements OnInit {
               data: {}
           }
       );
-
       dialogRef.afterClosed().subscribe(result => {
           console.log('The dialog was closed', result);
-
       });
   }
+
 
 }

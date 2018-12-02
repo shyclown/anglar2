@@ -1,6 +1,6 @@
 import {Component, TemplateRef, ViewChild} from '@angular/core';
 import {AuthService} from "./services/auth.service";
-import {Router} from "@angular/router";
+import {Router, ActivatedRoute} from "@angular/router";
 import {InitService} from "./services/init.service";
 
 
@@ -18,16 +18,17 @@ export class AppComponent {
 
     constructor(
         private initService: InitService,
-        private theRoute: Router
+        private theRouter: Router,
+        private theRoute: ActivatedRoute
     ) {
-        /* to receive token */
         this.initService.setToken();
     }
 
     ngOnInit() {
         this.user = AuthService.getUser();
-        if(!this.user){
-            this.theRoute.navigate(["login"]);
+        if (!this.user){
+            console.log(this.theRoute);
+            //this.theRouter.navigate(["home"]);
         }
     }
 

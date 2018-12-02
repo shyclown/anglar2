@@ -2,25 +2,25 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes, CanActivate } from '@angular/router';
 
-import {LoginViewComponent} from "../views/login-view/login-view.component";
+import { LoginViewComponent } from "../views/login-view/login-view.component";
 import { ExplorerComponent } from "../views/explorer/explorer/explorer.component";
 
 import { ResolveApi } from "../services/resolve-api";
 
 import { AuthGuard } from "../guards/auth.guard";
-import {HomeViewComponent} from "../views/home-view/home-view.component";
+import { HomeViewComponent } from "../views/home-view/home-view.component";
 
 
 const routes : Routes =[
     {
         path: 'login',
         component: LoginViewComponent,
-        pathMatch: 'full',
+       // pathMatch: 'full',
     },
     {
         path: 'home',
         component: HomeViewComponent,
-        pathMatch: 'full',
+       // pathMatch: 'full',
         canActivate: [ AuthGuard ]
     },
     {
