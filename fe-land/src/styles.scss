@@ -1,13 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import './custom-theme';
 
-$fa-font-path: "../node_modules/font-awesome/fonts";
-@import "../node_modules/font-awesome/scss/font-awesome.scss";
 html,body{
     padding: 0px;
     margin: 0px;
 }
-body { margin: 0; }
 
 
 .customDialog mat-dialog-container{
@@ -21,3 +18,5 @@ body { margin: 0; }
 }
 
 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

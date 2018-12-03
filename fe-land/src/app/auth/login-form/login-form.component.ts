@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from "../../services/auth.service";
+import { AuthService } from "../../services/auth.service";
 import { Router, ActivatedRoute } from '@angular/router';
+import { MatDialog } from "@angular/material";
 
 @Component({
   selector: 'app-login-form',
@@ -23,10 +24,10 @@ export class LoginFormComponent implements OnInit {
         private authService: AuthService,
         private route: ActivatedRoute,
         private router: Router,
+        private dialogRef: MatDialog
     ) { }
 
-    loginUser()
-    {
+    loginUser() {
         this.loginData = {
             email : this.login,
             password : this.password
@@ -36,18 +37,15 @@ export class LoginFormComponent implements OnInit {
             this.loginData.email,
             this.loginData.password
         ).subscribe((response)=>{
-            console.log('login: ', response);
-            //this.router.navigateByUrl(this.returnUrl);
+            this.dialogRef.closeAll();
         });
     }
 
-    registerUser()
-    {
+    registerUser() {
         console.log('login', this)
     }
 
-    ngOnInit()
-    {
+    ngOnInit() {
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
         console.log('URL: ',this.returnUrl);
     }

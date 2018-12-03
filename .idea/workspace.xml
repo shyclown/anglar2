@@ -2,18 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0366fb9d-41bd-4f08-9db8-47a0ca358a82" name="Default" comment="init src">
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe-land/src/app/views/public-view.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/_components/card/card.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/_components/card/card.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/_components/card/card.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/_components/card/card.module.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/app.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe-land/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/guards/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/guards/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/connector/connector.module.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/connector/data/data.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/directives/directives.module.spec.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/fe-land/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/services/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/custom-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/custom-theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/styles.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,36 +105,36 @@
           <entry key="project.closed" value="13" />
           <entry key="project.open.time.10" value="20" />
           <entry key="project.open.time.11" value="5" />
-          <entry key="project.open.time.12" value="3" />
+          <entry key="project.open.time.12" value="4" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.8" value="14" />
           <entry key="project.open.time.9" value="15" />
-          <entry key="project.opened" value="60" />
+          <entry key="project.opened" value="61" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="Angular2LanguageService" value="52" />
+          <entry key="Angular2LanguageService" value="53" />
           <entry key="TypeScriptServerServiceImpl" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="browserslist" value="1" />
+          <entry key="browserslist" value="2" />
           <entry key="css" value="2" />
           <entry key="env" value="1" />
           <entry key="folders" value="3" />
           <entry key="gitattributes" value="1" />
-          <entry key="gitignore" value="4" />
-          <entry key="html" value="110" />
+          <entry key="gitignore" value="5" />
+          <entry key="html" value="128" />
           <entry key="ico" value="1" />
           <entry key="item_tag" value="2" />
           <entry key="items" value="3" />
           <entry key="items_item_type_item_id_index" value="1" />
           <entry key="jpg" value="1" />
           <entry key="js" value="4" />
-          <entry key="json" value="22" />
+          <entry key="json" value="32" />
           <entry key="lock" value="1" />
           <entry key="md" value="1" />
           <entry key="migrations" value="3" />
@@ -130,12 +146,12 @@
           <entry key="password_resets" value="4" />
           <entry key="php" value="242" />
           <entry key="rnc" value="1" />
-          <entry key="scss" value="83" />
+          <entry key="scss" value="108" />
           <entry key="sql" value="1" />
           <entry key="tag_relations" value="2" />
           <entry key="taggables" value="4" />
           <entry key="tags" value="3" />
-          <entry key="ts" value="443" />
+          <entry key="ts" value="487" />
           <entry key="users" value="4" />
         </counts>
       </usages-collector>
@@ -143,18 +159,18 @@
         <counts>
           <entry key="CSS" value="2" />
           <entry key="Database Element" value="41" />
-          <entry key="HTML" value="110" />
+          <entry key="HTML" value="128" />
           <entry key="Image" value="2" />
-          <entry key="JSON" value="22" />
+          <entry key="JSON" value="32" />
           <entry key="JavaScript" value="4" />
           <entry key="Markdown" value="1" />
           <entry key="PHP" value="242" />
-          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="PLAIN_TEXT" value="9" />
           <entry key="RNG Compact" value="1" />
-          <entry key="SCSS" value="83" />
+          <entry key="SCSS" value="108" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="1" />
-          <entry key="TypeScript" value="443" />
+          <entry key="TypeScript" value="487" />
           <entry key="tsconfig" value="1" />
         </counts>
       </usages-collector>
@@ -162,53 +178,66 @@
         <counts>
           <entry key="cell" value="36" />
           <entry key="gitignore" value="8" />
-          <entry key="html" value="3436" />
+          <entry key="html" value="4722" />
           <entry key="js" value="18" />
-          <entry key="json" value="3" />
+          <entry key="json" value="14" />
           <entry key="md" value="630" />
           <entry key="php" value="6754" />
-          <entry key="scss" value="1145" />
-          <entry key="ts" value="13744" />
-          <entry key="txt" value="349" />
+          <entry key="scss" value="1426" />
+          <entry key="ts" value="14353" />
+          <entry key="txt" value="375" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="3435" />
-          <entry key="JSON" value="3" />
+          <entry key="HTML" value="4721" />
+          <entry key="JSON" value="14" />
           <entry key="JavaScript" value="19" />
           <entry key="Markdown" value="630" />
           <entry key="PHP" value="6754" />
-          <entry key="PLAIN_TEXT" value="357" />
-          <entry key="SCSS" value="1145" />
+          <entry key="PLAIN_TEXT" value="383" />
+          <entry key="SCSS" value="1426" />
           <entry key="Scratch" value="36" />
-          <entry key="TypeScript" value="13744" />
+          <entry key="TypeScript" value="14353" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/services/auth.service.ts">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="62" column="13" lean-forward="true" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+            <state relative-caret-position="465">
+              <caret line="32" column="10" lean-forward="true" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/guards/auth.guard.ts">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="192">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -216,8 +245,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+            <state relative-caret-position="230">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -225,23 +254,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.ts">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.scss">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+            <state relative-caret-position="115">
+              <caret line="5" column="37" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding>
-                <element signature="e#0#64#0" expanded="true" />
+                <element signature="e#0#58#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.html">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="161">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -249,49 +292,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-199">
-              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+            <state relative-caret-position="138">
+              <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
               <folding>
-                <element signature="e#0#58#0" expanded="true" />
-                <element signature="e#434#487#0" expanded="true" />
+                <element signature="e#434#512#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#74#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.spec.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#73#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.ts">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+            <state relative-caret-position="253">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="n#style#0;n#button#0;n#mat-toolbar#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -307,7 +324,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>styles.css</find>
       <find>css</find>
       <find>scri</find>
       <find>cooki</find>
@@ -337,6 +353,7 @@
       <find>get</find>
       <find>UserServ</find>
       <find>login'</find>
+      <find>font-awesome.cs</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -345,20 +362,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/fe-land/src/app/views/in-dialog/create-folder-dialog/create-folder-dialog.component.html" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/folder.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/user-menu/user-menu.component.html" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/views/explorer/create-folder-form/create-folder-form.component.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/login-form/login-form.component.html" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/login-form/login-form.component.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/sign-in-form/sign-in-form.component.html" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/_views/login/login.component.scss" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/_views/login/login.module.ts" />
-        <option value="$PROJECT_DIR$/fe-land/package.json" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/blog/blog.component.scss" />
-        <option value="$PROJECT_DIR$/fe-land/src/styles.scss" />
         <option value="$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.scss" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/app.component.scss" />
         <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/Auth/ResetPasswordController.php" />
         <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/Auth/RegisterController.php" />
@@ -385,17 +389,30 @@
         <option value="$PROJECT_DIR$/fe-land/src/app/user-menu/user-menu.component.ts" />
         <option value="$PROJECT_DIR$/be-land/routes/web.php" />
         <option value="$PROJECT_DIR$/fe-land/src/app/services/user.service.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.html" />
         <option value="$PROJECT_DIR$/fe-land/src/app/services/init.service.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/guards/auth.guard.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.html" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/services/auth.service.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/services/auth.service.ts" />
+        <option value="$PROJECT_DIR$/fe-land/angular.json" />
+        <option value="$PROJECT_DIR$/fe-land/src/styles.scss" />
+        <option value="$PROJECT_DIR$/fe-land/src/index.html" />
+        <option value="$PROJECT_DIR$/fe-land/package.json" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.html" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/app.component.scss" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.scss" />
+        <option value="$PROJECT_DIR$/fe-land/src/custom-theme.scss" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.html" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.module.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.scss" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/views/public-view.module.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.html" />
       </list>
     </option>
   </component>
@@ -506,7 +523,7 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1161" />
+    <option name="width" value="960" />
     <option name="height" value="1160" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -540,6 +557,23 @@
               <item name="fe-land" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="fe-land" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="_components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="fe-land" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="_components" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
@@ -646,6 +680,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="explorer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="fe-land" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="home-view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -668,6 +711,20 @@
             </path>
             <path>
               <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="fe-land" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="fe-land" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="environments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
@@ -685,20 +742,21 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
-    <property name="ts.external.directory.path" value="C:\wamp64\www\landfield\fe-land\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\TheForce\AppData\Local\JetBrains\Toolbox\apps\PhpStorm\ch-0\182.3911.43\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\landfield\fe-land\src\app\services" />
-      <recent name="C:\wamp64\www\landfield" />
-      <recent name="C:\wamp64\www\landfield\be-land\public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\landfield\fe-land\src\assets" />
       <recent name="C:\wamp64\www\landfield\fe-land\src\app\views" />
       <recent name="C:\wamp64\www\landfield\fe-land\src\app\user-menu" />
       <recent name="C:\wamp64\www\landfield\fe-land\src\app\auth" />
       <recent name="C:\wamp64\www\landfield\fe-land\src\app\_views\login" />
-      <recent name="C:\wamp64\www\landfield\fe-land\src\app\views\in-dialog" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\landfield\fe-land\src\app\_components\panel" />
+      <recent name="C:\wamp64\www\landfield\fe-land\src\app\services" />
+      <recent name="C:\wamp64\www\landfield" />
+      <recent name="C:\wamp64\www\landfield\be-land\public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -814,6 +872,7 @@
       <workItem from="1543521093292" duration="2090000" />
       <workItem from="1543684885500" duration="2988000" />
       <workItem from="1543742594045" duration="12966000" />
+      <workItem from="1543825549347" duration="23423000" />
     </task>
     <task id="LOCAL-00001" summary="init src">
       <created>1532195183376</created>
@@ -987,13 +1046,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="447480000" />
+    <option name="totallyTimeSpent" value="470903000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1161" height="1160" extended-state="0" />
+    <frame x="0" y="0" width="960" height="1160" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2719855" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30931264" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4977778" weight="0.32941177" />
@@ -1006,15 +1065,15 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4490022" weight="0.27263683" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4490022" weight="0.2719919" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4989339" weight="0.31749243" />
-      <window_info anchor="bottom" id="TypeScript" order="12" sideWeight="0.49445677" weight="0.33945945" />
+      <window_info anchor="bottom" id="TypeScript" order="12" sideWeight="0.49445677" weight="0.33872598" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5509978" side_tool="true" weight="0.2851365" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32968128" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.118767" />
+      <window_info anchor="right" id="Database" order="3" weight="0.03436807" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1070,216 +1129,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="init src" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/be-land/app/Exceptions/Handler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-621" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Middleware/RedirectIfAuthenticated.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/vendor/laravel/framework/src/Illuminate/Auth/AuthManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="30" column="43" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/login.component.ts" />
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/interceptor/jwt.interceptor.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/guards/role.guard.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/in-dialog/create-folder-dialog/create-folder-dialog.component.ts" />
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/in-dialog/create-folder-dialog/create-folder-dialog.component.html" />
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/in-dialog/in-dialog.component.html" />
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/in-dialog/in-dialog.module.ts" />
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/in-dialog/in-dialog.component.ts" />
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/user-menu/user-menu.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/node_modules/@angular/common/http/src/client.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-215">
-          <caret line="575" column="22" selection-start-line="575" selection-start-column="19" selection-end-line="575" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
-          <folding>
-            <element signature="e#45#81#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/interceptor/error.interceptor.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/services/user.service.ts" />
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/card/card.component.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/card/card.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/card/card.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
-          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/services/init.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_models/user.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/header/header.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/header/header.component.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/header/header.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/header/header.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/sidenav/sidenav.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/sidenav/sidenav.component.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/sidenav/sidenav.component.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/config/config.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/home-view/home-view.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/home-view/home-view.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1290,63 +1139,12 @@
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/connector/data/data.component.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-797">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/guards/auth.guard.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
+        <state relative-caret-position="575">
           <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/services/auth.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="62" column="13" lean-forward="true" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1360,26 +1158,341 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.module.ts">
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-199">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        <state relative-caret-position="138">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
           <folding>
-            <element signature="e#0#58#0" expanded="true" />
-            <element signature="e#434#487#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/services/auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/card/card.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/config.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
+        <state relative-caret-position="690">
           <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/assets/config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/node_modules/@angular/material/typings/icon/index.metadata.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2072" selection-start-column="1885" selection-end-column="2072" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/node_modules/@angular/material/card/typings/card-module.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/angular.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="53" column="22" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/user-menu/user-menu.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/node_modules/@angular/material/typings/esm5/card/index.metadata.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4164" selection-start-column="4164" selection-end-column="4164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/node_modules/@angular/material/card.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/node_modules/@angular/material/card/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/node_modules/@angular/material/card/typings/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/node_modules/@angular/material/card/typings/public-api.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/node_modules/@angular/material/card/typings/card.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/polyfills.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/user-menu/user-menu.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/user-menu/user-menu.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/home-view/home-view.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1231">
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/auth/auth.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-587">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/directives/directives.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-end-line="16" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/browserslist">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/node_modules/@angular/material/_theming.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="1299" column="10" selection-start-line="1299" selection-start-column="10" selection-end-line="1299" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/custom-theme.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#mat-toolbar#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+          <folding>
+            <element signature="e#434#512#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="32" column="10" lean-forward="true" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

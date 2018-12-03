@@ -9,9 +9,15 @@ import { ResolveApi } from "../services/resolve-api";
 
 import { AuthGuard } from "../guards/auth.guard";
 import { HomeViewComponent } from "../views/home-view/home-view.component";
+import {PublicViewComponent} from "../views/public-view/public-view.component";
 
 
 const routes : Routes =[
+    {
+        path: '',
+        component: PublicViewComponent,
+       // pathMatch: 'full',
+    },
     {
         path: 'login',
         component: LoginViewComponent,

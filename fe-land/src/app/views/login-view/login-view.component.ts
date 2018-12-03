@@ -22,7 +22,9 @@ export class LoginViewComponent implements OnInit {
           {
               panelClass: 'customDialog',
               maxWidth: '250px',
-              data: {}
+              data: {},
+              disableClose: true,
+              closeOnNavigation: true
           }
       );
       dialogRef.afterClosed().subscribe(result => {

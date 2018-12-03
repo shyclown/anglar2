@@ -91,7 +91,7 @@ export class AuthService {
         this.http.get( `/logout`).subscribe(
             () => {
                 AuthService.removeUser();
-                this.theRouter.navigate(["home"]);
+                this.theRouter.navigateByUrl("/");
                 return {};
             }
         );
