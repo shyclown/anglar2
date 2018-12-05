@@ -34,6 +34,5 @@ class CreateTagsTable extends Migration
     {
         Schema::dropIfExists('taggables');
         Schema::dropIfExists('tags');
-
     }
 }

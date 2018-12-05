@@ -13,15 +13,16 @@ import { MatCardModule } from '@angular/material';
 import { AngularFontAwesomeModule } from "angular-font-awesome";
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDividerModule } from '@angular/material/divider';
-import { PanelComponent } from "../_components/panel/panel.component";
+
+import { PanelModule } from "../_components/panel.module";
 
 
 @NgModule({
   declarations: [
-      PublicViewComponent,
-      PanelComponent,
+      PublicViewComponent
   ],
   imports: [
+      PanelModule,
       MatToolbarModule,
       CommonModule,
       MatCardModule,
@@ -35,7 +36,6 @@ import { PanelComponent } from "../_components/panel/panel.component";
   ],
   exports:[
       PublicViewComponent,
-      PanelComponent
   ],
     schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

@@ -30,7 +30,7 @@ class Folder extends Model
         return $this->morphOne(Item::class, 'item');
     }
 
-    /* Folder can have many Tags */
+    /* Folder can have many Tags through Item*/
     public function tags(){
         return $this->item()->tags();
     }

@@ -2,34 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0366fb9d-41bd-4f08-9db8-47a0ca358a82" name="Default" comment="init src">
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/views/public-view.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/be-land/database/migrations/2018_12_04_195714_create_projects_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe-land/src/app/_components/panel.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe-land/src/app/views/project-view.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/_components/card/card.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/_components/card/card.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/_components/card/card.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/_components/card/card.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/be-land/app/Folder.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/Folder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be-land/app/Http/Controllers/FolderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/Http/Controllers/FolderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be-land/database/migrations/2018_07_15_124844_create_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/database/migrations/2018_07_15_124844_create_tags_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be-land/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/be-land/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe-land/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/app.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe-land/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/connector/connector.module.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/connector/data/data.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/directives/directives.module.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/custom-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/custom-theme.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/public-view.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/public-view.module.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,238 +52,60 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="landfield@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="landfield: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="landfield: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="landfield@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="landfield: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="folders: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="landfield: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="folders: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="landfield@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="landfield: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="items: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="landfield: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="items: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="landfield@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="landfield: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="taggables: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="landfield: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tag_relations: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="landfield@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="landfield: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="users: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="landfield: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="taggables: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="149217481">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="13" />
-          <entry key="project.open.time.10" value="20" />
-          <entry key="project.open.time.11" value="5" />
-          <entry key="project.open.time.12" value="4" />
-          <entry key="project.open.time.13" value="2" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.8" value="14" />
-          <entry key="project.open.time.9" value="15" />
-          <entry key="project.opened" value="61" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.js.language.service.starts">
-        <counts>
-          <entry key="Angular2LanguageService" value="53" />
-          <entry key="TypeScriptServerServiceImpl" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="browserslist" value="2" />
-          <entry key="css" value="2" />
-          <entry key="env" value="1" />
-          <entry key="folders" value="3" />
-          <entry key="gitattributes" value="1" />
-          <entry key="gitignore" value="5" />
-          <entry key="html" value="128" />
-          <entry key="ico" value="1" />
-          <entry key="item_tag" value="2" />
-          <entry key="items" value="3" />
-          <entry key="items_item_type_item_id_index" value="1" />
-          <entry key="jpg" value="1" />
-          <entry key="js" value="4" />
-          <entry key="json" value="32" />
-          <entry key="lock" value="1" />
-          <entry key="md" value="1" />
-          <entry key="migrations" value="3" />
-          <entry key="oauth_access_tokens" value="2" />
-          <entry key="oauth_auth_codes" value="2" />
-          <entry key="oauth_clients" value="3" />
-          <entry key="oauth_personal_access_clients" value="3" />
-          <entry key="oauth_refresh_tokens" value="3" />
-          <entry key="password_resets" value="4" />
-          <entry key="php" value="242" />
-          <entry key="rnc" value="1" />
-          <entry key="scss" value="108" />
-          <entry key="sql" value="1" />
-          <entry key="tag_relations" value="2" />
-          <entry key="taggables" value="4" />
-          <entry key="tags" value="3" />
-          <entry key="ts" value="487" />
-          <entry key="users" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="2" />
-          <entry key="Database Element" value="41" />
-          <entry key="HTML" value="128" />
-          <entry key="Image" value="2" />
-          <entry key="JSON" value="32" />
-          <entry key="JavaScript" value="4" />
-          <entry key="Markdown" value="1" />
-          <entry key="PHP" value="242" />
-          <entry key="PLAIN_TEXT" value="9" />
-          <entry key="RNG Compact" value="1" />
-          <entry key="SCSS" value="108" />
-          <entry key="SQL" value="1" />
-          <entry key="Scratch" value="1" />
-          <entry key="TypeScript" value="487" />
-          <entry key="tsconfig" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="cell" value="36" />
-          <entry key="gitignore" value="8" />
-          <entry key="html" value="4722" />
-          <entry key="js" value="18" />
-          <entry key="json" value="14" />
-          <entry key="md" value="630" />
-          <entry key="php" value="6754" />
-          <entry key="scss" value="1426" />
-          <entry key="ts" value="14353" />
-          <entry key="txt" value="375" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="4721" />
-          <entry key="JSON" value="14" />
-          <entry key="JavaScript" value="19" />
-          <entry key="Markdown" value="630" />
-          <entry key="PHP" value="6754" />
-          <entry key="PLAIN_TEXT" value="383" />
-          <entry key="SCSS" value="1426" />
-          <entry key="Scratch" value="36" />
-          <entry key="TypeScript" value="14353" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="32" column="10" lean-forward="true" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.scss">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="37" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="138">
-              <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
-                <element signature="e#434#512#0" expanded="true" />
+                <element signature="e#0#58#0" expanded="true" />
+                <element signature="e#435#513#0" expanded="true" />
+                <element signature="e#1295#1357#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1357">
+              <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -304,11 +113,76 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="483">
+              <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#mat-toolbar#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/be-land/routes/api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="463">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/be-land/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="667">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="e#7#389#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/be-land/app/Folder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="805">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/be-land/app/Project.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/FolderController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -362,10 +236,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.scss" />
-        <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/Auth/ResetPasswordController.php" />
-        <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/fe-land/src/app/auth/auth.module.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/user-menu/user-menu.module.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/services/folder.service.ts" />
@@ -380,21 +250,17 @@
         <option value="$PROJECT_DIR$/fe-land/src/app/guards/role.guard.ts" />
         <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/Auth/LoginController.php" />
         <option value="$PROJECT_DIR$/be-land/app/Http/Middleware/RedirectIfAuthenticated.php" />
-        <option value="$PROJECT_DIR$/be-land/routes/api.php" />
         <option value="$PROJECT_DIR$/fe-land/src/app/interceptor/jwt.interceptor.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/interceptor/httpError.interceptor.ts" />
         <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/in-dialog/in-dialog.component.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/interceptor/error.interceptor.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/user-menu/user-menu.component.ts" />
-        <option value="$PROJECT_DIR$/be-land/routes/web.php" />
         <option value="$PROJECT_DIR$/fe-land/src/app/services/user.service.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/services/init.service.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/guards/auth.guard.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.html" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/services/auth.service.ts" />
         <option value="$PROJECT_DIR$/fe-land/angular.json" />
         <option value="$PROJECT_DIR$/fe-land/src/styles.scss" />
@@ -402,34 +268,27 @@
         <option value="$PROJECT_DIR$/fe-land/package.json" />
         <option value="$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.html" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/fe-land/src/app/app.component.scss" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.scss" />
         <option value="$PROJECT_DIR$/fe-land/src/custom-theme.scss" />
         <option value="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.html" />
         <option value="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.module.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.scss" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/views/public-view.module.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.html" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/_components/panel.module.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/views/public-view.module.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/views/project-view.module.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/views/project-view/project-view.component.html" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/FolderController.php" />
+        <option value="$PROJECT_DIR$/be-land/routes/web.php" />
+        <option value="$PROJECT_DIR$/be-land/routes/api.php" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/fe-land/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/be-land/package.json" />
-      <path value="$PROJECT_DIR$/fe-land/package.json" />
-    </packageJsonPaths>
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/be-land/package.json" />
@@ -543,6 +402,38 @@
             <path>
               <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
               <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="be-land" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="be-land" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="be-land" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="be-land" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="be-land" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
               <item name="fe-land" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -590,15 +481,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
-              <item name="landfield" type="462c0819:PsiDirectoryNode" />
-              <item name="fe-land" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="login-form" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
@@ -707,6 +589,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="project-view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="fe-land" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="public-view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -741,22 +632,23 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
-    <property name="ts.external.directory.path" value="C:\Users\TheForce\AppData\Local\JetBrains\Toolbox\apps\PhpStorm\ch-0\182.3911.43\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\wamp64\www\landfield\fe-land\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\landfield\fe-land\src\app\_components" />
+      <recent name="C:\wamp64\www\landfield\fe-land\src\app\views" />
+      <recent name="C:\wamp64\www\landfield\fe-land\src\app\_components\panel" />
+      <recent name="C:\wamp64\www\landfield\fe-land\src\app\services" />
+      <recent name="C:\wamp64\www\landfield" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\landfield\fe-land\src\assets" />
       <recent name="C:\wamp64\www\landfield\fe-land\src\app\views" />
       <recent name="C:\wamp64\www\landfield\fe-land\src\app\user-menu" />
       <recent name="C:\wamp64\www\landfield\fe-land\src\app\auth" />
       <recent name="C:\wamp64\www\landfield\fe-land\src\app\_views\login" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\landfield\fe-land\src\app\_components\panel" />
-      <recent name="C:\wamp64\www\landfield\fe-land\src\app\services" />
-      <recent name="C:\wamp64\www\landfield" />
-      <recent name="C:\wamp64\www\landfield\be-land\public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -873,6 +765,10 @@
       <workItem from="1543684885500" duration="2988000" />
       <workItem from="1543742594045" duration="12966000" />
       <workItem from="1543825549347" duration="23423000" />
+      <workItem from="1543942640178" duration="607000" />
+      <workItem from="1543952837030" duration="86000" />
+      <workItem from="1543953059932" duration="3996000" />
+      <workItem from="1544040951575" duration="6404000" />
     </task>
     <task id="LOCAL-00001" summary="init src">
       <created>1532195183376</created>
@@ -1046,19 +942,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="470903000" />
+    <option name="totallyTimeSpent" value="481996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="960" height="1160" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30931264" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33333334" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4977778" weight="0.32941177" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49840087" weight="0.33367038" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4824281" visible="true" weight="0.20525783" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4824281" visible="true" weight="0.20497513" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1067,7 +962,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4490022" weight="0.2719919" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4989339" weight="0.31749243" />
-      <window_info anchor="bottom" id="TypeScript" order="12" sideWeight="0.49445677" weight="0.33872598" />
+      <window_info anchor="bottom" id="TypeScript" order="12" sideWeight="0.49445677" weight="0.33333334" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5509978" side_tool="true" weight="0.2851365" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32968128" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -1114,9 +1009,20 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -1129,90 +1035,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="init src" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/home-view/home-view.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/connector/data/data.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/guards/auth.guard.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/services/auth.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/card/card.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/config.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/assets/config.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/node_modules/@angular/material/typings/icon/index.metadata.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2072" selection-start-column="1885" selection-end-column="2072" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1286,31 +1108,13 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/user-menu/user-menu.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/user-menu/user-menu.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/login-view/login-view.component.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1330,13 +1134,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1231">
           <caret column="32" selection-start-column="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/auth/auth.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-587">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -1382,9 +1179,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
           <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1395,27 +1189,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.scss">
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.module.ts" />
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#mat-toolbar#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -1432,33 +1210,6 @@
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/auth/login-form/login-form.component.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-          <folding>
-            <element signature="e#434#512#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -1469,24 +1220,14 @@
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="32" column="10" lean-forward="true" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+        <state relative-caret-position="343">
+          <caret line="75" column="11" lean-forward="true" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1494,6 +1235,149 @@
             <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/project-view/project-view.component.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/auth/auth.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="41" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/project-view/project-view.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/project-view.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/project-view/project-view.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#mat-toolbar#0;n#panel-header#0;n#app-panel#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#mat-toolbar#0;n#panel-header#0;n#app-panel#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#mat-toolbar#0;n#panel-header#0;n#app-panel#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#mat-toolbar#0;n#panel-footer#0;n#app-panel#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#435#513#0" expanded="true" />
+            <element signature="e#1295#1357#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1357">
+          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#mat-toolbar#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app-routing/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/FolderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Project.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Folder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>

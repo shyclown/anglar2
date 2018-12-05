@@ -14,6 +14,7 @@ import {InitService} from "./services/init.service";
 export class AppComponent {
 
     user:{};
+    //title = 'Landfield';
     title = 'Landfield';
 
     constructor(

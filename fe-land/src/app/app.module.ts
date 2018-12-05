@@ -26,7 +26,8 @@ import { HomeViewComponent } from './views/home-view/home-view.component';
 //import { PublicViewComponent } from './views/public-view/public-view.component';
 
 import { PublicViewModule } from "./views/public-view.module";
-//import { PanelComponent } from './_components/panel/panel.component';
+import { ProjectViewModule } from "./views/project-view.module";
+
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { PublicViewModule } from "./views/public-view.module";
 
   imports: [
       AuthModule,
+      ProjectViewModule,
     //  MatCardModule,
       MatToolbarModule,
       PublicViewModule,

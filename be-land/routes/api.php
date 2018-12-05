@@ -30,14 +30,7 @@ Route::get('/user', function() {
 })->middleware('auth:api');
 
 
-Route::get('/folder', function (){
 
-    $folders = \App\Folder::all();
-    return response()->json([
-        'folders'=> $folders
-    ]);
-
-});
 
 Route::get('/convert/{nr}/{base}', function ($nr, $base){
 
@@ -73,64 +66,14 @@ Route::get('/convert/{nr}/{base}', function ($nr, $base){
 
 });
 
+Route::group(['middleware' => 'auth:api'], function() {
 
-Route::get('/folder/{id}', function ($id){
-    $folder = \App\Folder::where('id', $id)->get();
-
-    return response()->json([
-        'folder'=> $folder
-    ]);
-
-});
-
-Route::post('/folder/create', function ( Request $request){
-    $folder = new \App\Folder();
-    $folder->name = $request->name;
-    $folder->parent_folder_id = $request->parent_folder_id ?: null;
-
-    $folder->insert();
-
-    return response()->json([
-        'success'=> true,
-        'folder'=> App\Folder::where('id', $folder->id)->get()
-    ]);
-
-});
-
-
-Route::post('/folder/update', function ( Request $request){
-
-    /* Updated */
-    $folder = \App\Folder::where('id', $request->id);
-
-    if(!$folder){
-        return response()->json([
-            'error' => 'trying to update folder that does not exist'
-        ]);
-    }
-
-
-    if($request->parent_folder_id){
-        $parent = \App\Folder::where('id', $request->parent_folder_id)->exists();
-        if(!$parent){
-            return response()->json([
-                'error' => 'invalid parent id'
-            ]);
-        }
-    }
-
-    if(
-        $folder->update([
-            'parent_folder_id' => $request->parent_folder_id
-        ])
-    ){
-        $folder = \App\Folder::where('id', $request->id)->get();
-        return response()->json([
-            'success'=> true,
-            'folder'=> $folder
-        ]);
-    }
-
-
-
+    Route::resource('folder', 'FolderController')->except([ 'create', 'edit' ]);
+    Route::resource('project', 'ProjectController')->except([ 'create', 'edit' ]);
+/*
+        Route::get('/folder', 'FolderController@getFolders');
+        Route::get('/folder/{id}', 'FolderController@getFolder');
+        Route::post('/folder', 'FolderController@createFolder');
+        Route::put('/folder/{id}', 'FolderController@updateFolder');
+*/
 });

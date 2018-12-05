@@ -9,7 +9,9 @@ import { ResolveApi } from "../services/resolve-api";
 
 import { AuthGuard } from "../guards/auth.guard";
 import { HomeViewComponent } from "../views/home-view/home-view.component";
-import {PublicViewComponent} from "../views/public-view/public-view.component";
+import { PublicViewComponent } from "../views/public-view/public-view.component";
+
+import { ProjectViewComponent } from "../views/project-view/project-view.component";
 
 
 const routes : Routes =[
@@ -32,6 +34,12 @@ const routes : Routes =[
     {
         path: 'explorer',
         component: ExplorerComponent ,
+        canActivate: [ AuthGuard ]
+        // resolve: { 'token': ResolveApi }
+    }  ,
+    {
+        path: 'project/:id',
+        component: ProjectViewComponent ,
         canActivate: [ AuthGuard ]
         // resolve: { 'token': ResolveApi }
     }
