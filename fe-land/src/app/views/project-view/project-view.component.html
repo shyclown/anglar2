@@ -1,0 +1,49 @@
+<app-panel>
+    <panel-header>
+        <mat-toolbar style="background-color: white">
+        <div ngClass="panelText">
+            <span
+                class="mat-headline"
+                style="margin-bottom: 0px"
+            >
+                Stream Line
+            </span>
+            <span
+                class="mat-caption"
+            >
+                Project by Roman
+            </span>
+        </div>
+        </mat-toolbar>
+    </panel-header>
+    <panel-content>
+        <mat-list>
+            <mat-list-item
+                *ngFor="let project of projects; let i = index"
+                ngClass="listItem"
+                [attr.data-index]="i"
+            >
+                <p  matLine class="mat-body-strong">
+                    {{project.name}}
+                </p>
+                <p  matLine class="mat-caption">
+                    {{project.description}}
+                </p>
+                <mat-divider *ngIf="projects.length != i" >
+                </mat-divider>
+            </mat-list-item>
+        </mat-list>
+    </panel-content>
+    <panel-footer>
+        <mat-toolbar>
+            <div style="display: flex; flex-direction: column; justify-content: space-around">
+                <h4 class="mat-headline">
+                    Project
+                </h4>
+                <span class="mat-caption">
+                    Your project
+                </span>
+            </div>
+        </mat-toolbar>
+    </panel-footer>
+</app-panel>
