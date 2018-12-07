@@ -1,3 +1,7 @@
+.root{
+  height:calc( 100vw - 360px )
+}
+
 .panelText{
   display: flex;
   flex-direction: column;
@@ -7,3 +11,4 @@
 .listItem{
   background-color: white;
 }
+
