@@ -35,7 +35,8 @@ class ProjectController extends Controller
         return null;
     }
 
-    public function store( Request $request ){
+    public function store( Request $request )
+    {
         $project = new Project();
         $project->name = $request->name;
         $project->description = $request->description;
@@ -46,5 +47,10 @@ class ProjectController extends Controller
             'success'=> true,
             'folder'=> Project::where('id', $project->id)->get()
         ]);
+    }
+
+    public function destroy( Project $project )
+    {
+        $project->delete();
     }
 }

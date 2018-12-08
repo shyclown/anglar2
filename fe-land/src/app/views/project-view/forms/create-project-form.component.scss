@@ -1,0 +1,25 @@
+.root{
+  height:calc( 100vw - 360px )
+}
+
+.panelText{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.listItem{
+  background-color: white;
+}
+
+.example-form {
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.space {
+  flex: 1 1 auto;
+}

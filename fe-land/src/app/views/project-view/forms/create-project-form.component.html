@@ -1,0 +1,59 @@
+<app-panel ngClass="root">
+    <panel-header>
+        <mat-toolbar style="background-color: white">
+            <div ngClass="panelText">
+                <span
+                    class="mat-headline"
+                    style="margin-bottom: 0px"
+                >
+                    Create Project
+                </span>
+                <span
+                    class="mat-caption"
+                >
+                    new Project
+                </span>
+            </div>
+        </mat-toolbar>
+    </panel-header>
+    <panel-content>
+        <form
+            class="example-form"
+            [formGroup]="projectForm"
+            (ngSubmit)="onSubmit()"
+        >
+            <mat-form-field class="example-full-width">
+                <input formControlName="name"
+                       type="text"
+                       placeholder="Name"
+                       aria-label="Number"
+                       matInput
+                />
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input formControlName="description"
+                       type="text"
+                       placeholder="Description"
+                       aria-label="Number"
+                       matInput
+                />
+            </mat-form-field>
+            <mat-toolbar>
+                <span class="space"></span>
+                <button
+                    type="submit"
+                    color="primary"
+                    mat-flat-button
+                >
+                    Save Project
+                </button>
+            </mat-toolbar>
+        </form>
+    </panel-content>
+    <panel-footer>
+
+            <!-- Actions of form -->
+
+
+    </panel-footer>
+</app-panel>
