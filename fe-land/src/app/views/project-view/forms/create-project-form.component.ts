@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProjectService } from "src/app/services/project.service";
-import {FormControl, FormGroup } from "@angular/forms";
+import { FormControl, FormGroup } from "@angular/forms";
 
 
 @Component({
@@ -14,7 +14,8 @@ export class CreateProjectFormComponent implements OnInit {
 
   projectForm = new FormGroup({
     name: new FormControl(),
-    description: new FormControl()
+    description: new FormControl(),
+    chips: new FormControl()
   });
 
   onSubmit = () => {

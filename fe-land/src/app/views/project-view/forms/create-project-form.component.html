@@ -22,7 +22,11 @@
             [formGroup]="projectForm"
             (ngSubmit)="onSubmit()"
         >
-            <app-chip-input></app-chip-input>
+            <app-chip-input
+                [thisFormGroup]="projectForm"
+                thisFormControlName="chips"
+                thisPlaceholder="Tags"
+            ></app-chip-input>
 
             <mat-form-field class="example-full-width">
                 <input formControlName="name"

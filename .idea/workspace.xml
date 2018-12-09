@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0366fb9d-41bd-4f08-9db8-47a0ca358a82" name="Default" comment="init src">
-      <change afterPath="$PROJECT_DIR$/be-land/app/Http/Controllers/ItemController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/be-land/app/Http/Controllers/TagController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/views/tag-view/forms/tag-form.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/views/tag-view/forms/tag-form.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/views/tag-view/forms/tag-form.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fe-land/src/app/views/tag-view/forms/tag-form.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/app/Http/Controllers/FolderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/Http/Controllers/FolderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/app/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/Project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/app/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/Tag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/project-view.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/project-view.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,11 +92,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+            <state relative-caret-position="462">
+              <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/tag-view/forms/tag-form.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="529">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,11 +136,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            <state relative-caret-position="448">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -148,11 +151,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="207">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -160,22 +160,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/tag-view/forms/tag-form.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
+            <state relative-caret-position="161">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="897">
-              <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-                <element signature="e#435#513#0" expanded="true" />
-                <element signature="e#1295#1357#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -183,8 +169,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+            <state relative-caret-position="207">
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -192,8 +178,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-46">
-              <caret line="15" column="28" selection-end-line="43" />
+            <state relative-caret-position="828">
+              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -293,7 +279,6 @@
         <option value="$PROJECT_DIR$/fe-land/src/app/views/project-view/create-project-form.component.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/project-view/project-view.component.html" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.scss" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/project-view/project-view.component.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/services/project.service.ts" />
         <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/ProjectController.php" />
@@ -308,14 +293,15 @@
         <option value="$PROJECT_DIR$/fe-land/src/app/views/tag-view/forms/tag-form.component.sass" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/tag-view/forms/tag-form.module.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/tag-view/forms/tag-form.component.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.html" />
         <option value="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.scss" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/project-view.module.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.module.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/tag-view/forms/tag-form.component.html" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.module.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.html" />
         <option value="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.ts" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.html" />
       </list>
     </option>
   </component>
@@ -411,7 +397,7 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1454" />
+    <option name="width" value="1035" />
     <option name="height" value="1160" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -776,7 +762,7 @@
       <workItem from="1544124241973" duration="9641000" />
       <workItem from="1544168528324" duration="16597000" />
       <workItem from="1544271598239" duration="8478000" />
-      <workItem from="1544343174916" duration="11587000" />
+      <workItem from="1544343174916" duration="19865000" />
     </task>
     <task id="LOCAL-00001" summary="init src">
       <created>1532195183376</created>
@@ -967,17 +953,24 @@
       <option name="project" value="LOCAL" />
       <updated>1544280999806</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="init src">
+      <created>1544378173086</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1544378173086</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="528982000" />
+    <option name="totallyTimeSpent" value="537260000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1454" height="1160" extended-state="0" />
+    <frame x="0" y="0" width="1035" height="1160" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29555237" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2871795" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4977778" weight="0.32941177" />
@@ -998,7 +991,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.16499282" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.063589744" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1344,16 +1337,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/tag-view/forms/tag-form.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/user-menu/user-menu.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1361,23 +1344,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="15" column="28" selection-end-line="43" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1389,16 +1355,6 @@
             <element signature="e#0#58#0" expanded="true" />
             <element signature="e#435#513#0" expanded="true" />
             <element signature="e#1295#1357#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1416,13 +1372,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/project-view/project-view.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -1435,27 +1384,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/tag-view/forms/tag-form.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/tag-view/forms/tag-form.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
+        <state relative-caret-position="161">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        <state relative-caret-position="207">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        <state relative-caret-position="448">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
         </state>
       </provider>
     </entry>
