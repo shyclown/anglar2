@@ -19,6 +19,11 @@
         [matChipInputAddOnBlur]="addOnBlur"
         (matChipInputTokenEnd)="add($event)"
     />
+
+    <input type="hidden"
+        [formControlName]= "thisFormControlName"
+        [formControl]="fruitCtrl"
+    />
   </mat-chip-list>
   <mat-autocomplete
       #auto="matAutocomplete"
