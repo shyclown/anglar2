@@ -17,13 +17,12 @@
         </mat-toolbar>
     </panel-header>
     <panel-content>
+
         <form
             class="example-form"
             [formGroup]="projectForm"
             (ngSubmit)="onSubmit()"
         >
-            <app-chip-input></app-chip-input>
-
             <mat-form-field class="example-full-width">
                 <input formControlName="name"
                        type="text"
@@ -54,7 +53,7 @@
     </panel-content>
     <panel-footer>
 
-            <!-- Actions of form -->
+        <!-- Actions of form -->
 
 
     </panel-footer>

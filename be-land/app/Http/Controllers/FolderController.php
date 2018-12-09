@@ -71,7 +71,7 @@ class FolderController extends Controller
     }
 
     public function destroy( Request $request, Folder $folder ){
-
+        $folder->delete();
     }
 
 }

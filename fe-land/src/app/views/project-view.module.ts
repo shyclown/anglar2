@@ -17,9 +17,10 @@ import {
 /* Services */
 import { ProjectService } from "../services/project.service";
 /* API */
-import {TokenInterceptor} from "../interceptor/token.interceptor";
-import {HTTP_INTERCEPTORS} from "@angular/common/http";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { TokenInterceptor } from "../interceptor/token.interceptor";
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import { FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ChipInputModule } from "../components/chip-input/chip-input.module";
 
 
 @NgModule({
@@ -45,7 +46,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
         MatAutocompleteModule,
         MatSidenavModule,
         FormsModule,
-        ReactiveFormsModule, MatInputModule
+        ReactiveFormsModule,
+        MatInputModule,
+        ChipInputModule,
     ],
     exports:[
         ProjectViewComponent,

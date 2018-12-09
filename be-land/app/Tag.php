@@ -10,6 +10,8 @@ class Tag extends Model
     //
     protected $fillable = ["name"];
 
+    public $timestamps = false;
+
     public function items()
     {
         return $this->morphedByMany('App\Item', 'taggable');

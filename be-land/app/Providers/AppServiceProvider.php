@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 
@@ -16,6 +17,11 @@ class AppServiceProvider extends ServiceProvider
     {
         // innodb_large_prefix else
         Schema::defaultStringLength(191);
+
+        Relation::morphMap([
+            'folder' => \App\Folder::class,
+            'project' => \App\Project::class,
+        ]);
     }
 
     /**
