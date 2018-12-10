@@ -56,8 +56,6 @@ export class ChipInputComponent implements OnInit {
 
     add(event: MatChipInputEvent): void {
 
-        console.log(event)
-
         if (!this.matAutocomplete.isOpen) {
             const input = event.input;
             const value = event.value;
