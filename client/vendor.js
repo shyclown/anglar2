@@ -50013,7 +50013,7 @@ var AbstractControl = /** @class */ (function () {
      * expect(login.valid).toEqual(false);
      * expect(login.errors).toEqual({ notUnique: true });
      *
-     * login.setValue('someOtherLogin');
+     * login.setFormGroupValue('someOtherLogin');
      *
      * expect(login.valid).toEqual(true);
      * ```
@@ -50303,11 +50303,11 @@ var FormControl = /** @class */ (function (_super) {
     /**
      * Patches the value of a control.
      *
-     * This function is functionally the same as {@link FormControl#setValue setValue} at this level.
+     * This function is functionally the same as {@link FormControl#setValue setFormGroupValue} at this level.
      * It exists for symmetry with {@link FormGroup#patchValue patchValue} on `FormGroups` and
      * `FormArrays`, where it does behave differently.
      *
-     * @see `setValue` for options
+     * @see `setFormGroupValue` for options
      */
     FormControl.prototype.patchValue = function (value, options) {
         if (options === void 0) { options = {}; }
@@ -50583,7 +50583,7 @@ var FormGroup = /** @class */ (function (_super) {
      *
      * console.log(form.value);   // {first: null, last: null}
      *
-     * form.setValue({first: 'Nancy', last: 'Drew'});
+     * form.setFormGroupValue({first: 'Nancy', last: 'Drew'});
      * console.log(form.value);   // {first: 'Nancy', last: 'Drew'}
      *
      * ```
@@ -50994,7 +50994,7 @@ var FormArray = /** @class */ (function (_super) {
      * ]);
      * console.log(arr.value);   // [null, null]
      *
-     * arr.setValue(['Nancy', 'Drew']);
+     * arr.setFormGroupValue(['Nancy', 'Drew']);
      * console.log(arr.value);   // ['Nancy', 'Drew']
      * ```
      *
@@ -51729,7 +51729,7 @@ var formControlBinding$1 = {
  * `AbstractControl`.
  *
  * **Set the value**: You can pass in an initial value when instantiating the `FormControl`,
- * or you can set it programmatically later using {@link AbstractControl#setValue setValue} or
+ * or you can set it programmatically later using {@link AbstractControl#setValue setFormGroupValue} or
  * {@link AbstractControl#patchValue patchValue}.
  *
  * **Listen to value**: If you want to listen to changes in the value of the control, you can
@@ -51784,7 +51784,7 @@ var formControlBinding$1 = {
  * ```
  *
  * ```ts
- * this.control.setValue('some value');
+ * this.control.setFormGroupValue('some value');
  * ```
  *
  * After (choice 2 - use template-driven forms):
@@ -51929,7 +51929,7 @@ var formDirectiveProvider$1 = {
  *
  * **Set value**: You can set the form's initial value when instantiating the
  * `FormGroup`, or you can set it programmatically later using the `FormGroup`'s
- * {@link AbstractControl#setValue setValue} or {@link AbstractControl#patchValue patchValue}
+ * {@link AbstractControl#setValue setFormGroupValue} or {@link AbstractControl#patchValue patchValue}
  * methods.
  *
  * **Listen to value**: If you want to listen to changes in the value of the form, you can subscribe
@@ -52117,7 +52117,7 @@ var formGroupNameProvider = {
  *
  * **Set the value**: You can set an initial value for each child control when instantiating
  * the `FormGroup`, or you can set it programmatically later using
- * {@link AbstractControl#setValue setValue} or {@link AbstractControl#patchValue patchValue}.
+ * {@link AbstractControl#setValue setFormGroupValue} or {@link AbstractControl#patchValue patchValue}.
  *
  * **Listen to value**: If you want to listen to changes in the value of the group, you can
  * subscribe to the {@link AbstractControl#valueChanges valueChanges} event.  You can also listen to
@@ -52192,7 +52192,7 @@ var formArrayNameProvider = {
  *
  * **Set the value**: You can set an initial value for each child control when instantiating
  * the `FormArray`, or you can set the value programmatically later using the
- * `FormArray`'s {@link AbstractControl#setValue setValue} or
+ * `FormArray`'s {@link AbstractControl#setValue setFormGroupValue} or
  * {@link AbstractControl#patchValue patchValue} methods.
  *
  * **Listen to value**: If you want to listen to changes in the value of the array, you can
@@ -52323,7 +52323,7 @@ var controlNameBinding = {
  *
  *  **Set value**: You can set an initial value for the control when instantiating the
  *  `FormControl`, or you can set it programmatically later using
- *  {@link AbstractControl#setValue setValue} or {@link AbstractControl#patchValue patchValue}.
+ *  {@link AbstractControl#setValue setFormGroupValue} or {@link AbstractControl#patchValue patchValue}.
  *
  * **Listen to value**: If you want to listen to changes in the value of the control, you can
  * subscribe to the {@link AbstractControl#valueChanges valueChanges} event.  You can also listen to
@@ -52388,7 +52388,7 @@ var controlNameBinding = {
  * ```
  *
  * ```ts
- * this.form.get('first').setValue('some value');
+ * this.form.get('first').setFormGroupValue('some value');
  * ```
  *
  * After (choice 2 - use template-driven forms):

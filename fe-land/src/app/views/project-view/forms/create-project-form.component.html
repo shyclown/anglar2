@@ -24,6 +24,8 @@
         >
             <app-chip-input
                 [thisFormGroup]="projectForm"
+                [getDataValue]="getTagValue"
+                [getDataIndexValue]="getTagIndexValue"
                 thisFormControlName="chips"
                 thisPlaceholder="Tags"
             ></app-chip-input>

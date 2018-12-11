@@ -26,6 +26,13 @@ export class CreateProjectFormComponent implements OnInit {
     })
   };
 
+  getTagValue = (tag) => {
+    return tag.name;
+  };
+  getTagIndexValue = (tag) => {
+    return tag.id;
+  };
+
   options: string[] = ['One', 'Two', 'Three'];
 
   constructor(
