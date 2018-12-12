@@ -80,9 +80,6 @@ export class ChipInputComponent implements OnInit {
             const input = event.input;
             const value = event.value;
 
-            console.log('add = input', input);
-            console.log('add = value', value);
-
             /* Do not add values twice */
             if(
                 this.selectedData.filter(selected =>
@@ -90,8 +87,7 @@ export class ChipInputComponent implements OnInit {
                 ).length > 0
             ){
                 // Do nothing
-            }
-            else if ((value || '').trim()) {
+            } else if ((value || '').trim()) {
                 this.selectedData.push(this.setValue(value.trim()));
             }
 
@@ -104,7 +100,7 @@ export class ChipInputComponent implements OnInit {
             this.setFormGroupValue(this.selectedData);
         //}
     }
-
+/* TODO */
     remove(data: string): void {
         const index = this.selectedData.indexOf(data);
         if (index >= 0) {
@@ -112,19 +108,19 @@ export class ChipInputComponent implements OnInit {
         }
     }
 
+    /* triggered by clicking on option */
     selected(event: MatAutocompleteSelectedEvent): void {
-        console.log('selected == event.option.value' , event.option.value);
+        /* add value to selected data */
         this.selectedData.push(event.option.value);
+        /* clear elements is something is written */
         this.dataInput.nativeElement.value = '';
         this.localCtrl.setValue(null);
-        console.log(this.localCtrl.value);
-        console.log(this.dataInput.nativeElement.value);
     }
 
-    /* Filter in select based on input */
-    private _filter(inputText: string): Tag[] {
-        console.log('filter ==', inputText);
+    /* Filter in select options based on input */
+    private _filter(inputText: string): any[] {
         const filterValue = inputText.toLowerCase();
+        /* find objects with value */
         return this.allData.filter(data =>
             this.getDataValue(data).toLowerCase().indexOf(filterValue) === 0
         );
