@@ -9,9 +9,10 @@
       <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
     </mat-chip>
     <input
+        name="mat-chip-input"
         [placeholder]="thisPlaceholder"
         #dataInput
-        [formControl]="localCtrl"
+        [formControl]="localInputControl"
         [matAutocomplete]="auto"
         [matChipInputFor]="chipList"
         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"

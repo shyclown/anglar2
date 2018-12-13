@@ -23,8 +23,12 @@
             (ngSubmit)="onSubmit()"
         >
             <app-chip-input
+                debug = "true"
+                [dataset]="availableTags"
+                [selected]="[]"
                 [thisFormGroup]="projectForm"
                 [getDataValue]="getTagValue"
+                [setDataValue]="setTagValue"
                 [getDataIndexValue]="getTagIndexValue"
                 thisFormControlName="chips"
                 thisPlaceholder="Tags"

@@ -15,7 +15,10 @@ class Tag{
     templateUrl: 'chip-input.component.html',
     styleUrls: ['chip-input.component.scss'],
 })
-export class ChipInputComponent implements OnInit {
+export class ChipInputComponent implements OnInit
+{
+    @Input() debug: boolean;
+
     @Input() thisFormGroup: FormGroup;
     @Input() thisFormControlName: string;
     @Input() thisPlaceholder: string;
@@ -23,8 +26,7 @@ export class ChipInputComponent implements OnInit {
     /* Data */
     @Input() dataset: any[];
     @Input() selected: any[];
-
-    new: any[];
+    new: any[] = [];
 
     @Input() getDataValue: (data: any) => string;
     @Input() setDataValue: (data: string) => any;
@@ -32,7 +34,9 @@ export class ChipInputComponent implements OnInit {
 
     @Input() getIndexes : boolean;
     @Input() allowNew : boolean;
+
     @Input() separateNew : boolean;
+    @Input() setDataValueForNew: (data: string) => any;
 
     /* Settings */
     visible = true;
@@ -40,21 +44,19 @@ export class ChipInputComponent implements OnInit {
     removable = true;
     addOnBlur = true;
     separatorKeysCodes: number[] = [ENTER, COMMA];
-    localCtrl = new FormControl();
+    localInputControl = new FormControl();
 
     setFormGroupValue(value) {
         this.thisFormGroup.value[this.thisFormControlName] = value;
-        this.thisFormGroup.setValue(
-            this.thisFormGroup.value
-        );
+        this.thisFormGroup.setValue( this.thisFormGroup.value );
     }
-
     getValue(rawValue){
         if (this.getDataValue) { return this.getDataValue(rawValue) }
         else { return rawValue; }
     }
     setValue(rawInput){
-        if (this.setDataValue) { return this.getDataValue(rawInput) }
+
+        if (this.setDataValue) { return this.setDataValue(rawInput) }
         else{ return rawInput }
     }
 
@@ -64,11 +66,9 @@ export class ChipInputComponent implements OnInit {
         } else { return data.id }
     }
 
-
-
     filteredData: Observable<any[]>;
 
-    allData: Tag[] = [{id:1, name:"Apple"}];
+
 
     @ViewChild('dataInput') dataInput: ElementRef<HTMLInputElement>;
     @ViewChild('auto') matAutocomplete: MatAutocomplete;
@@ -78,75 +78,74 @@ export class ChipInputComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.filteredData = this.localCtrl.valueChanges.pipe(
+        this.filteredData = this.localInputControl.valueChanges.pipe(
             startWith(null), map(
                 (data: string | null) => {
-                    console.log('init ', data);
                     return data && (typeof data === 'string') ?
                         this._filter(data) :
-                        this.allData.slice()
+                        this.dataset.slice()
 
                 }
             )
         );
     }
 
-    add(event: MatChipInputEvent): void {
-        //if (!this.matAutocomplete.isOpen) {
-            const input = event.input;
-            const value = event.value;
-
-            /* Do not add values twice */
-            if( this.isInSelected(value) ){
-                // Do nothing
-            } else if ((value || '').trim()) {
-                this.selected.push(this.setValue(value.trim()));
-            }
-
-            if (input) {
-                input.value = '';
-            }
-
-            this.localCtrl.setValue(null);
-            console.log('add = selected', this.selected);
-            this.setFormGroupValue(this.selected);
-        //}
-    }
-/* TODO */
-    remove(data: string): void {
-        const index = this.selected.indexOf(data);
-        if (index >= 0) {
-            this.selected.splice(index, 1);
+    dump(value){
+        if(this.debug){
+        Array.isArray(value) ?
+        value.map(
+            v => console.warn('DEBUG: ', v )
+        ) : console.warn( 'DEBUG: ', value);
         }
     }
 
-    isInSelected = ( value ) => {
+    add(event: MatChipInputEvent): void {
+        const input = event.input;
+        const value = event.value;
+
+            this.dump(value);
+            this.dump(['selected', this.setValue(value)]);
+
+        if( this.inSelected(value) ){
+            this.dump(['selected', value])
+        }
+        else if ((value || '').trim()) {
+            this.selected.push(this.setValue(value.trim()));
+        }
+        if (input) { input.value = ''; }
+        this.setFormGroupValue(this.selected);
+        /* clear input */
+        this.localInputControl.setValue(null);
+    }
+
+    remove(data: any): void {
+        this.selected = this.selected.filter(
+            selectedData =>
+                this.getDataValue(selectedData) !== this.getDataValue(data)
+        );
+    }
+
+    inSelected = ( inputValue: string ) => {
         return this.selected.filter(
             selected => {
-                return this.getDataValue( selected ) === value.trim()
+                return this.getDataValue( selected ) === inputValue.trim()
             }
         ).length > 0
     };
 
-    isInNew = ( value ) => {
-
-    };
-
-    /* triggered by clicking on option */
     selectOption(event: MatAutocompleteSelectedEvent): void {
-        /* add value to selected data */
         this.selected.push(event.option.value);
-        /* clear elements is something is written */
         this.dataInput.nativeElement.value = '';
-        this.localCtrl.setValue(null);
+        this.localInputControl.setValue(null);
     }
 
-    /* Filter in select options based on input */
     private _filter(inputText: string): any[] {
-        const filterValue = inputText.toLowerCase();
-        /* find objects with value */
         return this.dataset.filter(data =>
-            this.getDataValue(data).toLowerCase().indexOf(filterValue) === 0
+            this.getDataValue(data)
+                .toLowerCase()
+                .indexOf(
+                    inputText.toLowerCase()
+                ) === 0
         );
     }
 }

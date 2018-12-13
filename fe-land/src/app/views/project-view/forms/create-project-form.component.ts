@@ -36,6 +36,13 @@ export class CreateProjectFormComponent implements OnInit {
     return tag.id;
   };
 
+  availableTags : any[] = [
+      {id: 1, name: 'tag1'},
+      {id: 4, name: 'tag2'},
+      {id: 6, name: 'tag3'},
+      {id: 8, name: 'tag4'},
+  ];
+
   options: string[] = ['One', 'Two', 'Three'];
 
   constructor(
