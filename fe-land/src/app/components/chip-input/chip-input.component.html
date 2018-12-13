@@ -1,7 +1,7 @@
 <mat-form-field class="example-chip-list" [formGroup]="thisFormGroup">
   <mat-chip-list #chipList>
     <mat-chip
-        *ngFor="let data of selectedData"
+        *ngFor="let data of selected"
         [selectable]="selectable"
         [removable]="removable"
         (removed)="remove(data)">
@@ -25,7 +25,7 @@
   </mat-chip-list>
   <mat-autocomplete
       #auto="matAutocomplete"
-      (optionSelected)="selected($event)"
+      (optionSelected)="selectOption($event)"
   >
     <mat-option
         *ngFor="let data of filteredData | async"

@@ -29,6 +29,9 @@ export class CreateProjectFormComponent implements OnInit {
   getTagValue = (tag) => {
     return tag.name;
   };
+  setTagValue = (inputText) => {
+      return {name: inputText}
+  };
   getTagIndexValue = (tag) => {
     return tag.id;
   };
