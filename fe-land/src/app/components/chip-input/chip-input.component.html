@@ -1,7 +1,8 @@
 <mat-form-field class="example-chip-list" [formGroup]="thisFormGroup">
-  <mat-chip-list #chipList>
+  <mat-chip-list #chipList [multiple]="true" >
     <mat-chip
         *ngFor="let data of selected"
+        ngClass="chip"
         [selectable]="selectable"
         [removable]="removable"
         (removed)="remove(data)">
@@ -19,11 +20,11 @@
         [matChipInputAddOnBlur]="addOnBlur"
         (matChipInputTokenEnd)="add($event)"
     >
-
-
-
-
   </mat-chip-list>
+
+
+
+
   <mat-autocomplete
       #auto="matAutocomplete"
       (optionSelected)="selectOption($event)"
