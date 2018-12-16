@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use App\Tag;
 use Illuminate\Http\Request;
 use App\Folder;
 
@@ -37,15 +38,26 @@ class ProjectController extends Controller
 
     public function store( Request $request )
     {
-        $project = new Project();
-        $project->name = $request->name;
-        $project->description = $request->description;
-        /* custom insert function */
-        $project->save();
+
+        $tagsToSync = [];
+
+        foreach( $request->get('tags') as $tag) {
+
+            if(!isset($tag->id)){
+               $tag = Tag::create($tag);
+            }
+            array_push($tagsToSync, $tag->id);
+        }
+        /*
+*/
+        $project = Project::create( $request->all() );
+
+        $project->item->tags()->sync($tagsToSync);
+
 
         return response()->json([
-            'success'=> true,
-            'folder'=> Project::where('id', $project->id)->get()
+            'tags'=>$tagsToSync,
+            'project'=> Project::where('id', $project->id)->get()
         ]);
     }
 

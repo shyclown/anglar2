@@ -15,7 +15,7 @@ export class CreateProjectFormComponent implements OnInit {
   projectForm = new FormGroup({
     name: new FormControl(),
     description: new FormControl(),
-    chips: new FormControl()
+    tags: new FormControl()
   });
 
   onSubmit = () => {

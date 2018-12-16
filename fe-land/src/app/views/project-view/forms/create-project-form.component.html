@@ -18,6 +18,7 @@
     </panel-header>
     <panel-content>
         <form
+            ngClass="content"
             class="example-form"
             [formGroup]="projectForm"
             (ngSubmit)="onSubmit()"
@@ -30,7 +31,7 @@
                 [getDataValue]="getTagValue"
                 [setDataValue]="setTagValue"
                 [getDataIndexValue]="getTagIndexValue"
-                thisFormControlName="chips"
+                thisFormControlName="tags"
                 thisPlaceholder="Tags"
             ></app-chip-input>
 
@@ -62,10 +63,7 @@
             </mat-toolbar>
         </form>
     </panel-content>
-    <panel-footer>
-
-            <!-- Actions of form -->
-
-
-    </panel-footer>
+    <!--
+    <panel-footer></panel-footer>
+    -->
 </app-panel>

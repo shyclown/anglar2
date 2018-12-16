@@ -12,17 +12,15 @@ class Folder extends Model
     protected $with = ["item"];
     public $timestamps = false;
 
-    public function insert() {
-        if(DB::transaction( function(){
-            $this->save(); // Save Folder
+    public static function boot()
+    {
+        parent::boot();
+
+        self::created(function(Folder $folder){
             $item = new Item;
             $item->user_id = Auth::id();
-            $this->item()->save($item); // Add new Item to Folder
-        })){
-            return $this;
-        };
-        // Failed to save the Folder or add folder to the Item Model
-        return null;
+            $folder->item()->save($item); // Add new Item to Folder
+        });
     }
 
     /* Folder has One User Item */

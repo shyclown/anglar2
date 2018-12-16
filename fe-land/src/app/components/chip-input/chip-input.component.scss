@@ -1,8 +1,10 @@
+@import "~src/_variables";
+
 .example-chip-list {
   width: 100%;
 }
 
 .chip{
-  background-color: palegreen;
-
+  background-color: mat-color($primary);
+  color: white;
 }
