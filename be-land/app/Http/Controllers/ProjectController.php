@@ -42,14 +42,10 @@ class ProjectController extends Controller
         $tagsToSync = [];
 
         foreach( $request->get('tags') as $tag) {
-
-            if(!isset($tag->id)){
-               $tag = Tag::create($tag);
-            }
-            array_push($tagsToSync, $tag->id);
+            if(!isset($tag["id"])){ $tag = Tag::create($tag); }
+            array_push($tagsToSync, $tag["id"]);
         }
-        /*
-*/
+
         $project = Project::create( $request->all() );
 
         $project->item->tags()->sync($tagsToSync);

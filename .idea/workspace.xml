@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0366fb9d-41bd-4f08-9db8-47a0ca358a82" name="Default" comment="init src">
-      <change afterPath="$PROJECT_DIR$/fe-land/src/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/landfield.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/landfield.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/app/Folder.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/Folder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/app/Http/Controllers/ItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/Http/Controllers/ItemController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/be-land/app/Http/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/Http/Controllers/ProjectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/app/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/Item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/app/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/Project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be-land/app/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/be-land/app/Tag.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/project-view/project-view.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/project-view/project-view.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/app/views/project-view/project-view.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/views/project-view/project-view.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/custom-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/custom-theme.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fe-land/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,11 +98,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="257">
+              <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="492">
+              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/node_modules/@angular/material/autocomplete/typings/autocomplete.d.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -123,8 +140,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/be-land/app/Project.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+            <state relative-caret-position="496">
+              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
                 <element signature="e#23#62#0#PHP" expanded="true" />
               </folding>
@@ -135,8 +152,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/ProjectController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+            <state relative-caret-position="257">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="e#40#56#0#PHP" expanded="true" />
               </folding>
@@ -145,39 +162,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/tag_relations">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/projects">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/ItemController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#40#53#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/be-land/app/Item.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
+            <state relative-caret-position="-23">
               <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
             </state>
           </provider>
@@ -187,12 +174,12 @@
         <entry file="file://$PROJECT_DIR$/be-land/app/Tag.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/taggables">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -291,7 +278,6 @@
         <option value="$PROJECT_DIR$/fe-land/src/app/views/tag-view/forms/tag-form.component.html" />
         <option value="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.module.ts" />
         <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/Controller.php" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/_components/panel/panel.component.scss" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/project-view/project-view.component.scss" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.scss" />
@@ -305,11 +291,12 @@
         <option value="$PROJECT_DIR$/be-land/app/Project.php" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.html" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.ts" />
-        <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/ProjectController.php" />
         <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/ItemController.php" />
         <option value="$PROJECT_DIR$/be-land/app/Item.php" />
         <option value="$PROJECT_DIR$/be-land/app/Tag.php" />
+        <option value="$PROJECT_DIR$/be-land/app/Http/Controllers/ProjectController.php" />
         <option value="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.html" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.ts" />
       </list>
     </option>
   </component>
@@ -407,8 +394,8 @@
       <path value="$PROJECT_DIR$/be-land/vendor/guzzlehttp/psr7" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="788" />
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1382" />
     <option name="height" value="1160" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -417,7 +404,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -639,6 +625,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -800,7 +787,8 @@
       <workItem from="1544720546686" duration="9187000" />
       <workItem from="1544807719127" duration="1241000" />
       <workItem from="1544822595274" duration="3292000" />
-      <workItem from="1544953825481" duration="15405000" />
+      <workItem from="1544953825481" duration="16154000" />
+      <workItem from="1545068672220" duration="8809000" />
     </task>
     <task id="LOCAL-00001" summary="init src">
       <created>1532195183376</created>
@@ -1026,17 +1014,23 @@
       <option name="project" value="LOCAL" />
       <updated>1544736238468</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="init src">
+      <created>1544994182490</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1544994182490</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="586220000" />
+    <option name="totallyTimeSpent" value="595778000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1382" height="1160" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19349681" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29198185" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4977778" weight="0.32941177" />
@@ -1049,7 +1043,7 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4490022" visible="true" weight="0.26841575" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4490022" visible="true" weight="0.2728205" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4989339" weight="0.31685168" />
       <window_info anchor="bottom" id="TypeScript" order="12" sideWeight="0.49445677" weight="0.33299696" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5509978" side_tool="true" weight="0.2851365" />
@@ -1057,7 +1051,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.18496802" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.29500756" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1124,16 +1118,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="init src" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/TagController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-          <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/tag-view/forms/tag-form.component.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1415,20 +1399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="45" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/project-view/forms/create-project-form.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -1440,40 +1410,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-          <folding>
-            <element signature="e#23#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/ProjectController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
-          <folding>
-            <element signature="e#40#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/tags">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/taggables">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1493,7 +1429,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/ItemController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="322">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#40#53#0#PHP" expanded="true" />
@@ -1501,24 +1437,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Item.php">
+    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/ProjectController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        <state relative-caret-position="257">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/be-land/app/Tag.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be-land/app/Item.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/node_modules/@angular/material/autocomplete/typings/autocomplete.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        <state relative-caret-position="257">
+          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/tags">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://37369eba-5761-4bf7-83fa-f1b3163024af/schema/landfield/table/taggables">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
