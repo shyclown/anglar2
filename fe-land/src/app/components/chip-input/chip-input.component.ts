@@ -36,6 +36,7 @@ export class ChipInputComponent implements OnInit
     separatorKeysCodes: number[] = [ENTER, COMMA];
     localInputControl = new FormControl();
     filteredData: Observable<any[]>;
+
     @ViewChild('dataInput') dataInput: ElementRef<HTMLInputElement>;
     @ViewChild('auto') matAutocomplete: MatAutocomplete;
 

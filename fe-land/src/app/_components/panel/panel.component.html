@@ -2,8 +2,8 @@
   <div class="header">
     <ng-content select="panel-header"></ng-content>
   </div>
-  <div class="content">
-    <ng-content select="panel-content"></ng-content>
+  <div class="content" cdkScrollable>
+    <ng-content select="panel-content" cdkScrollable></ng-content>
   </div>
   <div class="footer">
     <ng-content select="panel-footer"></ng-content>

@@ -1,27 +1,17 @@
-<app-panel ngClass="root">
-    <panel-header>
-        <mat-toolbar style="background-color: white">
+<div style="display: flex; flex-direction: column; height: 100%;" cdkScrollable>
+    <div>
+        <mat-toolbar style="flex-grow:1; background-color: red">
             <div ngClass="panelText">
-                <span
-                    class="mat-headline"
-                    style="margin-bottom: 0px"
-                >
-                    Stream Line
-                </span>
-                <span
-                    class="mat-caption"
-                >
-                    Project by Roman
-                </span>
+                <span class="mat-headline" style="margin-bottom: 0px"> Stream Line </span>
+                <span class="mat-caption" > Project by Roman </span>
             </div>
         </mat-toolbar>
-    </panel-header>
-    <panel-content>
+    </div>
+    <div style="flex-grow: 1; overflow: hidden; overflow-y:auto" cdkScrollable>
         <app-create-project-form></app-create-project-form>
         <mat-list>
-            <mat-list-item
+            <mat-list-item ngClass="listItem"
                 *ngFor="let project of projects; let i = index"
-                ngClass="listItem"
                 [attr.data-index]="i"
             >
                 <p  matLine class="mat-body-strong">
@@ -34,23 +24,16 @@
                 </mat-divider>
             </mat-list-item>
         </mat-list>
+    </div>
+    <div>
         <mat-toolbar>
-            <div
-                style="
+            <div style="
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around"
-            >
-                <h4 class="mat-headline">
-                    Project
-                </h4>
-                <span class="mat-caption">
-                    Your project
-                </span>
+                justify-content: space-around">
+                <h4 class="mat-headline"> Project </h4>
+                <span class="mat-caption"> Your project </span>
             </div>
         </mat-toolbar>
-    </panel-content>
-    <panel-footer>
-
-    </panel-footer>
-</app-panel>
+    </div>
+</div>

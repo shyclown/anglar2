@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { PanelComponent } from "./panel/panel.component";
 import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
+import {ScrollingModule} from "@angular/cdk/scrolling";
+
 
 
 @NgModule({
@@ -11,6 +13,7 @@ import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
   ],
 
   exports:[
+      ScrollingModule,
       PanelComponent
   ],
 
