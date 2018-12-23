@@ -25,8 +25,9 @@ import { LoginViewComponent } from "./views/login-view/login-view.component";
 import { HomeViewComponent } from './views/home-view/home-view.component';
 //import { PublicViewComponent } from './views/public-view/public-view.component';
 
-import { PublicViewModule } from "./views/public-view.module";
-import { ProjectViewModule } from "./views/project-view.module";
+import { PublicViewModule } from "./views/public-view/public-view.module";
+import { ProjectViewModule } from "./views/project-view/project-view.module";
+import {ScrollDispatchModule} from "@angular/cdk/scrolling";
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { ProjectViewModule } from "./views/project-view.module";
       FormsModule,
       BrowserAnimationsModule,
       MatMenuModule,
-      MatListModule
+      MatListModule,
+
   ],
   bootstrap: [ AppComponent ],
   schemas:[ NO_ERRORS_SCHEMA ],

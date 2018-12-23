@@ -1,32 +1,37 @@
-<div style="display: flex; flex-direction: column; height: 100%;" cdkScrollable>
-    <div>
-        <mat-toolbar style="flex-grow:1; background-color: red">
-            <div ngClass="panelText">
-                <span class="mat-headline" style="margin-bottom: 0px"> Stream Line </span>
-                <span class="mat-caption" > Project by Roman </span>
-            </div>
+<app-panel>
+    <panel-header>
+        <mat-toolbar ngClass="whiteBg">
+            <mat-toolbar-row>
+                <mat-icon ngClass="icon">work</mat-icon>
+                <span>Projects</span>
+                <div ngClass="grow"></div>
+                <button mat-button color="primary"><mat-icon>add</mat-icon> Create New Project</button>
+            </mat-toolbar-row>
         </mat-toolbar>
-    </div>
-    <div style="flex-grow: 1; overflow: hidden; overflow-y:auto" cdkScrollable>
-        <app-create-project-form></app-create-project-form>
-        <mat-list>
+    </panel-header>
+    <panel-content style="flex-grow: 1; overflow: hidden; overflow-y:auto" cdkScrollable>
+        <mat-nav-list>
+
             <mat-list-item ngClass="listItem"
+                           (click)="openProject(project.id)"
                 *ngFor="let project of projects; let i = index"
                 [attr.data-index]="i"
             >
-                <p  matLine class="mat-body-strong">
-                    {{project.name}}
-                </p>
-                <p  matLine class="mat-caption">
-                    {{project.description}}
-                </p>
-                <mat-divider *ngIf="projects.length != i" >
-                </mat-divider>
+                    <p  matLine class="mat-body-strong">
+                        {{project.name}}
+                    </p>
+                    <p  matLine class="mat-caption">
+                        {{project.description}}
+                    </p>
+                    <mat-divider *ngIf="projects.length != i" >
+                    </mat-divider>
             </mat-list-item>
-        </mat-list>
-    </div>
-    <div>
-        <mat-toolbar>
+
+        </mat-nav-list>
+    </panel-content>
+    <panel-footer>
+
+        <mat-toolbar ngClass="whiteBg" class="mat-elevation-z2">
             <div style="
                 display: flex;
                 flex-direction: column;
@@ -35,5 +40,7 @@
                 <span class="mat-caption"> Your project </span>
             </div>
         </mat-toolbar>
-    </div>
-</div>
+
+    </panel-footer>
+</app-panel>
+

@@ -1,11 +1,13 @@
 <div class="panel">
-  <div class="header">
+  <div ngClass="header" class="mat-elevation-z4">
     <ng-content select="panel-header"></ng-content>
   </div>
-  <div class="content" cdkScrollable>
-    <ng-content select="panel-content" cdkScrollable></ng-content>
-  </div>
-  <div class="footer">
+
+
+      <ng-content select="panel-content"></ng-content>
+
+
+  <div ngClass="footer" class="mat-elevation-z4">
     <ng-content select="panel-footer"></ng-content>
   </div>
 </div>

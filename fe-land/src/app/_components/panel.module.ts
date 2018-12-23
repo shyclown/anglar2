@@ -14,11 +14,13 @@ import {ScrollingModule} from "@angular/cdk/scrolling";
 
   exports:[
       ScrollingModule,
-      PanelComponent
+      PanelComponent,
+
   ],
 
   declarations: [
-      PanelComponent
+      PanelComponent,
+
   ],
     schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

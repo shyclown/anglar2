@@ -13,6 +13,7 @@ import { PublicViewComponent } from "../views/public-view/public-view.component"
 
 
 import { ProjectViewComponent } from "../views/project-view/project-view.component";
+import {ProjectManagerComponent} from "../views/project-view/project-manager/project-manager.component";
 
 
 const routes : Routes =[
@@ -37,10 +38,16 @@ const routes : Routes =[
         component: ExplorerComponent ,
         canActivate: [ AuthGuard ]
         // resolve: { 'token': ResolveApi }
-    }  ,
+    },
+    {
+        path: 'project',
+        component: ProjectViewComponent ,
+        canActivate: [ AuthGuard ]
+        // resolve: { 'token': ResolveApi }
+    },
     {
         path: 'project/:id',
-        component: ProjectViewComponent ,
+        component: ProjectManagerComponent ,
         canActivate: [ AuthGuard ]
         // resolve: { 'token': ResolveApi }
     }

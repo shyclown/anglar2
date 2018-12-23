@@ -1,6 +1,6 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PublicViewComponent } from "./public-view/public-view.component";
+import { PublicViewComponent } from "./public-view.component";
 import {
     MatButtonModule,
     MatChipsModule,
@@ -14,7 +14,7 @@ import { AngularFontAwesomeModule } from "angular-font-awesome";
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDividerModule } from '@angular/material/divider';
 
-import { PanelModule } from "../_components/panel.module";
+import { PanelModule } from "../../_components/panel.module";
 
 
 @NgModule({

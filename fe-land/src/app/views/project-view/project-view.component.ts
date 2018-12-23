@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ProjectService} from "../../services/project.service";
+import {Router, ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-create-project-view',
@@ -9,13 +10,16 @@ import {ProjectService} from "../../services/project.service";
 export class ProjectViewComponent implements OnInit {
   projectService: ProjectService;
   projects: any[];
+  router: Router;
 
   testProjects: any[];
 
   constructor(
+      private theRouter: Router,
     private theProjectService: ProjectService
   ) {
     this.projectService = theProjectService;
+    this.router = theRouter;
     this.projectService.projectsObservable.subscribe(
         projects => {
           this.testProjects = projects;
@@ -23,6 +27,10 @@ export class ProjectViewComponent implements OnInit {
         }
     )
   }
+
+  openProject = (projectId: number) => {
+      this.router.navigate([`/project/${projectId}`]);
+  };
 
   ngOnInit() {
     this.theProjectService.index().subscribe(

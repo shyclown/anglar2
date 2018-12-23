@@ -18,12 +18,10 @@
 
         <form
             ngClass="content"
-            class="example-form"
             [formGroup]="projectForm"
             (ngSubmit)="onSubmit()"
         >
             <app-chip-input
-
                 debug = "true"
                 [dataset]="availableTags"
                 [selected]="[]"
@@ -51,7 +49,7 @@
                        matInput
                 />
             </mat-form-field>
-            <mat-toolbar>
+            <mat-toolbar style="background-color: #FFFFFF">
                 <span class="space"></span>
                 <button
                     type="submit"
