@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { Router, ActivatedRoute} from '@angular/router';
 import { ProjectService } from "../../../services/project.service";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-project-manager',
@@ -11,20 +12,74 @@ export class ProjectManagerComponent implements OnInit {
 
   id:any;
 
+
+  projectForm = new FormGroup({
+    name: new FormControl(),
+    description: new FormControl(),
+    tags: new FormControl()
+  });
+
+
+  tags: any[];
+  @Input() project: any;
+
   constructor(
       private theRoute: ActivatedRoute,
       private theProjectService: ProjectService
   ) {
-
+      if(this.project){
+        this.projectForm.setValue({
+          name: this.project.name,
+          description: this.project.description
+        });
+      }
   }
 
   ngOnInit() {
+
     this.theRoute.params.subscribe(event => {
       this.id = event.id;
-      this.theProjectService.show({id: this.id}).subscribe((data)=>{
-        console.log(data);
+      this.theProjectService.show({id: this.id})
+          .subscribe((data)=>{
+            this.project = data;
+            this.projectForm.setValue({
+              tags: [],
+              name: data.name,
+              description: data.description
+            });
       })
     });
   }
+
+  onSubmit = () => {
+
+    console.log(this.projectForm.value);
+
+
+    this.theProjectService.create(
+        this.projectForm.value
+    ).subscribe((response)=>{
+      console.log(response)
+    })
+  };
+
+  getTagValue = (tag) => {
+    return tag.name;
+  };
+  setTagValue = (inputText) => {
+    return {name: inputText}
+  };
+  getTagIndexValue = (tag) => {
+    return tag.id;
+  };
+
+  availableTags : any[] = [
+    {id: 1, name: 'tag1'},
+    {id: 4, name: 'tag2'},
+    {id: 6, name: 'tag3'},
+    {id: 8, name: 'tag4'},
+  ];
+
+  options: string[] = ['One', 'Two', 'Three'];
 
 }

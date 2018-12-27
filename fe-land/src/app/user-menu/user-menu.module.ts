@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule }    from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { UserMenuComponent } from "./user-menu.component";
+import {MatMenuModule} from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { UserMenuComponent } from "./user-menu.component";
   ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+      MatMenuModule,
   ]
 })
 export class UserMenuModule { }

@@ -1,3 +1,64 @@
-<app-create-project-form>
 
-</app-create-project-form>
+<mat-toolbar style="background-color: white">
+    <div ngClass="panelText">
+                <span
+                    class="mat-headline"
+                    style="margin-bottom: 0px"
+                >
+                    Create Project
+                </span>
+        <span
+            class="mat-caption"
+        >
+                    new Project
+                </span>
+    </div>
+</mat-toolbar>
+
+<form
+    ngClass="content"
+    [formGroup]="projectForm"
+    (ngSubmit)="onSubmit()"
+>
+    <app-chip-input
+        debug = "true"
+        [dataset]="availableTags"
+        [selected]="[]"
+        [thisFormGroup]="projectForm"
+        [getDataValue]="getTagValue"
+        [setDataValue]="setTagValue"
+        [getDataIndexValue]="getTagIndexValue"
+        thisFormControlName="tags"
+        thisPlaceholder="Tags"
+    ></app-chip-input>
+
+    <mat-form-field class="example-full-width">
+        <input formControlName="name"
+               type="text"
+               [value]="project && project.name || ''"
+               placeholder="Name"
+               aria-label="Number"
+               matInput
+        />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input formControlName="description"
+               type="text"
+               [value]="project && project.description || ''"
+               placeholder="Description"
+               aria-label="Number"
+               matInput
+        />
+    </mat-form-field>
+    <mat-toolbar style="background-color: #FFFFFF">
+        <span class="space"></span>
+        <button
+            type="submit"
+            color="primary"
+            mat-flat-button
+        >
+            Save Project
+        </button>
+    </mat-toolbar>
+</form>
+

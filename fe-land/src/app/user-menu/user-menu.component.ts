@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ViewChild } from "@angular/core";
 import { MatMenu } from "@angular/material"
 import { AuthService }  from "../services/auth.service";
-import {ExplorerService} from "../views/explorer/service/explorer.service";
 
 @Component({
   selector: 'app-user-menu',

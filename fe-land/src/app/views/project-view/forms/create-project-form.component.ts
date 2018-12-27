@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { ProjectService } from "src/app/services/project.service";
 import { FormControl, FormGroup } from "@angular/forms";
 
@@ -9,8 +9,17 @@ import { FormControl, FormGroup } from "@angular/forms";
   styleUrls: ['./create-project-form.component.scss']
 })
 export class CreateProjectFormComponent implements OnInit {
+
   projectService: ProjectService;
   projects: any[];
+  tags: any[];
+
+
+
+  @Input() project: any;
+
+
+
 
   projectForm = new FormGroup({
     name: new FormControl(),
@@ -48,8 +57,11 @@ export class CreateProjectFormComponent implements OnInit {
   constructor(
     private theProjectService: ProjectService
   ) {
+    console.log(this.project);
+
     this.projectService = theProjectService;
   }
+
 
   ngOnInit() {
     this.theProjectService.index().subscribe(
