@@ -17,6 +17,7 @@ export class CreateProjectFormComponent implements OnInit {
 
 
   @Input() project: any;
+  @Input() handleSubmit: (data: any)=> any;
 
 
 
