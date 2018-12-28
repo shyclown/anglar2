@@ -27,27 +27,41 @@ export class ProjectManagerComponent implements OnInit {
       private theRoute: ActivatedRoute,
       private theProjectService: ProjectService
   ) {
+    /*
       if(this.project){
         this.projectForm.setValue({
           name: this.project.name,
           description: this.project.description
         });
       }
+      */
   }
 
   ngOnInit() {
 
     this.theRoute.params.subscribe(event => {
       this.id = event.id;
-      this.theProjectService.show({id: this.id})
-          .subscribe((data)=>{
-            this.project = data;
+
+      console.log(this.id);
+
+      if (event.id !== 'new'){
+        this.theProjectService.show({id: this.id})
+            .subscribe((data)=>{
+              this.project = data;
+              this.projectForm.setValue({
+                tags: [],
+                name: data.name,
+                description: data.description
+              });
+            })
+      } else {
             this.projectForm.setValue({
               tags: [],
-              name: data.name,
-              description: data.description
+              name: '',
+              description: ''
             });
-      })
+      }
+
     });
   }
 
