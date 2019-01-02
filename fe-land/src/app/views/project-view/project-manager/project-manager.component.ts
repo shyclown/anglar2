@@ -27,14 +27,7 @@ export class ProjectManagerComponent implements OnInit {
       private theRoute: ActivatedRoute,
       private theProjectService: ProjectService
   ) {
-    /*
-      if(this.project){
-        this.projectForm.setValue({
-          name: this.project.name,
-          description: this.project.description
-        });
-      }
-      */
+
   }
 
   ngOnInit() {
@@ -66,16 +59,24 @@ export class ProjectManagerComponent implements OnInit {
   }
 
   onSubmit = () => {
+    const project = {
+      ...this.project,
+      ...this.projectForm.value
+    };
+    console.log(project.id);
 
-    console.log(this.projectForm.value);
-
-
-    this.theProjectService.create(
-        this.projectForm.value
-    ).subscribe((response)=>{
-      console.log(response)
-    })
+    if(project.id){
+      this.theProjectService.update(project).subscribe((this.afterSubmit));
+    }
+    else {
+      this.theProjectService.create( this.projectForm.value )
+          .subscribe(this.afterSubmit)
+    }
   };
+
+  afterSubmit(data : any){
+    console.log(this.id, data)
+  }
 
   getTagValue = (tag) => {
     return tag.name;
