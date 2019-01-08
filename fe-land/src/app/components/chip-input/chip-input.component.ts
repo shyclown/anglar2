@@ -12,14 +12,16 @@ import {map, startWith} from 'rxjs/operators';
 })
 export class ChipInputComponent implements OnInit
 {
+    new: any[] = [];
+
     @Input() debug: boolean;
+
     @Input() thisFormGroup: FormGroup;
     @Input() thisFormControlName: string;
     @Input() thisPlaceholder: string;
     /* Data */
     @Input() dataset: any[];
     @Input() selected: any[];
-    new: any[] = [];
     @Input() getDataValue: (data: any) => string;
     @Input() setDataValue: (data: string) => any;
     @Input() getDataIndexValue: (data: any) => any;
@@ -32,7 +34,7 @@ export class ChipInputComponent implements OnInit
     visible = true;
     selectable = true;
     removable = true;
-    addOnBlur = true;
+    addOnBlur = false;
     separatorKeysCodes: number[] = [ENTER, COMMA];
     localInputControl = new FormControl();
     filteredData: Observable<any[]>;
@@ -43,17 +45,23 @@ export class ChipInputComponent implements OnInit
     optionSelected = false;
 
     setFormGroupValue(value) {
+        this.debug && console.log(value);
         this.thisFormGroup.value[this.thisFormControlName] = value;
         this.thisFormGroup.setValue( this.thisFormGroup.value );
     }
+
     getValue(rawValue) {
+        this.debug && console.log(rawValue);
         if (this.getDataValue) { return this.getDataValue(rawValue) }
         else { return rawValue; }
     }
+
     setValue(rawInput) {
+        this.debug && console.log(rawInput);
         if (this.setDataValue) { return this.setDataValue(rawInput) }
         else{ return rawInput }
     }
+
     constructor() { }
 
     ngOnInit() {
@@ -74,23 +82,23 @@ export class ChipInputComponent implements OnInit
         return dataset.filter( data => !this.inSelected(this.getDataValue(data)));
     };
 
+    inputBlurEvent(){
+        this.dataInput.nativeElement.value = '';
+    }
+
     add(event: MatChipInputEvent): void {
-        console.log(this.matAutocomplete);
+        const input = event.input;
+        const value = this.dataInput.nativeElement.value;
 
-        if (!this.optionSelected) {
-            const input = event.input;
-            const value = event.value;
-
-            if ( this.inSelected(value) ){ /* Do Nothing */ }
-            else if ((value || '').trim()) {
-                this.selected.push(this.setValue(value.trim()));
-            }
-            if (input) {  input.value = '';  }
-            this.setFormGroupValue(this.selected);
-            this.localInputControl.setValue(null);
-
+        if (this.inSelected(value)) { /* Do Nothing */
+        } else if ((value || '').trim()) {
+            this.selected.push(this.setValue(value.trim()));
         }
-        this.optionSelected = false;
+        if (input) {
+            input.value = '';
+        }
+        this.setFormGroupValue(this.selected);
+        this.localInputControl.setValue(null);
     }
 
     remove(data: any): void {
@@ -109,10 +117,8 @@ export class ChipInputComponent implements OnInit
     };
 
     selectOption(event: MatAutocompleteSelectedEvent): void {
-        this.localInputControl.setValue(null);
-        this.dataInput.nativeElement.value = '';
-        this.optionSelected = true;
         this.selected.push(event.option.value);
+        this.optionSelected = true;
     }
 
 

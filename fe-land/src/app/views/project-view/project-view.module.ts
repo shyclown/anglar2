@@ -25,6 +25,7 @@ import { FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ChipInputModule } from "../../components/chip-input/chip-input.module";
 
 import { ProjectManagerComponent } from './project-manager/project-manager.component';
+import {TagService} from "src/app/services/tag.service";
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { ProjectManagerComponent } from './project-manager/project-manager.compo
     ],
     providers:[
         ProjectService,
+        TagService,
         {
             provide: HTTP_INTERCEPTORS,
             useClass: TokenInterceptor,

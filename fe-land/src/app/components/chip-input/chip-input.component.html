@@ -19,9 +19,11 @@
         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
         [matChipInputAddOnBlur]="addOnBlur"
         (matChipInputTokenEnd)="add($event)"
-    >
+        (blur)="inputBlurEvent($event)"
+
+    />
   </mat-chip-list>
-  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectOption($event)">
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectOption($event)" >
     <mat-option *ngFor="let data of filteredData | async" [value]="data">
       {{ getDataValue(data) }}
     </mat-option>

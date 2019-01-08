@@ -1,7 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { Router, ActivatedRoute} from '@angular/router';
-import { ProjectService } from "../../../services/project.service";
+import { ProjectService } from "src/app/services/project.service";
 import {FormControl, FormGroup} from "@angular/forms";
+import {TagService} from "src/app/services/tag.service";
 
 @Component({
   selector: 'app-project-manager',
@@ -12,30 +13,30 @@ export class ProjectManagerComponent implements OnInit {
 
   id:any;
 
-
   projectForm = new FormGroup({
     name: new FormControl(),
     description: new FormControl(),
     tags: new FormControl()
   });
 
-
   tags: any[];
+  availableTags : any[] = [];
+
   @Input() project: any;
 
   constructor(
       private theRoute: ActivatedRoute,
-      private theProjectService: ProjectService
-  ) {
-
-  }
+      private theProjectService: ProjectService,
+      private theTagService: TagService
+  ) {}
 
   ngOnInit() {
+    this.tags=[];
+    this.theTagService.index().subscribe(data=>{ this.availableTags = data; });
 
     this.theRoute.params.subscribe(event => {
       this.id = event.id;
 
-      console.log(this.id);
 
       if (event.id !== 'new'){
         this.theProjectService.show({id: this.id})
@@ -61,9 +62,10 @@ export class ProjectManagerComponent implements OnInit {
   onSubmit = () => {
     const project = {
       ...this.project,
-      ...this.projectForm.value
+      ...this.projectForm.value,
+      
     };
-    console.log(project.id);
+    console.log(project);
 
     if(project.id){
       this.theProjectService.update(project).subscribe((this.afterSubmit));
@@ -73,6 +75,8 @@ export class ProjectManagerComponent implements OnInit {
           .subscribe(this.afterSubmit)
     }
   };
+
+
 
   afterSubmit(data : any){
     console.log(this.id, data)
@@ -88,13 +92,8 @@ export class ProjectManagerComponent implements OnInit {
     return tag.id;
   };
 
-  availableTags : any[] = [
-    {id: 1, name: 'tag1'},
-    {id: 4, name: 'tag2'},
-    {id: 6, name: 'tag3'},
-    {id: 8, name: 'tag4'},
-  ];
 
-  options: string[] = ['One', 'Two', 'Three'];
+
+
 
 }

@@ -16,7 +16,7 @@ class TagController extends Controller
     /* Tag is never updated */
 
     public function index(){
-        return Tag::with('items')->get();
+        return Tag::all();
     }
 
     public function store(Request $request){
