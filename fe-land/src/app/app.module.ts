@@ -26,7 +26,7 @@ import { HomeViewComponent } from './views/home-view/home-view.component';
 //import { PublicViewComponent } from './views/public-view/public-view.component';
 
 import { PublicViewModule } from "./views/public-view/public-view.module";
-import { ProjectViewModule } from "./views/project-view/project-view.module";
+import { ProjectViewModule } from "./views/project/project-view.module";
 import {ScrollDispatchModule} from "@angular/cdk/scrolling";
 
 

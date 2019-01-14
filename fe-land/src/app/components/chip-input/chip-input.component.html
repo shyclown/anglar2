@@ -1,4 +1,9 @@
-<mat-form-field class="example-chip-list" [formGroup]="thisFormGroup">
+<mat-form-field
+    class="example-chip-list"
+    appearance="outline"
+    [formGroup]="thisFormGroup"
+>
+  <mat-label>Tag</mat-label>
   <mat-chip-list #chipList>
     <mat-chip
         *ngFor="let data of selected"

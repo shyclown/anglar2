@@ -18,8 +18,8 @@ class CreateProjectsTable extends Migration
             function ( Blueprint $table ) {
                 $table->increments('id');
                 $table->timestamps();
-                $table->string('name', 64);
-                $table->string('description', 250);
+                $table->string('name', 64)->nullable();
+                $table->string('description', 250)->nullable();
             }
         );
     }

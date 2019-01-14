@@ -1,9 +1,8 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 /* Component */
-import { ProjectViewComponent } from './project-view.component';
-import { CreateProjectFormComponent } from "./forms/create-project-form.component";
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { ProjectViewComponent } from './project-view/project-view.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 /* Modules */
 import { PanelModule } from "../../_components/panel.module";
@@ -14,7 +13,7 @@ import {
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule,
+    MatCardModule, MatChipsModule,
 } from "@angular/material";
 /* Services */
 import { ProjectService } from "../../services/project.service";
@@ -24,16 +23,14 @@ import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ChipInputModule } from "../../components/chip-input/chip-input.module";
 
-import { ProjectManagerComponent } from './project-manager/project-manager.component';
-import {TagService} from "src/app/services/tag.service";
+import { ProjectManagerViewComponent } from './project-manager-view/project-manager-view.component';
+import { TagService } from "src/app/services/tag.service";
 
 
 @NgModule({
     declarations: [
         ProjectViewComponent,
-        CreateProjectFormComponent,
-
-        ProjectManagerComponent
+        ProjectManagerViewComponent
     ],
     providers:[
         ProjectService,
@@ -57,12 +54,12 @@ import {TagService} from "src/app/services/tag.service";
         ReactiveFormsModule,
         MatInputModule,
         ChipInputModule,
+        MatChipsModule,
         MatIconModule,
         MatCardModule
     ],
     exports:[
         ProjectViewComponent,
-        CreateProjectFormComponent
     ],
     schemas:[
         CUSTOM_ELEMENTS_SCHEMA

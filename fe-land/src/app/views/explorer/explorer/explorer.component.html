@@ -1,24 +1,11 @@
 
 <div class="explorerWrap">
-
-
-  <div [ngClass]="['popup']" *ngIf="selected">
-    <div [ngClass]="'body'">
-    <label>name:
-      <input [(ngModel)]="name" placeholder="name">
-      {{name}}
-      <button [ngClass]="'submitButton'" (click)="saveNewFolder(name)">Save new folder </button>
-    </label>
+    <div class="explorerTree">
+        <button mat-button (click)="selected = true">New Folder</button>
+        <app-folder-tree-line></app-folder-tree-line>
     </div>
-  </div>
 
-<div class="explorerTree">
-
-  <app-folder-tree-line></app-folder-tree-line>
-
-
-</div>
-
-<div class="explorerContent" logOnClick >Current folder ID: {{currentFolderID}}</div>
-
+    <div class="explorerContent" logOnClick >
+        Current folder ID: {{currentFolderID}}
+    </div>
 </div>

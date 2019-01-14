@@ -22,15 +22,12 @@ export class ExplorerComponent implements OnInit {
   constructor(
       private ExplorerService: ExplorerService
   ) {
-
     this.selected = false;
     this.data = ExplorerService;
-
     this.folders = this.data.folders;
 
     this.data.explorerState.subscribe( data =>
     {
-        console.log(data);
         this.currentState = data;
        // this.folders = this.currentState.folders;
         this.currentFolderID = this.currentState.currentFolderID;

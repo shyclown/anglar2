@@ -28,6 +28,10 @@ Route::get('/db_debug', function  (){
     return response()->json([]);
 });
 
+Route::get('/hash', function (){
+    var_dump(Hash::make('password'));
+});
+
 
 /* Routes used for auth */
 //Auth::routes();

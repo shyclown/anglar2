@@ -13,33 +13,14 @@ export class UserMenuComponent implements OnInit {
 
     @ViewChild(MatMenu) menu: MatMenu;
 
-    controllerName:string;
-
-
-
     constructor(
         private authService : AuthService
-    ){
-        this.controllerName = 'userMenu';
-    }
+    ){}
 
-    ngOnInit() {
+    ngOnInit() {}
 
-    }
-
-    clickProfile(event) : void {
-        console.log(this.controllerName, 'clickProfile',[event]);
-    }
-    clickItems(event) : void {
-
-
-        console.log(this.controllerName, 'clickItems',[event]);
-    }
-    clickLogOut(event) : void {
-        console.log(this.controllerName, 'clickItems',[event]);
-        this.authService.logout();
-    }
-    clickSettings(event) : void {
-        console.log(this.controllerName, 'clickSettings',[event]);
-    }
+    clickProfile() : void { }
+    clickItems() : void { }
+    clickLogOut() : void { this.authService.logout(); }
+    clickSettings() : void { }
 }

@@ -12,8 +12,12 @@ export class LoginViewComponent implements OnInit {
 
   @ViewChild('loginFormDialog')
   loginFormDialog: TemplateRef<any>;
+
   ngOnInit() {
-      setTimeout(() => this.openLoginDialog(),100);
+      setTimeout(
+          () => this.openLoginDialog(),
+          100
+      );
   }
 
   openLoginDialog(): void {

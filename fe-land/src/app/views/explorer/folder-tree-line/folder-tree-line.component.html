@@ -1,18 +1,19 @@
 <ul class="folders" >
-  <li
-          *ngFor="let folder of getCurrentFolders()"
-          (click)="openFolder(folder)"
-          class="singleFolder"
-  >
-    <i [ngClass]="(isOpenFolder(folder)) ?  'fa fa-folder-open' : 'fa fa-folder'" ></i>
-      {{folder.name}}
-
-
-      <app-folder-tree-line
-              *ngIf="(folder.isOpen)"
-              [folder]="folder"
-      >
-      </app-folder-tree-line>
-
-  </li>
+    <li
+        *ngFor="let folder of getCurrentFolders()"
+        (click)="openFolder(folder)"
+        class="singleFolder"
+    >
+        <i
+            [ngClass]="(isOpenFolder(folder)) ?
+        'fa fa-folder-open' :
+        'fa fa-folder'"
+        ></i>
+        {{folder.name}}
+        <app-folder-tree-line
+            *ngIf="(folder.isOpen)"
+            [folder]="folder"
+        >
+        </app-folder-tree-line>
+    </li>
 </ul>

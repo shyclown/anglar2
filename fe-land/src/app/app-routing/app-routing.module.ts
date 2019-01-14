@@ -12,8 +12,8 @@ import { HomeViewComponent } from "../views/home-view/home-view.component";
 import { PublicViewComponent } from "../views/public-view/public-view.component";
 
 
-import { ProjectViewComponent } from "../views/project-view/project-view.component";
-import {ProjectManagerComponent} from "../views/project-view/project-manager/project-manager.component";
+import { ProjectViewComponent } from "../views/project/project-view/project-view.component";
+import {ProjectManagerViewComponent} from "../views/project/project-manager-view/project-manager-view.component";
 
 
 const routes : Routes =[
@@ -47,7 +47,7 @@ const routes : Routes =[
     },
     {
         path: 'project/:id',
-        component: ProjectManagerComponent ,
+        component: ProjectManagerViewComponent ,
         canActivate: [ AuthGuard ]
         // resolve: { 'token': ResolveApi }
     }

@@ -85,4 +85,13 @@ export class ProjectService {
         );
     }
 
+    delete(project: Project): Observable<Project>{
+        return this.http.delete<Project>(
+            `/api/project/${project.id}`
+        ).pipe(
+            tap(()=>{}),
+            catchError(this.handleError('delete', []))
+        );
+    }
+
 }

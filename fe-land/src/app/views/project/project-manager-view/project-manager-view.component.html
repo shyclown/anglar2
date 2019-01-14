@@ -1,0 +1,90 @@
+<div ngClass="wrap">
+
+<div ngClass="root">
+<div>
+        <mat-toolbar ngClass="header">
+            <button
+                mat-icon-button
+                color="primary"
+                (click)="backToProjects()"
+            >
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+            {{project && project.id ? 'Edit Project' : 'New Project'}}
+        </mat-toolbar>
+</div>
+
+    <div style="flex-grow: 1; overflow-y: auto" ngClass="content" cdkScrollable>
+    <form
+        style="height: 100%; overflow:hidden" [formGroup]="projectForm"
+        (ngSubmit)="onSubmit()"
+    >
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Name</mat-label>
+            <input
+                formControlName="name"
+                type="text"
+                [value]="project && project.name || ''"
+                placeholder="Name"
+                aria-label="Number"
+                matInput
+            />
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Description</mat-label>
+            <textarea
+                formControlName="description"
+                matInput
+                placeholder="Description"
+                aria-label="Description"
+               [value]="project && project.description || ''"
+            ></textarea>
+
+        </mat-form-field>
+
+        <app-chip-input
+            debug = "true"
+            [dataset]="availableTags"
+            [selected]="tags"
+            [thisFormGroup]="projectForm"
+            [getDataValue]="getTagValue"
+            [setDataValue]="setTagValue"
+            [getDataIndexValue]="getTagIndexValue"
+            thisFormControlName="tags"
+            thisPlaceholder="Tags"
+        >
+
+        </app-chip-input>
+        <input type="submit" style="visibility: hidden">
+</form>
+    </div>
+<div>
+    <mat-toolbar ngClass="footer">
+        <button
+            *ngIf="project && project.id"
+            mat-button
+            (click)="handleDeleteProject()"
+            color="accent"
+        >
+            <mat-icon>delete</mat-icon>
+            Delete Project
+        </button>
+            <span class="space"></span>
+        <button
+            (click)="onSubmit()"
+            color="primary"
+            mat-flat-button
+        >
+            Save Project
+        </button>
+
+    </mat-toolbar>
+</div>
+
+
+
+</div>
+</div>
+
+

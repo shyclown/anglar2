@@ -1,0 +1,52 @@
+@import '../../../../../node_modules/@angular/material/theming';
+@import "../../../../variables";
+.wrap{
+  overflow: hidden;
+  height: 100%;
+}
+.root{
+  @include mat-elevation(10);
+  display: flex;
+  margin:16px;
+  flex-direction: column;
+  border: 0px #666 solid;
+  border-radius: 8px;
+  height: calc(100% - 32px);
+  width: calc(100% - 32px);
+  overflow: hidden;
+}
+.header{
+  @include mat-elevation(4);
+  //background-color:mat-color($primary);
+}
+.footer{
+  @include mat-elevation(4);
+  //background-color:mat-color($primary);
+}
+
+.panelText{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.listItem{
+  background-color: white;
+}
+
+.example-form {
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.space {
+  flex: 1 1 auto;
+}
+.content{
+  padding: 24px;
+  overflow-y: auto;
+}

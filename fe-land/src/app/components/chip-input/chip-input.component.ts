@@ -106,6 +106,8 @@ export class ChipInputComponent implements OnInit
             selectedData =>
                 this.getDataValue(selectedData) !== this.getDataValue(data)
         );
+        console.log(this.selected);
+        this.setFormGroupValue(this.selected);
     }
 
     inSelected = ( inputValue: string ) => {

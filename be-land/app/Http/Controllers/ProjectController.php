@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Item;
 use App\Project;
 use App\Tag;
 use Illuminate\Http\Request;
@@ -17,6 +18,27 @@ class ProjectController extends Controller
         return $project;
     }
 
+    private function updateProjectTags($tags , Project $project){
+        $newTags = [];
+        foreach ($tags as $tag){
+            if(isset($tag['id'])){ $newTags[]=$tag['id']; }
+            else{
+                $existingTag = Tag::where('name',$tag['name'])->first();
+                if($existingTag){
+                    $newTags[]=$existingTag->id;
+                }
+                else {
+                    $newTag = new Tag();
+                    $newTag->fill($tag);
+                    $newTag->save();
+                    $newTags[] = $newTag->id;
+                }
+            }
+        }
+
+        $project->item->tags()->sync($newTags);
+    }
+
     public function update( Request $request, Project $project)
     {
         if(!$project){ return response()->json([
@@ -27,6 +49,7 @@ class ProjectController extends Controller
             'name' => $request->name,
             'description' => $request->description
         ])){
+            $request->tags && $this->updateProjectTags($request->tags, $project);
            // $project = Project::where('id', $request->id )->get();
             return response()->json([
                 'success'=> true,
@@ -47,6 +70,8 @@ class ProjectController extends Controller
         }
 
         $project = Project::create( $request->all() );
+
+        $request->tags && $this->updateProjectTags($request->tags, $project);
 
         $project->item->tags()->sync($tagsToSync);
 

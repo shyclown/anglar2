@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from "rxjs/internal/BehaviorSubject";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {catchError, subscribeOn, tap} from "rxjs/operators";
-//import {Folder} from "../../folder";
+
 import {Observable} from "rxjs/internal/Observable";
 import {CookieService} from "ngx-cookie-service";
 import {InitService} from "./init.service";
@@ -34,7 +34,6 @@ export class ExplorerService {
         private cookieService: CookieService,
         private http: HttpClient,
         private api: InitService,
-
     ) {
         this.getFolders();
     }
@@ -46,7 +45,7 @@ export class ExplorerService {
     });
 
     public folders = new BehaviorSubject<Folders>(
-        { folders: [ ] }
+        { folders: [] }
     );
 
     public getFolders = (): void => {
@@ -74,7 +73,6 @@ export class ExplorerService {
     };
 
     public saveNewFolder = (name) => {
-      console.log(this.api);
 
       this.http.post( this.api.API+"/save_folder",
           { 'name' :  name },httpOptions).subscribe((data)=>{

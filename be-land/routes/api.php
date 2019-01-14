@@ -72,10 +72,5 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::resource('project', 'ProjectController')->except([ 'create', 'edit' ]);
     Route::resource('item', 'ItemController')->except([ 'create', 'edit' ]);
     Route::resource('tag', 'TagController')->except([ 'create', 'edit' ]);
-/*
-        Route::get('/folder', 'FolderController@getFolders');
-        Route::get('/folder/{id}', 'FolderController@getFolder');
-        Route::post('/folder', 'FolderController@createFolder');
-        Route::put('/folder/{id}', 'FolderController@updateFolder');
-*/
+
 });
