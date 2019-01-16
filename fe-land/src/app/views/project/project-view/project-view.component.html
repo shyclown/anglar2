@@ -36,9 +36,11 @@
                         {{project.description}}
                     </p>
                     <p  matLine class="mat-caption">
-                        <mat-chip-list>
+                        <mat-chip-list *ngIf="project.item">
 
-                            <mat-chip *ngFor="let tag of project.item.tags">
+                            <mat-chip *ngFor="let tag of project.item.tags"
+                                      (click)="openTag(tag.id)"
+                            >
                                 {{tag.name}}
                             </mat-chip>
                         </mat-chip-list>

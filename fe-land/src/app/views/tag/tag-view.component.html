@@ -23,12 +23,21 @@
         overflow-y:auto"
         cdkScrollable
     >
-        <mat-card>
-            <div *ngFor="let item of tag.items">
-                <mat-
-                {{item.item.name}}
+            <div *ngIf="tag">
+                <mat-card
+                    *ngFor="let item of tag.items"
+                    (click)="openEntity(item.entity_type, item.entity)"
+                >
+                    <mat-card-header>
+                        <mat-card-title>
+                            {{item.entity.name}}
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            {{item.entity_type.toUpperCase()}}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                </mat-card>
             </div>
-        </mat-card>
 
     </panel-content>
     <panel-footer>

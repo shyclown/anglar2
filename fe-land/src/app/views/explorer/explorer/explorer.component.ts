@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import { ExplorerService } from "./../service/explorer.service";
 import {catchError, tap} from "rxjs/operators";
 import {Folder} from "../../../folder";
 import {InitService} from "../service/init.service";
+import {MatDialog} from "@angular/material";
 
 @Component({
   selector: 'app-explorer',
@@ -20,7 +21,8 @@ export class ExplorerComponent implements OnInit {
     name:string;
 
   constructor(
-      private ExplorerService: ExplorerService
+      private ExplorerService: ExplorerService,
+        public dialog: MatDialog
   ) {
     this.selected = false;
     this.data = ExplorerService;
@@ -33,7 +35,27 @@ export class ExplorerComponent implements OnInit {
         this.currentFolderID = this.currentState.currentFolderID;
     });
   }
+
+    @ViewChild('createFolderDialog')
+    createFolderDialog: TemplateRef<any>;
+
     saveNewFolder =(name)=>{  this.data.saveNewFolder(name); }
+
+    openCreateFolderDialog(): void {
+        const dialogRef = this.dialog.open(
+            this.createFolderDialog,
+            {
+                panelClass: 'customDialog',
+                maxWidth: '250px',
+                data: {},
+                disableClose: false,
+                closeOnNavigation: true
+            }
+        );
+        dialogRef.afterClosed().subscribe(result => {
+            console.log('The dialog was closed', result);
+        });
+    }
     /*
     deleteFolder = (folder)=>{ this.data.deleteFolder(name);}
     */

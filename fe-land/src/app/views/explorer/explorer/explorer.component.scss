@@ -4,6 +4,13 @@ $color-brand: rebeccapurple;
 $margin-base: 1rem;
 $padding-base: 1rem;
 
+.iconButton span.mat-button-wrapper{
+  display: flex;
+}
+.iconButton mat-icon{
+  margin: auto 4px 2px 0;
+}
+
 .explorerWrap{
   box-sizing: border-box;
   width: 100%;

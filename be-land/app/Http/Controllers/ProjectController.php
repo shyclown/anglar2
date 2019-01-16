@@ -11,14 +11,15 @@ use App\Folder;
 class ProjectController extends Controller
 {
     public function index(){
-        return Project::all();
+        return Project::with('item.tags')->get();
     }
 
     public function show(Project $project){
-        return $project;
+        return $project->load('item.tags');
     }
 
     private function updateProjectTags($tags , Project $project){
+
         $newTags = [];
         foreach ($tags as $tag){
             if(isset($tag['id'])){ $newTags[]=$tag['id']; }

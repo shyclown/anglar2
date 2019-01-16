@@ -1,11 +1,19 @@
 
 <div class="explorerWrap">
     <div class="explorerTree">
-        <button mat-button (click)="selected = true">New Folder</button>
+        <button mat-flat-button color="primary" (click)="openCreateFolderDialog()" ngClass="iconButton">
+
+            <mat-icon>create_new_folder</mat-icon> New Folder
+
+        </button>
         <app-folder-tree-line></app-folder-tree-line>
     </div>
 
     <div class="explorerContent" logOnClick >
         Current folder ID: {{currentFolderID}}
     </div>
+
+    <ng-template #createFolderDialog >
+        <app-create-folder-form></app-create-folder-form>
+    </ng-template>
 </div>

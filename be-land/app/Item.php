@@ -9,11 +9,9 @@ class Item extends Model
 {
     protected $table = "items";
 
-    protected $with = [ 'tags', 'item' ];
-
-    public function insert($item, $item_type) {
-        $this->item_id = $item->id;
-        $this->item_type = $item_type;
+    public function insert($entity, $entity_type) {
+        $this->entity_id = $entity->id;
+        $this->entity_type = $entity_type;
         return $this->save();
     }
 
@@ -28,7 +26,7 @@ class Item extends Model
     }
 
     /* Attaches Item model to another Item-able model */
-    public function item(){ return $this->morphTo();  }
+    public function entity(){ return $this->morphTo();  }
 
     public function tags()
     {

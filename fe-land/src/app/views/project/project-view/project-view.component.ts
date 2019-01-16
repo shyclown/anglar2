@@ -32,6 +32,9 @@ export class ProjectViewComponent implements OnInit {
         console.log(projectId);
         this.router.navigate([`/project/${projectId}`]);
     };
+    openTag = (tagId: number) => {
+        this.router.navigate([`/tag/${tagId}`]);
+    };
 
     createProject = () => {
         console.log('new');

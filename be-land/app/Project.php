@@ -3,9 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\Relation;
+
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
+
 
 class Project extends Model
 {
@@ -19,12 +19,12 @@ class Project extends Model
 
         self::created(function(Project $project){
             $item = new Item;
-            $item->user_id = Auth::id();
+            $item->entity_id = Auth::id();
             $project->item()->save($item); // Add new Item to Folder
         });
     }
 
     public function item(){
-        return $this->morphOne(Item::class, 'item');
+        return $this->morphOne(Item::class, 'entity');
     }
 }

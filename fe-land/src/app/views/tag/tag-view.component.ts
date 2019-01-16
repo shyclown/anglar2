@@ -25,6 +25,10 @@ export class TagViewComponent implements OnInit {
 
     }
 
+    openEntity = (entity_type, entity) => {
+        this.theRouter.navigate([`/${entity_type}/${entity.id}`]);
+    };
+
     ngOnInit() {
 
         this.theRoute.params.subscribe(event => {

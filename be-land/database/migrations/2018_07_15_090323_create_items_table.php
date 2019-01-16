@@ -18,7 +18,7 @@ class CreateItemsTable extends Migration
 
             $table->increments('id');
             $table->integer('user_id')->unsigned()->nullable();
-            $table->morphs('item');
+            $table->morphs('entity');
 
             /* Manage timestamps for items */
             $table->timestamps();

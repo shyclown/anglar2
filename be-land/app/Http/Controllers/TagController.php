@@ -22,7 +22,7 @@ class TagController extends Controller
 
     public function show(Tag $tag ){
 
-        return $tag->load('items.item');
+        return $tag->load('items.entity');
 
     }
 

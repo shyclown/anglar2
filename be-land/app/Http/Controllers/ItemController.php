@@ -22,7 +22,7 @@ class ItemController extends Controller
     }
 
     public function index(){
-        return Item::with('item')->get();
+        return Item::with('entity')->get();
 
     }
 

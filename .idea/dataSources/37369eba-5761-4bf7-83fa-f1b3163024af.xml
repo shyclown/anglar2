@@ -1007,13 +1007,13 @@
       <DataType>int(10) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="234" name="item_type">
+    <column id="260" parent="234" name="entity_type">
       <Position>3</Position>
       <DataType>varchar(191)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="234" name="item_id">
+    <column id="261" parent="234" name="entity_id">
       <Position>4</Position>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
@@ -1038,9 +1038,9 @@
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="266" parent="234" name="items_item_type_item_id_index">
-      <ColNames>item_type
-item_id</ColNames>
+    <index id="266" parent="234" name="items_entity_type_entity_id_index">
+      <ColNames>entity_type
+entity_id</ColNames>
       <Type>btree</Type>
     </index>
     <key id="267" parent="234" name="PRIMARY">
