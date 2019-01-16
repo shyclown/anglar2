@@ -1,0 +1,40 @@
+<app-panel>
+    <panel-header>
+        <mat-toolbar ngClass="whiteBg">
+            <mat-toolbar-row>
+
+                <span>My Tags</span>
+                <div ngClass="grow"></div>
+                <button
+                    mat-button
+                    color="primary"
+                    (click)="createProject()"
+                >
+                    <mat-icon>add</mat-icon>
+                    Add to Item
+                </button>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </panel-header>
+    <panel-content
+        style="
+        flex-grow: 1;
+        overflow: hidden;
+        overflow-y:auto"
+        cdkScrollable
+    >
+        <mat-card>
+            <div *ngFor="let item of tag.items">
+                <mat-
+                {{item.item.name}}
+            </div>
+        </mat-card>
+
+    </panel-content>
+    <panel-footer>
+
+
+
+    </panel-footer>
+</app-panel>
+

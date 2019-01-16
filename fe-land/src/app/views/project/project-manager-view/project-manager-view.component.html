@@ -1,5 +1,4 @@
 <div ngClass="wrap">
-
 <div ngClass="root">
 <div>
         <mat-toolbar ngClass="header">
@@ -13,7 +12,6 @@
             {{project && project.id ? 'Edit Project' : 'New Project'}}
         </mat-toolbar>
 </div>
-
     <div style="flex-grow: 1; overflow-y: auto" ngClass="content" cdkScrollable>
     <form
         style="height: 100%; overflow:hidden" [formGroup]="projectForm"
@@ -81,9 +79,6 @@
 
     </mat-toolbar>
 </div>
-
-
-
 </div>
 </div>
 

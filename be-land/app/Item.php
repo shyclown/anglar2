@@ -9,7 +9,7 @@ class Item extends Model
 {
     protected $table = "items";
 
-    protected $with = ['tags'];
+    protected $with = [ 'tags', 'item' ];
 
     public function insert($item, $item_type) {
         $this->item_id = $item->id;

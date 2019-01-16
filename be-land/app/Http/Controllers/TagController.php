@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Item;
+use App\Project;
 use App\Tag;
 use Illuminate\Http\Request;
 
@@ -17,6 +18,12 @@ class TagController extends Controller
 
     public function index(){
         return Tag::all();
+    }
+
+    public function show(Tag $tag ){
+
+        return $tag->load('items.item');
+
     }
 
     public function store(Request $request){

@@ -28,6 +28,7 @@ import { HomeViewComponent } from './views/home-view/home-view.component';
 import { PublicViewModule } from "./views/public-view/public-view.module";
 import { ProjectViewModule } from "./views/project/project-view.module";
 import {ScrollDispatchModule} from "@angular/cdk/scrolling";
+import {TagViewModule} from "./views/tag/tag-view.module";
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import {ScrollDispatchModule} from "@angular/cdk/scrolling";
   ],
 
   imports: [
+      TagViewModule,
       AuthModule,
       ProjectViewModule,
     //  MatCardModule,

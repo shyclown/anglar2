@@ -14,6 +14,7 @@ import { PublicViewComponent } from "../views/public-view/public-view.component"
 
 import { ProjectViewComponent } from "../views/project/project-view/project-view.component";
 import {ProjectManagerViewComponent} from "../views/project/project-manager-view/project-manager-view.component";
+import { TagViewComponent} from "../views/tag/tag-view.component";
 
 
 const routes : Routes =[
@@ -42,6 +43,12 @@ const routes : Routes =[
     {
         path: 'project',
         component: ProjectViewComponent ,
+        canActivate: [ AuthGuard ]
+        // resolve: { 'token': ResolveApi }
+    },
+    {
+        path: 'tag/:id',
+        component: TagViewComponent ,
         canActivate: [ AuthGuard ]
         // resolve: { 'token': ResolveApi }
     },

@@ -1,0 +1,35 @@
+.root{
+  height:calc( 100vw - 360px );
+  padding: 8px;
+  border: 1px solid #EAEAEA;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: calc(100% - 32px);
+  overflow: hidden;
+  margin: 16px;
+}
+
+.grow{
+  flex-grow: 1;
+}
+
+.icon{
+  margin-right: 8px;
+}
+.whiteBg{
+  background-color: #ffffff;
+}
+
+.panelText{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.listItem{
+  background-color: white;
+}
