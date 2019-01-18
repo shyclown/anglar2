@@ -13,7 +13,7 @@ Editor.splitSelection = function(oRoot)
     let changeEndNode;
 
     if(!isTextNode(startNode)){
-        if(startNode == oRoot){
+        if(startNode === oRoot){
             startNode = oRoot.children[startOffset - 1];
         }
         if(this.isCustom(startNode)){
@@ -23,7 +23,7 @@ Editor.splitSelection = function(oRoot)
     }
 
     if(!isTextNode(endNode)){
-        if(endNode == oRoot){
+        if(endNode === oRoot){
             endNode = oRoot.children[endOffset - 1];
         }
         if(this.isCustom(endNode)){
@@ -32,9 +32,9 @@ Editor.splitSelection = function(oRoot)
         }
     }
 
-    let sameTextNode = startNode == endNode;
-    let wholeStart = startOffset == 0;
-    let wholeEnd = endOffset == endNode.textContent.length;
+    let sameTextNode = startNode === endNode;
+    let wholeStart = startOffset === 0;
+    let wholeEnd = endOffset === endNode.textContent.length;
     let wholeContent = wholeStart && wholeEnd;
 
     if(wholeContent)
@@ -131,9 +131,9 @@ Editor.changeSelectionTag = function(oTag, oRoot)
                         placeNodes.push(nodes[i]);
                     }
                 }
-                if(currentNode == rootEnd){
+                if(currentNode === rootEnd){
                     if(placeNodes.length > 0){
-                        var oElement = this.createNewTagElement(placeNodes,rootEnd.tagName,placeAfter);
+                       const oElement = this.createNewTagElement(placeNodes,rootEnd.tagName,placeAfter);
                         placeNodes = [];
                     }
                     controlElement = false;
@@ -160,7 +160,7 @@ Editor.changeSelectionTag = function(oTag, oRoot)
 
     }
 
-    if( rootStart != rootEnd){
+    if( rootStart !== rootEnd){
         removeElement(rootEnd);
     }
     removeElement(rootStart);
@@ -174,14 +174,14 @@ Editor.createNewTagElement = function(oNodes,oTag,oPlacementAfter)
         this.createInnerLine(oNodes[i], oTag, oElement);
     }
     return oElement;
-}
+};
 
 Editor.createInnerLine = function(oText,oTag, oPlacement)
 {
     var oTag = oTag.toLowerCase();
     var fnInnerLine = this.innerLine[oTag];
     fnInnerLine.bind(this, oText, oPlacement)();
-}
+};
 Editor.innerLine = {
     p: function(oText, oPlacement){ ;oPlacement.appendChild(oText); var br = document.createElement('br'); oPlacement.appendChild(br);},
     h2:function(oText, oPlacement){ oPlacement.appendChild(oText); var br = document.createElement('br'); oPlacement.appendChild(br);},

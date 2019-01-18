@@ -11,6 +11,12 @@ Editor.node = function(node, root){
     }
 }
 
+export default class EditorUtils{
+
+    constructor(theEditor){ this.editor = theEditor }
+
+}
+
 function callbackEditor(data){ console.log(data);}
 
 const insertAfter = (newNode, referenceNode) => referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
@@ -20,12 +26,8 @@ const removeNextSibling = (el) => el.parentNode.removeChild(el.nextSibling);
 const inArrayString = (arr, str) => arr.indexOf(str) > -1;
 const deleteAnchorRange = (el, offset) => deleteRange( el, offset , el , el.length );
 const deleteFocusRange = (el, offset) => deleteRange( el, 0 , el , offset );
-const getFirstTextNode = (el) => {
-    while(el.firstChild != null){  el = el.firstChild; } return el;
-};
-const getLastTextNode = (el) => {
-    while(el.lastChild != null){ el = el.lastChild; } return el;
-};
+const getFirstTextNode = (el) => { while(el.firstChild != null){  el = el.firstChild; } return el; };
+const getLastTextNode = (el) => { while(el.lastChild != null){ el = el.lastChild; } return el; };
 const deleteRange = (start, end, startOffset, endOffset) => {
     const range = document.createRange();
     range.setStart(start, startOffset);
@@ -37,10 +39,11 @@ const hasTextInside = (el) =>{
     let found = false;
     if(!el){ return false; }
     const isEmpty = (el) => {
-        (!found) ?
+        if(!found) {
             isTextNode(el) ?
                 found = (el.textContent !== '') :
-                el.childNodes.map(ch => isEmpty(ch));
+                el.childNodes.map(ch => isEmpty(ch))
+        }
     };
     isEmpty(el);
     return found;
@@ -73,7 +76,7 @@ const hasDirectSiblingOfTag = (el, tagName) => ( el.nextSibling != null && isOfT
 const isOfTag = (el, tagName) => ( !isTextNode(el) && el.tagName.toUpperCase() === tagName.toUpperCase());
 const newCaretPosition = function(oSelection, oElement, oOffset)
 {
-    var range = document.createRange();
+    let range = document.createRange();
     range.setStart(oElement, oOffset);
     range.collapse(true);
     oSelection.removeAllRanges();

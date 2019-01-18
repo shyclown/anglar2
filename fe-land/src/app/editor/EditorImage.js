@@ -1,8 +1,8 @@
-const Editor = Editor || {};
+import Editor from Editor;
 /*
 Functions needed for manipulating Images
 */
-Editor.imageFigure = function(source, caption, root)
+Editor.prototype.imageFigure = function(source, caption, root)
 {
     let css = Editor.css.imagefigure;
     let figure = Editor.fn.el('figure',css.figure);
