@@ -1,7 +1,7 @@
 import {el, getParentInRoot, insertAfter, isDescendant, pasteEvent, resizeDropped} from "./EditorUtils";
 import {imageFigure} from "./operations/Image";
 import {ajax} from "./utils/ajax";
-import {css, disalovedTags, texts} from "./config";
+import {css, customTags, texts} from "./config";
 import {buttons} from "./buttons";
 
 import {backspaceEvent} from "./operations/Backspace";
@@ -64,10 +64,10 @@ export default class EditorArea {
         return {
             keydown: function (event) {
                 if (event.keyCode === 46) {
-                    deleteEvent(oSelection, oRoot, disalovedTags);
+                    deleteEvent(oSelection, oRoot, customTags);
                 } // delete
                 if (event.keyCode === 8) {
-                    backspaceEvent(oSelection, oRoot , disalovedTags);
+                    backspaceEvent(oSelection, oRoot , customTags);
                 } // backspace
                 if (event.keyCode === 13) {
                     enterEvent(oSelection, oRoot, event);

@@ -13,9 +13,9 @@ export const node = (node, root) => {
 };
 
 export const el = function( oTag, oClass ){
-    const el = document.createElement( oTag );
-    el.className = oClass;
-    return el;
+    const elm = document.createElement( oTag );
+    elm.className = oClass;
+    return elm;
 };
 
 /* TODO */
@@ -40,9 +40,9 @@ export const isCustom = (oNode, customTags) =>{
 
 export const createCodeLine = function(oText)
 {
-    let el =  document.createElement('div');
-    el.appendChild(oText);
-    el.className = 'code_line';
+    let elm =  document.createElement('div');
+    elm.appendChild(oText);
+    elm.className = 'code_line';
     return el;
 };
 
@@ -51,21 +51,21 @@ export const createCodeLine = function(oText)
 export const createNewTagElement = (oNodes,oTag,oPlacementAfter)=> {
     let oElement = document.createElement(oTag);
     insertAfter(oElement,oPlacementAfter);
-    for (var i = 0; i < oNodes.length; i++) {
-        this.createInnerLine(oNodes[i], oTag, oElement);
+    for (let i = 0; i < oNodes.length; i++) {
+        createInnerLine(oNodes[i], oTag, oElement);
     }
     return oElement;
 };
 
 export const insertAfter = (newNode, referenceNode) => referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 export const insertBefore = (newNode, referenceNode) => referenceNode.parentNode.insertBefore(newNode, referenceNode);
-export const removeElement = (el) => el.parentNode.removeChild(el);
-export const removeNextSibling = (el) => el.parentNode.removeChild(el.nextSibling);
+export const removeElement = (elm) => elm.parentNode.removeChild(elm);
+export const removeNextSibling = (elm) => elm.parentNode.removeChild(elm.nextSibling);
 export const inArrayString = (arr, str) => arr.indexOf(str) > -1;
-export const deleteAnchorRange = (el, offset) => deleteRange( el, offset , el , el.length );
-export const deleteFocusRange = (el, offset) => deleteRange( el, 0 , el , offset );
-export const getFirstTextNode = (el) => { while(el.firstChild != null){  el = el.firstChild; } return el; };
-export const getLastTextNode = (el) => { while(el.lastChild != null){ el = el.lastChild; } return el; };
+export const deleteAnchorRange = (elm, offset) => deleteRange( elm, offset , elm, elm.length );
+export const deleteFocusRange = (elm, offset) => deleteRange( elm, 0 , elm , offset );
+export const getFirstTextNode = (elm) => { while(elm.firstChild != null){  elm = elm.firstChild; } return el; };
+export const getLastTextNode = (elm) => { while(elm.lastChild != null){ elm = elm.lastChild; } return el; };
 
 export const deleteRange = (start, end, startOffset, endOffset) => {
     const range = document.createRange();
@@ -74,44 +74,49 @@ export const deleteRange = (start, end, startOffset, endOffset) => {
     range.deleteContents();
 };
 
-export const isTextNode = (el) => el.nodeType === 3;
-export const hasTextInside = (el) =>{
+export const isTextNode = (elm) => elm.nodeType === 3;
+export const hasTextInside = (elm) =>{
     let found = false;
     if(!el){ return false; }
-    const isEmpty = (el) => {
+    const isEmpty = (elm) => {
         if(!found) {
-            isTextNode(el) ?
-                found = (el.textContent !== '') :
-                el.childNodes.map(ch => isEmpty(ch))
+            isTextNode(elm) ?
+                found = (elm.textContent !== '') :
+                Array.from(elm).childNodes.map(ch => isEmpty(ch))
         }
     };
-    isEmpty(el);
+    isEmpty(elm);
     return found;
 };
 export const getPreviousTextSibling = (theElement, root) =>{
-    let el = theElement;
+    let elm = theElement;
     // BR
-    while(el.previousSibling != null && isOfTag(el.previousSibling,'br')){
-        el = el.previousSibling;
+    while(elm.previousSibling != null && isOfTag(elm.previousSibling,'br')){
+        elm = elm.previousSibling;
     }
-    while(el.previousSibling === null && root.firstChild !== el){ el = el.parentNode; }
-    if(root.firstChild === el){ return false; }
-    //if( isOfTag(el, 'br') ){ el = getPreviousTextSibling(el,oRoot); }
-    return getLastTextNode(el.previousSibling);
+    while(
+        elm.previousSibling === null &&
+        root.firstChild !== elm
+    ){
+        elm = elm.parentNode;
+    }
+    if(root.firstChild === elm){ return false; }
+    //if( isOfTag(el, 'br') ){ elm = getPreviousTextSibling(el,oRoot); }
+    return getLastTextNode(elm.previousSibling);
 };
 export const getNextTextSibling = (theElement, root) =>
 {
-    let el = theElement;
-    while(el.nextSibling === null && root.lastChild !== el){
-        el = el.parentNode;
+    let elm = theElement;
+    while(elm.nextSibling === null && root.lastChild !== el){
+        elm = elm.parentNode;
     }
-    if(root.lastChild === el){ return false; }
+    if(root.lastChild === elm){ return false; }
     // Avoid Custom elements!!!
-    while(Editor.isCustom(getParentInRoot(el.nextSibling, root))){ el = el.nextSibling; }
-    return getFirstTextNode(el.nextSibling);
+    while(Editor.isCustom(getParentInRoot(elm.nextSibling, root))){ elm = elm.nextSibling; }
+    return getFirstTextNode(elm.nextSibling);
 };
-export const hasDirectSiblingOfTag = (el, tagName) => ( el.nextSibling != null && isOfTag( el.nextSibling, tagName ));
-export const isOfTag = (el, tagName) => ( !isTextNode(el) && el.tagName.toUpperCase() === tagName.toUpperCase());
+export const hasDirectSiblingOfTag = (elm, tagName) => ( elm.nextSibling != null && isOfTag( elm.nextSibling, tagName ));
+export const isOfTag = (elm, tagName) => ( !isTextNode(elm) && elm.tagName.toUpperCase() === tagName.toUpperCase());
 export const newCaretPosition = function(oSelection, oElement, oOffset)
 {
     let range = document.createRange();
@@ -120,13 +125,13 @@ export const newCaretPosition = function(oSelection, oElement, oOffset)
     oSelection.removeAllRanges();
     oSelection.addRange(range);
 };
-export const getTopEmpty = (el, root) => {
-    if(!Editor.isDescendant(el, root)){
+export const getTopEmpty = (elm, root) => {
+    if(!Editor.isDescendant(elm, root)){
         console.log('error: getTopEmpty - element is not inside root');
         return false;
     } else {
         let found = false;
-        let currentNode = el;
+        let currentNode = elm;
         while(!found && currentNode !== root){
             if(hasTextInside(currentNode.parentNode)){ found = true; break; }
             else{ currentNode = currentNode.parentNode; }
@@ -134,29 +139,30 @@ export const getTopEmpty = (el, root) => {
         return (found) ? currentNode : false;
     }
 };
-export const hasCustomParent = (el, root, customTags) => {
-    while(el.parentNode !== root){
-        if(isCustom(el.parentNode, customTags)){ return true; }
-        if(!el.parentNode){ return false; } // has not parent in root
-        el = el.parentNode;
+export const hasCustomParent = (elm, root, customTags) => {
+    while(elm.parentNode !== root){
+        if(isCustom(elm.parentNode, customTags)){ return true; }
+        if(!elm.parentNode){ return false; } // has not parent in root
+        elm = elm.parentNode;
     }
     return false;
 };
-export const getParentInRoot = (el, root) => {
-    while(el.parentNode !== root ) {
-        if(!el.parentNode){ return false; } // has not parent in root
-        el = el.parentNode;
+export const getParentInRoot = (elm, root) => {
+    while(elm.parentNode !== root ) {
+        if(!elm.parentNode){ return false; } // has not parent in root
+        elm = elm.parentNode;
     }
-    return el;
+    return elm;
 };
-export const findText = (el , arr) => {
-    isTextNode(el) ?
-        arr.push(el) :
-        el.childNodes.map(ch => findText(ch, arr))
+export const findText = (elm , arr) => {
+    console.log(elm.childNodes);
+    isTextNode(elm) ?
+        arr.push(elm) :
+        Array.from(elm.childNodes).map(ch => findText(ch, arr))
 };
-export const getAllTextNodes = (el) => {
+export const getAllTextNodes = (elm) => {
     const arr = [];
-    findText(el ,arr);
+    findText(elm ,arr);
     return arr;
 };
 export const getNodesBetweenNodes = function(nodes, startNode, endNode, includingBorder = false){
@@ -185,8 +191,8 @@ export const deleteRangeElements = function(oSelection, oRoot)
         range.deleteContents()
     } else {
         const oElements = getElementsInSelection(range, oRoot);
-        oElements.map((el, i, arr) => {
-            if (el.className && (el.className === 'code')){ return; }
+        Array.from(oElements).map((elm, i, arr) => {
+            if (elm.className && (elm.className === 'code')){ return; }
             if (i === 0){
                 deleteAnchorRange(range.startContainer, range.startOffset);
             }
@@ -194,7 +200,7 @@ export const deleteRangeElements = function(oSelection, oRoot)
                 deleteFocusRange(range.endContainer, range.endOffset);
             }
             else {
-                oRoot.removeChild(el);
+                oRoot.removeChild(elm);
             }
         });
     }
@@ -202,7 +208,8 @@ export const deleteRangeElements = function(oSelection, oRoot)
 
 export const  replaceInserted = (items, callback) => {
     console.log(items);
-    items.map(item => {
+
+    Array.from(items).map(item => {
         let paragraph = document.createElement('p');
         let nodes = getAllTextNodes(item);
         let str = '';
@@ -372,7 +379,7 @@ export const changeSelectionTag = function(oTag, oRoot, customTags)
         if(!isCustom(currentNode, customTags)){
             let nodes = getAllTextNodes(currentNode);
             if(currentNode === rootStart || currentNode === rootEnd){
-                nodes.map( node => {
+                Array.from(nodes).map( node => {
                     if(node === changeStartNode){
                         if(placeNodes.length > 0){
                             placeAfter = createNewTagElement(placeNodes,rootStart.tagName,placeAfter);

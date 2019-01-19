@@ -1,4 +1,6 @@
 import {btnEvent, changeSelectionTag} from "./EditorUtils";
+import {customTags} from "./config";
+
 
 export const buttons = (root) => {
     return {
@@ -6,13 +8,13 @@ export const buttons = (root) => {
             nicename:'Remove_formating',
             fname:'paragraph',
             btn_event: function(){
-                changeSelectionTag('p',root);
+                changeSelectionTag('p',root, customTags);
             }
         },
         Header_H2: {
             nicename:'Header_H2',
             fname:'header',
-            btn_event: function(){changeSelectionTag('h2',root);}
+            btn_event: function(){changeSelectionTag('h2',root, customTags);}
         },
         Bold: {
             nicename:'Bold',
@@ -52,12 +54,12 @@ export const buttons = (root) => {
         Numbered_list: {
             nicename:'Numbered list',
             fname:'list-ol',
-            btn_event: function(){changeSelectionTag('ol', root)}
+            btn_event: function(){changeSelectionTag('ol', root, customTags)}
         },
         Dotted_list: {
             nicename:'Dotted list',
             fname:'list-ul',
-            btn_event: function(){changeSelectionTag('ul', root)}
+            btn_event: function(){changeSelectionTag('ul', root, customTags)}
         },
         Quote:{
             nicename:'Quote',
@@ -80,7 +82,7 @@ export const buttons = (root) => {
         Code: {
             nicename:'Code',
             fname:'code',
-            btn_event: function(){ changeSelectionTag('code', root); }
+            btn_event: function(){ changeSelectionTag('code', root, customTags); }
         }
     }
 };

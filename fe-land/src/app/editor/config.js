@@ -29,4 +29,4 @@ export const texts = {
     figure_defText: 'figure description',
     placeholder: 'placeholder',
 };
-export const disalovedTags = ['IMG','FIGURE','A'];
+export const customTags = ['IMG','FIGURE','A'];
