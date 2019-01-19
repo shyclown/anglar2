@@ -1,10 +1,10 @@
-var Editor = Editor || {};
-Editor.backspaceEvent = function (oSelection, oRoot)
+import {getParentInRoot} from "../EditorUtils";
+export const backspaceEvent = (oSelection, oRoot) =>
 {
 
     var oNode = oSelection.focusNode;
     var rootNode = getParentInRoot(oNode,oRoot);
-    if(oNode == oRoot){
+    if(oNode === oRoot){
         event.preventDefault();
         console.log('error: selected node is root node'); return false;
     }

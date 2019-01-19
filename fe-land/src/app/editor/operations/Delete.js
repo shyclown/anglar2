@@ -1,85 +1,67 @@
-var Editor = Editor || {};
+import {
+    getAllTextNodes, getFirstTextNode,
+    getNextTextSibling,
+    getParentInRoot,
+    getTopEmpty, hasTextInside, isCustom, isDescendant, isOfTag, mergeTextnodes,
+    newCaretPosition,
+    removeElement, splitSelection
+} from "../EditorUtils";
 
-Editor.deleteEvent = function(oSelection, oRoot)
+export const deleteEvent = (oSelection, oRoot, customTags) =>
 {
-    // when more items selected
-    if(!oSelection.isCollapsed)
-    {
+    if(!oSelection.isCollapsed) {
         event.preventDefault();
         Editor.deleteRange(oRoot);
     }
-    // cursor at end of text element
-    else if( oSelection.focusOffset == oSelection.focusNode.length )
+
+    else if( oSelection.focusOffset === oSelection.focusNode.length )
     {
         event.preventDefault();
-        var oNode = oSelection.focusNode;
-
+        let oNode = oSelection.focusNode;
         /*
         Issue: There is issue when next element is custom Image,
         We need to make it skip the image solved in next sibling
         */
+        if(oNode === oRoot){ return false; }
 
-        if(oNode == oRoot){
-            console.log('error: selected node is root node');
-            return false;
-        }
         const firstNotCustomChild = function(){
             let oElement = oRoot.firstChild;
-            while(Editor.isCustom(oElement)){
+            while(isCustom(oElement, customTags)){
                 oElement = oElement.nextSibling;
             }
             return oElement;
-        }
+        };
+
         const lastNotCustomChild = function(){
             let oElement = oRoot.lastChild;
-            while(Editor.isCustom(oElement)){
+            while(isCustom(oElement, customTags)){
                 oElement = oElement.previousSibling;
             }
             return oElement
-        }
+        };
 
         const emptyNode = !hasTextInside(oNode);
-        const lastNodeInEditor = oNode == firstNotCustomChild() && oNode == lastNotCustomChild();
-        const firstTextNode = oNode == getFirstTextNode(oRoot) || oNode == oRoot.firstChild;
+        const lastNodeInEditor = oNode === firstNotCustomChild() && oNode === lastNotCustomChild();
+        const firstTextNode = oNode === getFirstTextNode(oRoot) || oNode === oRoot.firstChild;
 
-        if(lastNodeInEditor && emptyNode){
-            console.log('cant delete last tag');
-            return false;
-        }
+        if ( lastNodeInEditor && emptyNode){ return false; }
 
-        // grab next node text content and move to same line
-        if(oNode.nextSibling != null && isOfTag(oNode.nextSibling, 'br'))
-        {
-            console.log('removed Sibling', oNode.nextSibling);
+        if ( oNode.nextSibling != null && isOfTag(oNode.nextSibling, 'br')){
             removeElement(oNode.nextSibling);
-            mergeTextnodes();
-        }
-        else
-        {
-            // if next element has no text node in it
-            var nextTextNode = getNextTextSibling( oNode, oRoot);
+            mergeTextnodes(oSelection, oRoot, oNode);
+        } else {
+            let nextTextNode = getNextTextSibling( oNode, oRoot);
             if( nextTextNode )
             {
-                if(nextTextNode.parentNode.tagName == 'A'){
+                if(nextTextNode.parentNode.tagName === 'A'){
                     oSelection.getRangeAt(0).insertNode(nextTextNode.parentNode);
                 }
                 else{
-                    mergeTextnodes();
+                    mergeTextnodes(oSelection, oRoot, oNode);
                 }
             }
         }
-
-        function mergeTextnodes()
-        {
-            var oPosition = oNode.length;
-            var nextTextNode = getNextTextSibling( oNode, oRoot);
-            oNode.textContent += nextTextNode.textContent;
-            nextTextNode.textContent = '';
-            newCaretPosition(oSelection , oNode , oPosition);
-            removeElement(getTopEmpty(nextTextNode,oRoot));
-        }
     }
-
 }
 
 
@@ -90,15 +72,15 @@ Editor.deleteEvent = function(oSelection, oRoot)
 - does not care about position of custom elements
 - @requires Editor.splitSelection(root);
 */
-Editor.deleteRange = function(oRoot)
+Editor.deleteRange = function(oRoot, customTags)
 {
-    const xSelection = Editor.splitSelection(oRoot);
+    const xSelection = splitSelection(oRoot, customTags);
     const changeStartNode = xSelection.changeStartNode;
     const changeEndNode = xSelection.changeEndNode;
     const startElement = getParentInRoot(changeStartNode, oRoot);
     const endElement = getParentInRoot(changeEndNode, oRoot);
 
-    const sameRootParent = startElement == endElement;
+    const sameRootParent = startElement === endElement;
 
     let deleteElement = true;
     let removeNode = false;
@@ -108,70 +90,55 @@ Editor.deleteRange = function(oRoot)
         oNode.textContent = '';
         let node = getTopEmpty(oNode,oRoot);
         if(node){ removeElement(node) }
-    }
+    };
 
     while(deleteElement)
     {
         let nextElement = currentElement.nextSibling;
 
-        if(currentElement == startElement || currentElement == endElement)
-        {
+        if(
+            currentElement === startElement ||
+            currentElement === endElement
+        ){
             let nodes = getAllTextNodes(currentElement);
-            for (let i = 0; i < nodes.length; i++) {
-                if(nodes[i] == changeStartNode){
+
+            nodes.map( node => {
+                if(node === changeStartNode){
                     removeNode = true;
-                    clearNode(nodes[i], oRoot);
-                    if(nodes[i] == changeEndNode){
+                    clearNode(node, oRoot);
+                    if(node === changeEndNode){
                         removeNode = false;
                         deleteElement = false;
                     }
                 }
-                else if(nodes[i] == changeEndNode){
-                    clearNode(nodes[i], oRoot);
+                else if(node === changeEndNode){
+                    clearNode(node, oRoot);
                     removeNode = false;
                     deleteElement = false;
                 }
                 else if(removeNode){
-                    clearNode(nodes[i], oRoot);
+                    clearNode(node, oRoot);
                 }
-            }
-            if(!hasTextInside(currentElement) && Editor.isDescendant(currentElement, oRoot)){
+            });
+            if(!hasTextInside(currentElement) && isDescendant(currentElement, oRoot)){
                 removeElement(currentElement); }
         }
         else {
-            if(!Editor.isCustom(currentElement) && Editor.isDescendant(currentElement, oRoot)){
+            if(!isCustom(currentElement, customTags) && isDescendant(currentElement, oRoot)){
                 removeElement(currentElement);
             }
         }
         currentElement = nextElement;
     }
-    if(sameRootParent && changeStartNode != changeEndNode){
+    if(sameRootParent && changeStartNode !== changeEndNode){
         const xEndNode = xSelection.endNode;
         xSelection.startNode.textContent += xEndNode.textContent;
         clearNode(xEndNode,oRoot);
     }
     // join nodes if same type
-    if(!sameRootParent && startElement.tagName == endElement.tagName){
+    if(!sameRootParent && startElement.tagName === endElement.tagName){
         xSelection.startNode.textContent += xSelection.endNode.textContent;
         clearNode(xSelection.endNode, oRoot);
-        Editor.newCaretPosition(xSelection);
+        newCaretPosition(xSelection, xSelection.startNode, xSelection.startOffset);
     }
-}
-
-Editor.newCaretPosition = function(xSelection){
-    range = document.createRange();
-    selection = window.getSelection();
-    range.setStart(xSelection.startNode, xSelection.startOffset);
-    range.collapse(true);
-    selection.removeAllRanges();
-    selection.addRange(range);
-}
-
-Editor.isDescendant = function(oElement, oRoot){
-    let node = oElement.parentNode;
-    while(node != null){
-        if(node == oRoot){ return true; }
-        node = node.parentNode;
-    }
-    return false;
-}
+};
