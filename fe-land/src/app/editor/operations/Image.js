@@ -1,11 +1,13 @@
 import {
     el,
     getParentInRoot,
+    insertAfter,
     removeElement
-} from "./EditorUtils";
+} from "../EditorUtils";
+import {css, texts} from "../config";
 
 export const imageFigure = (source, caption, root) => {
-    let css = Editor.css.imagefigure;
+    let css = css.imagefigure;
     let figure = el('figure',css.figure);
     figure.setAttribute('contenteditable', false);
 
@@ -36,7 +38,7 @@ export const imageFigure = (source, caption, root) => {
     const moveImg = function()
     {
         console.log('move');
-        placeholder = Editor.imagePlaceholder(root);
+        placeholder = imagePlaceholder(root);
         placeholder.follow();
         placeholder.el.appendChild(figure);
         moveBtn.removeEventListener('click',moveImg,false);
@@ -63,7 +65,7 @@ export const imageFigure = (source, caption, root) => {
 export const imagePlaceholder = (root) =>
 {
     let placeholder = el('div','placeholder');
-    placeholder.innerHTML = Editor.texts.placeholder;
+    placeholder.innerHTML = texts.placeholder;
     let oldPosition = true;
 
     const followMouse = function(event)

@@ -2,13 +2,14 @@
 * Text Editor
 * v. 0.01
 */
-const Editor = Editor || {};
-Editor.node = function(node, root){
-    let inEditor = false;
-    while(node.parentNode != null){
-        if(node === root){ inEditor = true }
 
+/* Todo */
+export const node = (node, root) => {
+    let inEditor = false;
+    while(node.parentNode != null || inEditor === false){
+        inEditor = (node === root)
     }
+    return inEditor;
 };
 
 export const el = function( oTag, oClass ){
@@ -27,7 +28,7 @@ export const innerLine = {
     h2:function(oText, oPlacement){ oPlacement.appendChild(oText); const br = document.createElement('br'); oPlacement.appendChild(br);},
     ul:function(oText, oPlacement){  const li = document.createElement('li'); li.appendChild(oText); oPlacement.appendChild(li);  },
     ol:function(oText, oPlacement){  const li = document.createElement('li'); li.appendChild(oText); oPlacement.appendChild(li);  },
-    code:function(oText, oPlacement){ const line = createCodeline(oText); oPlacement.appendChild(line);}
+    code:function(oText, oPlacement){ const line = createCodeLine(oText); oPlacement.appendChild(line);}
 };
 
 export const notCustom = (oNode, customTags) =>{
@@ -37,9 +38,9 @@ export const isCustom = (oNode, customTags) =>{
     return !notCustom(oNode, customTags);
 };
 
-export const createCodeline = function(oText)
+export const createCodeLine = function(oText)
 {
-    var el =  document.createElement('div');
+    let el =  document.createElement('div');
     el.appendChild(oText);
     el.className = 'code_line';
     return el;
@@ -65,12 +66,14 @@ export const deleteAnchorRange = (el, offset) => deleteRange( el, offset , el , 
 export const deleteFocusRange = (el, offset) => deleteRange( el, 0 , el , offset );
 export const getFirstTextNode = (el) => { while(el.firstChild != null){  el = el.firstChild; } return el; };
 export const getLastTextNode = (el) => { while(el.lastChild != null){ el = el.lastChild; } return el; };
+
 export const deleteRange = (start, end, startOffset, endOffset) => {
     const range = document.createRange();
     range.setStart(start, startOffset);
     range.setEnd(end, endOffset);
     range.deleteContents();
 };
+
 export const isTextNode = (el) => el.nodeType === 3;
 export const hasTextInside = (el) =>{
     let found = false;
@@ -440,4 +443,9 @@ export const mergeTextnodes = (oSelection, oRoot, oNode) =>
     nextTextNode.textContent = '';
     newCaretPosition(oSelection , oNode , oPosition);
     removeElement(getTopEmpty(nextTextNode,oRoot));
+};
+
+
+export const btnEvent = (type, value) => {
+    document.execCommand(type,false,value);
 };

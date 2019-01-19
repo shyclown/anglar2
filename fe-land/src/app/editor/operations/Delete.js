@@ -1,4 +1,5 @@
 import {
+
     getAllTextNodes, getFirstTextNode,
     getNextTextSibling,
     getParentInRoot,
@@ -11,7 +12,7 @@ export const deleteEvent = (oSelection, oRoot, customTags) =>
 {
     if(!oSelection.isCollapsed) {
         event.preventDefault();
-        Editor.deleteRange(oRoot);
+        deleteRange(oRoot);
     }
 
     else if( oSelection.focusOffset === oSelection.focusNode.length )
@@ -72,7 +73,7 @@ export const deleteEvent = (oSelection, oRoot, customTags) =>
 - does not care about position of custom elements
 - @requires Editor.splitSelection(root);
 */
-Editor.deleteRange = function(oRoot, customTags)
+export const deleteRange = (oRoot, customTags) =>
 {
     const xSelection = splitSelection(oRoot, customTags);
     const changeStartNode = xSelection.changeStartNode;

@@ -1,9 +1,14 @@
-import {getParentInRoot} from "../EditorUtils";
-export const backspaceEvent = (oSelection, oRoot) =>
+import {
+    deleteRange, getFirstTextNode, getNextTextSibling,
+    getParentInRoot, getPreviousTextSibling, getTopEmpty, hasTextInside,
+    isCustom, isOfTag, isTextNode, newCaretPosition, removeElement
+} from "../EditorUtils";
+
+export const backspaceEvent = (oSelection, oRoot, customTags) =>
 {
 
-    var oNode = oSelection.focusNode;
-    var rootNode = getParentInRoot(oNode,oRoot);
+    const oNode = oSelection.focusNode;
+    const rootNode = getParentInRoot(oNode,oRoot);
     if(oNode === oRoot){
         event.preventDefault();
         console.log('error: selected node is root node'); return false;
@@ -12,30 +17,30 @@ export const backspaceEvent = (oSelection, oRoot) =>
     // Selection NOT Colapsed
     //-----------------------------------------------------
     if(!oSelection.isCollapsed){
-        if(Editor.isCustom(rootNode)){
+        if(isCustom(rootNode, customTags)){
             console.log('delete range inside custom');
             // default
         }
         else{
             event.preventDefault();
-            Editor.deleteRange(oRoot);
+            deleteRange(oRoot);
         }
     }
     //-----------------------------------------------------
     // Selection Colapsed
     //-----------------------------------------------------
-    else if( oSelection.isCollapsed && oSelection.focusOffset == 0 )
+    else if( oSelection.isCollapsed && oSelection.focusOffset === 0 )
     {
         console.log('backspace - selection is Colapsed');
         event.preventDefault();
         let oPrevText = getPreviousTextSibling(oNode, oRoot);
         let targetRoot = getParentInRoot(oPrevText, oRoot); console.log('targetRoot', targetRoot);
         let sourceRoot = getParentInRoot(oNode, oRoot);
-        let sameRoot = targetRoot == sourceRoot;
+        let sameRoot = targetRoot === sourceRoot;
         let oPosition = oPrevText.length;
-        var emptyNode = !hasTextInside(oNode); //
-        var lastNodeInTree = oNode == oRoot.firstChild && oNode == oRoot.lastChild;
-        var firstTextNode = oNode == getFirstTextNode(oRoot) || oNode == oRoot.firstChild;
+        let emptyNode = !hasTextInside(oNode); //
+        let lastNodeInTree = oNode === oRoot.firstChild && oNode === oRoot.lastChild;
+        let firstTextNode = oNode === getFirstTextNode(oRoot) || oNode === oRoot.firstChild;
 
         if( isOfTag(rootNode,'code')
             || isOfTag(rootNode,'figure')
@@ -43,7 +48,7 @@ export const backspaceEvent = (oSelection, oRoot) =>
             || isOfTag(rootNode, 'ol'))
         {
             console.log('inside - Custom Root Node');
-            if(getFirstTextNode(rootNode) == oNode || isOfTag(oNode, 'figcaption')){
+            if(getFirstTextNode(rootNode) === oNode || isOfTag(oNode, 'figcaption')){
                 return false; // nothing to delete
             }
             else{
@@ -54,7 +59,7 @@ export const backspaceEvent = (oSelection, oRoot) =>
             }
         }
 
-        else if(Editor.isCustom(rootNode)){ return false; }
+        else if(isCustom(rootNode, customTags)){ return false; }
         //-----------------------------------------------------
         // Default Function when not Custom Elements - Not First or Last Node
         //-----------------------------------------------------
@@ -75,11 +80,10 @@ export const backspaceEvent = (oSelection, oRoot) =>
             if(!firstTextNode)
             {
                 /* Do not move to custom elements */
-                if(Editor.isCustom(targetRoot)){ return false; }
+                if(isCustom(targetRoot, customTags)){ return false; }
 
                 /* Remove previous BR */
-                oPrevious = oNode.previousSibling;
-                console.log('previousSibling', oPrevious);
+                let oPrevious = oNode.previousSibling;
                 if(oPrevious && isOfTag(oPrevious,'br')){ removeElement(oPrevious, oRoot); oPosition = oPrevText.textContent.length; }
 
                 /* Move A TAG as a Element not just text */
@@ -100,7 +104,7 @@ export const backspaceEvent = (oSelection, oRoot) =>
                 //-----------------------------------------------------
                 else{
                     console.log('Different Roots');
-                    if(oNode == sourceRoot){ oNode = sourceRoot.firstChild; }
+                    if(oNode === sourceRoot){ oNode = sourceRoot.firstChild; }
                     let prevNode = oPrevText;
                     if(isOfTag(prevNode.parentNode,'a')){ prevNode = prevNode.parentNode; }
                     while(oNode){

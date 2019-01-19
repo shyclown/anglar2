@@ -1,12 +1,23 @@
-class EditorArea {
+import {el, getParentInRoot, insertAfter, isDescendant, pasteEvent, resizeDropped} from "./EditorUtils";
+import {imageFigure} from "./operations/Image";
+import {ajax} from "./utils/ajax";
+import {css, disalovedTags, texts} from "./config";
+import {buttons} from "./buttons";
+
+import {backspaceEvent} from "./operations/Backspace";
+import {deleteEvent} from "./operations/Delete";
+import {enterEvent} from "./operations/Enter";
+
+
+export default class EditorArea {
 
     constructor(data) {
-        this.drop_file_callback = data.drop_file_callback || false;
-        this.image_url = data.image_url || '';
+        this.drop_file_callback = data && data.drop_file_callback || false;
+        this.image_url = data && data.image_url || '';
         this.upload_file = 'system/php/upload_image.php';
         // Editor.area
-        this.input_id = data.input_id;
-        this.form_id = data.form_id;
+        this.input_id = data && data.input_id;
+        this.form_id = data && data.form_id;
         this.input_el = document.getElementById(this.input_id);
         this.form_el = document.getElementById(this.form_id);
 
@@ -14,6 +25,7 @@ class EditorArea {
         this.root = this.part.content_wrap;
         this.buttons = this.createAllButtons();
         this.event = this.createEvents();
+
         this.attachEvents();
 
         this.placehoderAbove = true;
@@ -23,7 +35,7 @@ class EditorArea {
     }
 
     //Editor.attachImageControls.bind(this)();
-    attachEvent() {
+    attachEvents() {
         this.root.addEventListener('keydown', this.event.keydown, false);
         this.root.addEventListener('copy', this.event.copy, false);
         this.root.addEventListener('paste', this.event.paste, false);
@@ -31,14 +43,14 @@ class EditorArea {
         // Change Mode
         this.part.htmlSwitch.addEventListener('change', this.event.changeMode, false);
         // Mouse Events
-        this.root.addEventListener('contextmenu', function () {
-        }, false);
+        this.root.addEventListener('contextmenu', function () {}, false);
+
         this.root.addEventListener('dragenter', this.event.dragenter, false);
-        this.root.addEventListener('dragleave', Editor.fn.removeDefault, false);// def
-        this.root.addEventListener('dragstart', Editor.fn.removeDefault, false);// def
-        this.root.addEventListener('dragend', Editor.fn.removeDefault, false);// def
-        this.root.addEventListener('dragover', Editor.fn.removeDefault, false);// def
-        this.root.addEventListener('drag', Editor.fn.removeDefault, false);// def
+        this.root.addEventListener('dragleave', removeDefault, false);// def
+        this.root.addEventListener('dragstart', removeDefault, false);// def
+        this.root.addEventListener('dragend', removeDefault, false);// def
+        this.root.addEventListener('dragover', removeDefault, false);// def
+        this.root.addEventListener('drag', removeDefault, false);// def
         this.root.addEventListener('drop', this.event.drop, false);
         // Submit
         this.form_el.addEventListener('submit', this.oSubmit.bind(this), false);
@@ -52,20 +64,20 @@ class EditorArea {
         return {
             keydown: function (event) {
                 if (event.keyCode === 46) {
-                    Editor.deleteEvent(oSelection, oRoot);
+                    deleteEvent(oSelection, oRoot, disalovedTags);
                 } // delete
                 if (event.keyCode === 8) {
-                    Editor.backspaceEvent(oSelection, oRoot);
+                    backspaceEvent(oSelection, oRoot , disalovedTags);
                 } // backspace
                 if (event.keyCode === 13) {
-                    Editor.enterEvent(oSelection, oRoot, event);
+                    enterEvent(oSelection, oRoot, event);
                 } // enter
             },
             copy: function (event) {
                 console.log('copy', event);
             },
             paste: function (event) {
-                Editor.pasteEvent(oSelection, oRoot, event);
+                pasteEvent(oSelection, oRoot, event);
             },
             cut: function (event) {
                 console.log('cut', event);
@@ -101,7 +113,7 @@ class EditorArea {
                 }
             },
             drop: function (event) {
-                Editor.fn.removeDefault(event);
+                removeDefault(event);
                 // if provided upload function
                 if (area.drop_file_callback) {
                     area.drop_file_callback();
@@ -110,7 +122,7 @@ class EditorArea {
                     const data = event.dataTransfer.files;
                     const reader = new FileReader();
                     reader.onload = function (readerEvent) {
-                        const dataUrl = Editor.resizeDropped(readerEvent, callback); // TODO
+                        const dataUrl = resizeDropped(readerEvent, callback);
                         function callback(resultUrl) {
                             const oData = {action: 'upload', image: resultUrl};
                             const uploadProgress = function (percent) {
@@ -119,12 +131,12 @@ class EditorArea {
                             const callbackAjax = function (response) {
                                 area.afterImageUpload(response, true);
                             };
-                            new Editor.ajax(area.upload_file, oData, uploadProgress, callbackAjax);
+                            new ajax(area.upload_file, oData, uploadProgress, callbackAjax);
                         }
-                    }
+                    };
                     reader.onprogress = function (ev) {
                         console.log(ev.loaded / (ev.total / 100));
-                    }
+                    };
                     reader.readAsDataURL(data[0]);
                 }
             }
@@ -134,18 +146,18 @@ class EditorArea {
     createParts() {
         const oInput = this.input_el;
         let part = {};
-        part.editor_wrap = Editor.fn.el('div', Editor.css.parts.editor_main);
-        part.buttons_wrap = Editor.fn.el('div', Editor.css.parts.buttons.wrap);
-        part.content_wrap = Editor.fn.el('div', Editor.css.parts.content.wrap);
-        part.htmlSwitch_wrap = Editor.fn.el('div', Editor.css.parts.html_switch.wrap);
-        part.htmlSwitch = Editor.fn.el('input', Editor.css.parts.html_switch.el);
-        part.htmlSwitch_label = Editor.fn.el('label', Editor.css.parts.html_switch.label);
+        part.editor_wrap = el('div', css.parts.editor_main);
+        part.buttons_wrap = el('div', css.parts.buttons.wrap);
+        part.content_wrap = el('div', css.parts.content.wrap);
+        part.htmlSwitch_wrap = el('div', css.parts.html_switch.wrap);
+        part.htmlSwitch = el('input', css.parts.html_switch.el);
+        part.htmlSwitch_label = el('label', css.parts.html_switch.label);
 
         part.content_wrap.contentEditable = true;
         part.htmlSwitch.type = 'checkbox';
         part.htmlSwitch.name = 'switchMode';
         part.htmlSwitch_label.setAttribute('for', 'switchMode');
-        part.htmlSwitch_label.textContent = Editor.texts.htmlSwitch_label;
+        part.htmlSwitch_label.textContent = texts.htmlSwitch_label;
 
         part.editor_wrap.appendChild(part.buttons_wrap);
         part.editor_wrap.appendChild(part.content_wrap);
@@ -159,22 +171,26 @@ class EditorArea {
     }
 
     createAllButtons() {
-        let buttons = {};
-        for (var item in Editor.buttons) {
-            const oButton = Editor.buttons[item];
-            const el = Editor.fn.el('button', Editor.css.parts.buttons.icon_wrap);
-            const iconCss = 'fa fa-' + oButton.fname + ' fa-fw';
-            const icon = Editor.fn.el('i', iconCss);
 
-            el.type = 'button';
-            el.title = oButton.nicename;
-            const fn = function () {
-                this.inEditMode(oButton.btn_event.bind(this));
-            }
-            el.addEventListener('click', fn.bind(this), false);
-            el.appendChild(icon);
-            this.part.buttons_wrap.appendChild(el);
-            buttons[item] = el;
+        let allButtons = buttons(this.root);
+
+
+        for (let item in allButtons)
+        {
+            const theButton = allButtons[item];
+            const elm = el('button', css.parts.buttons.icon_wrap);
+            const iconCss = 'fa fa-' + theButton.fname + ' fa-fw';
+            const icon = el('i', iconCss);
+
+            elm.type = 'button';
+            elm.title = theButton.nicename;
+            const fn = () => {
+                this.inEditMode(theButton.btn_event.bind(this));
+            };
+            elm.addEventListener('click', fn.bind(this), false);
+            elm.appendChild(icon);
+            this.part.buttons_wrap.appendChild(elm);
+            buttons[item] = elm;
         }
         return buttons;
     }
@@ -192,26 +208,22 @@ class EditorArea {
     }
 
     oSubmit() {
-        if (this.inEditMode()) {
-            //this.area_el.value = this.root.innerHTML;
-            return true;
-        }
-        return false;
+        return this.inEditMode();
     }
     update_content(newContent) {
         this.root.innerHTML = newContent;
     }
 
-    insertAfterSelection(oElement) {
-        // inser after base node
+    insertAfterSelection(oElement)
+    {
         const oRoot = this.root;
         const oSelection = document.getSelection();
         const oRange = oSelection.getRangeAt(0);
         const oRootTag = oRange.endContainer.parentNode.tagName;
-        if (Editor.isDescendant(oRange.endContainer, oRoot)) {
-            if (oRange.endContainer.parentNode.tagName == 'A') {
+        if (isDescendant(oRange.endContainer, oRoot)) {
+            if (oRange.endContainer.parentNode.tagName === 'A') {
                 insertAfter(oElement, oRange.endContainer.parentNode);
-            } else if (oRootTag == 'P' || oRootTag == 'LI') {
+            } else if (oRootTag === 'P' || oRootTag === 'LI') {
                 oRange.deleteContents();
                 oRange.insertNode(oElement);
             } else {
@@ -233,18 +245,14 @@ class EditorArea {
         this.placeholder = void 0;
     };
 
-    imagePlaceholder(root) {
-        return Editor.imagePlaceholder(root);
-    };
-
-    removeDefault(event) {
-        event.preventDefault();
-        event.stopPropagation();
-    };
     afterImageUpload(response) {
-        /* Edited resposne : it is like default angular : respose.data and already parsed JSON */
-        sponse = response.data;
-        let figure = new Editor.imageFigure(this.image_url + response.file_src, 'new item', this.root);
+        response = response.data;
+        let figure = new imageFigure(this.image_url + response.file_src, 'new item', this.root);
         this.root.insertBefore(figure.el, this.placeholder.el);
     };
 }
+
+export const removeDefault = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+};
