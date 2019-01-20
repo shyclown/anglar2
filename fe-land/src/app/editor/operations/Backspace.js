@@ -27,36 +27,30 @@ export const backspaceEvent = (oSelection, oRoot, customTags) =>
         }
     }
     //-----------------------------------------------------
-    // Selection Colapsed
+    // Selection Collapsed
     //-----------------------------------------------------
     else if( oSelection.isCollapsed && oSelection.focusOffset === 0 )
     {
-        console.log('backspace - selection is Colapsed');
+        console.log('Backspace - selection is Collapsed');
         event.preventDefault();
         let oPrevText = getPreviousTextSibling(oNode, oRoot);
         let targetRoot = getParentInRoot(oPrevText, oRoot); console.log('targetRoot', targetRoot);
         let sourceRoot = getParentInRoot(oNode, oRoot);
-
-        console.log('SourceRoot: ',sourceRoot);
         hasTextInside(sourceRoot);
-        console.log('Node: ', oNode);
-
         let sameRoot = targetRoot === sourceRoot;
         let oPosition = oPrevText.length;
         let emptyNode = !hasTextInside(oNode); //
-
-        console.log('emptyNode',emptyNode);
-
         let lastNodeInTree = oNode === oRoot.firstChild && oNode === oRoot.lastChild;
         let firstTextNode = oNode === getFirstTextNode(oRoot) || oNode === oRoot.firstChild;
 
-        if( isOfTag(rootNode,'code')
+        if (
+            isOfTag(rootNode,'code')
             || isOfTag(rootNode,'figure')
             || isOfTag(rootNode, 'ul')
             || isOfTag(rootNode, 'ol'))
         {
             console.log('inside - Custom Root Node');
-            if(getFirstTextNode(rootNode) === oNode || isOfTag(oNode, 'figcaption')){
+            if (getFirstTextNode(rootNode) === oNode || isOfTag(oNode, 'figcaption')){
                 return false; // nothing to delete
             }
             else{
@@ -67,44 +61,42 @@ export const backspaceEvent = (oSelection, oRoot, customTags) =>
             }
         }
 
-        else if(isCustom(rootNode, customTags)){ return false; }
+        else if (isCustom(rootNode, customTags)){
+            return false;
+        }
         //-----------------------------------------------------
         // Default Function when not Custom Elements - Not First or Last Node
         //-----------------------------------------------------
         else{
-
-            console.log(sourceRoot);
-
-            if(!hasTextInside(sourceRoot)){
-                console.log('Source is Empty');
+            if (!hasTextInside(sourceRoot)){
                 removeElement(sourceRoot);
-                console.log(oSelection, oPrevText);
                 newCaretPosition(oSelection, oPrevText, oPrevText.length);
                 return false;
             }
-            if(!hasTextInside(targetRoot)){
-                console.log('is Empty');
+            if (!hasTextInside(targetRoot)){
                 removeElement(targetRoot);
                 return false;
             }
-
-            console.log('inside - Normal Root Node');
-            if(!firstTextNode)
-            {
+            if (!firstTextNode){
                 /* Do not move to custom elements */
-                if(isCustom(targetRoot, customTags)){ return false; }
-
+                if (isCustom(targetRoot, customTags)){
+                    return false;
+                }
                 /* Remove previous BR */
                 let oPrevious = oNode.previousSibling;
-                if(oPrevious && isOfTag(oPrevious,'br')){ removeElement(oPrevious, oRoot); oPosition = oPrevText.textContent.length; }
-
+                if (oPrevious && isOfTag(oPrevious,'br')){
+                    removeElement(oPrevious, oRoot);
+                    oPosition = oPrevText.textContent.length;
+                }
                 /* Move A TAG as a Element not just text */
-                if( isOfTag(oNode.parentNode, 'a') ){ oNode = oNode.parentNode; }
+                if (isOfTag(oNode.parentNode, 'a')){
+                    oNode = oNode.parentNode;
+                }
 
                 //-----------------------------------------------------
                 // Same Root Element
                 //-----------------------------------------------------
-                if(sameRoot){
+                if (sameRoot){
                     console.log('In Same Root');
                     if(isTextNode(oPrevText) && isTextNode(oNode)){
                         oPrevText.textContent += oNode.textContent;
@@ -116,9 +108,13 @@ export const backspaceEvent = (oSelection, oRoot, customTags) =>
                 //-----------------------------------------------------
                 else{
                     console.log('Different Roots');
-                    if(oNode === sourceRoot){ oNode = sourceRoot.firstChild; }
+                    if (oNode === sourceRoot){
+                        oNode = sourceRoot.firstChild;
+                    }
                     let prevNode = oPrevText;
-                    if(isOfTag(prevNode.parentNode,'a')){ prevNode = prevNode.parentNode; }
+                    if (isOfTag(prevNode.parentNode,'a')){
+                        prevNode = prevNode.parentNode;
+                    }
                     while(oNode){
                         let nextNode = oNode.nextSibling;
                         if(isTextNode(oNode) && isTextNode(prevNode)){ prevNode.textContent += oNode.textContent; removeElement( oNode ); }
@@ -132,11 +128,11 @@ export const backspaceEvent = (oSelection, oRoot, customTags) =>
             //-----------------------------------------------------
             // First Text Node in Root
             //-----------------------------------------------------
-            else if(firstTextNode){
+            else if (firstTextNode){
                 // if its last node altogether
-                if(lastNodeInTree || !emptyNode){ return false; }
+                if (lastNodeInTree || !emptyNode){ return false; }
                 // if its not the last we remove it if empty and move to next
-                else if(!lastNodeInTree && emptyNode)
+                else if (!lastNodeInTree && emptyNode)
                 {
                     newCaretPosition(oSelection, getNextTextSibling(oNode, oRoot), 0);
                     removeElement( getTopEmpty(oNode, oRoot) );

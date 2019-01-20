@@ -3,9 +3,6 @@
 * v. 0.01
 */
 
-/* Todo */
-import {customTags} from "./config";
-
 export const node = (node, root) => {
     let inEditor = false;
     while(node.parentNode != null || inEditor === false){
@@ -40,15 +37,12 @@ export const isCustom = (oNode, customTags) =>{
     return !notCustom(oNode, customTags);
 };
 
-export const createCodeLine = function(oText)
-{
+export const createCodeLine = (oText) => {
     let elm =  document.createElement('div');
     elm.appendChild(oText);
     elm.className = 'code_line';
     return elm;
 };
-
-
 
 export const createNewTagElement = (oNodes, oTag, oPlacementAfter)=> {
     let oElement = document.createElement(oTag);
@@ -82,17 +76,16 @@ export const deleteExistingRange = (range) => {
 
 export const isTextNode = (elm) => { return elm.nodeType === 3};
 
-export const hasTextInside = (elm) =>{
-
+export const hasTextInside = (elm) =>
+{
     let found = false;
-    if(!elm){ return false; }
+    if (!elm){ return false; }
     const isEmpty = (elm) => {
         if(!found) {
             if( isTextNode(elm) ){
                 found = (elm.textContent !== '')
             }
             else {
-                console.log(elm.childNodes);
                 for (let i = 0; i < elm.childNodes.length; i++) {
                     isEmpty(elm.childNodes[i])
                 }
@@ -100,10 +93,9 @@ export const hasTextInside = (elm) =>{
         }
     };
     isEmpty(elm);
-
-    console.log('Has Text Inside: ', found, elm);
     return found;
 };
+
 export const getPreviousTextSibling = (theElement, root) =>{
     let elm = theElement;
     // BR
@@ -116,7 +108,7 @@ export const getPreviousTextSibling = (theElement, root) =>{
     ){
         elm = elm.parentNode;
     }
-    if(root.firstChild === elm){ return false; }
+    if (root.firstChild === elm){ return false; }
     //if( isOfTag(el, 'br') ){ elm = getPreviousTextSibling(el,oRoot); }
     return getLastTextNode(elm.previousSibling);
 };
@@ -127,7 +119,7 @@ export const getNextTextSibling = (theElement, root, customTags) =>
     while(elm.nextSibling === null && root.lastChild !== el){
         elm = elm.parentNode;
     }
-    if(root.lastChild === elm){ return false; }
+    if (root.lastChild === elm){ return false; }
     // Avoid Custom elements!!!
     while(isCustom(getParentInRoot(elm.nextSibling, root), customTags)){ elm = elm.nextSibling; }
     return getFirstTextNode(elm.nextSibling);
@@ -145,7 +137,7 @@ export const newCaretPosition = function(oSelection, oElement, oOffset)
     oSelection.addRange(range);
 };
 export const getTopEmpty = (elm, root) => {
-    if(!Editor.isDescendant(elm, root)){
+    if (!isDescendant(elm, root)){
         console.log('error: getTopEmpty - element is not inside root');
         return false;
     } else {
@@ -160,21 +152,20 @@ export const getTopEmpty = (elm, root) => {
 };
 export const hasCustomParent = (elm, root, customTags) => {
     while(elm.parentNode !== root){
-        if(isCustom(elm.parentNode, customTags)){ return true; }
-        if(!elm.parentNode){ return false; } // has not parent in root
+        if (isCustom(elm.parentNode, customTags)){ return true; }
+        if (!elm.parentNode){ return false; } // has not parent in root
         elm = elm.parentNode;
     }
     return false;
 };
 export const getParentInRoot = (elm, root) => {
-    while(elm.parentNode !== root ) {
-        if(!elm.parentNode){ return false; } // has not parent in root
+    while(elm.parentNode !== root) {
+        if (!elm.parentNode){ return false; } // has not parent in root
         elm = elm.parentNode;
     }
     return elm;
 };
 export const findText = (elm , arr) => {
-    console.log(elm.childNodes);
     isTextNode(elm) ?
         arr.push(elm) :
         Array.from(elm.childNodes).map(ch => findText(ch, arr))
@@ -329,12 +320,12 @@ export const splitSelection = function(oRoot, customTags)
     let wholeEnd = endOffset === endNode.textContent.length;
     let wholeContent = wholeStart && wholeEnd;
 
-    if(wholeContent)
+    if (wholeContent)
     {
         changeStartNode = startNode;
         changeEndNode = endNode;
     }
-    if(!wholeContent && sameTextNode){
+    if (!wholeContent && sameTextNode){
         endNode = startNode.cloneNode('deep');
         insertAfter(endNode,startNode);
         changeStartNode = startNode.cloneNode('deep');
@@ -344,9 +335,9 @@ export const splitSelection = function(oRoot, customTags)
         startNode.textContent = startNode.textContent.substr(0,startOffset);
         endNode.textContent = endNode.textContent.substr(endOffset);
     }
-    if(!wholeContent && !sameTextNode)
+    if (!wholeContent && !sameTextNode)
     {
-        if(wholeStart){
+        if (wholeStart){
             changeStartNode = startNode;
         }
         else{
@@ -355,7 +346,7 @@ export const splitSelection = function(oRoot, customTags)
             changeStartNode.textContent = changeStartNode.textContent.substr(startOffset);
             startNode.textContent = startNode.textContent.substr(0,startOffset);
         }
-        if(wholeEnd){
+        if (wholeEnd){
             changeEndNode = endNode;
         }
         else{
@@ -385,7 +376,10 @@ export const changeSelectionTag = function(oTag, oRoot, customTags)
     let rootEnd = getParentInRoot(changeEndNode,oRoot);
 
     // because of ability editing text in custom elements
-    if(isCustom(rootStart, customTags) && rootStart === rootEnd){ return false; }
+    if (
+        isCustom(rootStart, customTags) &&
+        rootStart === rootEnd
+    ){ return false; }
 
     let placeNodes = [];
     let placeAfter = rootStart;
@@ -431,12 +425,12 @@ export const changeSelectionTag = function(oTag, oRoot, customTags)
             }
         }
 
-        if(isCustom(currentNode, customTags)){
-            if(placeNodes.length > 0){
+        if (isCustom(currentNode, customTags)){
+            if (placeNodes.length > 0){
                 createNewTagElement(placeNodes,oTag,placeAfter);
                 placeNodes = [];
             }
-            if(currentNode === rootEnd){
+            if (currentNode === rootEnd){
                 controlElement = false;
             }
             placeAfter = nextElement;
@@ -445,7 +439,7 @@ export const changeSelectionTag = function(oTag, oRoot, customTags)
 
     }
 
-    if( rootStart !== rootEnd){
+    if (rootStart !== rootEnd){
         removeElement(rootEnd);
     }
     removeElement(rootStart);
@@ -455,7 +449,7 @@ export const changeSelectionTag = function(oTag, oRoot, customTags)
 export const isDescendant = (oElement, oRoot) => {
     let node = oElement.parentNode;
     while(node != null){
-        if(node === oRoot){ return true; }
+        if (node === oRoot){ return true; }
         node = node.parentNode;
     }
     return false;
