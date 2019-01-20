@@ -7,11 +7,7 @@ import { environment } from './environments/environment';
 
 /* Editor */
 
-import EditorArea from './app/editor/EditorArea';
 
-const editor = new EditorArea({ input_id: 'inputTest', form_id: 'formTest'});
-
-console.log(editor);
 
 if (environment.production) {
   enableProdMode();

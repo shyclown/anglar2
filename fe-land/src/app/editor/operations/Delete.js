@@ -12,7 +12,7 @@ export const deleteEvent = (oSelection, oRoot, customTags) =>
 {
     if(!oSelection.isCollapsed) {
         event.preventDefault();
-        deleteRange(oRoot);
+        deleteRange(oRoot, customTags);
     }
 
     else if( oSelection.focusOffset === oSelection.focusNode.length )
@@ -140,6 +140,7 @@ export const deleteRange = (oRoot, customTags) =>
     if(!sameRootParent && startElement.tagName === endElement.tagName){
         xSelection.startNode.textContent += xSelection.endNode.textContent;
         clearNode(xSelection.endNode, oRoot);
+        console.log(xSelection);
         newCaretPosition(xSelection, xSelection.startNode, xSelection.startOffset);
     }
 };

@@ -4,6 +4,8 @@
 */
 
 /* Todo */
+import {customTags} from "./config";
+
 export const node = (node, root) => {
     let inEditor = false;
     while(node.parentNode != null || inEditor === false){
@@ -43,12 +45,12 @@ export const createCodeLine = function(oText)
     let elm =  document.createElement('div');
     elm.appendChild(oText);
     elm.className = 'code_line';
-    return el;
+    return elm;
 };
 
 
 
-export const createNewTagElement = (oNodes,oTag,oPlacementAfter)=> {
+export const createNewTagElement = (oNodes, oTag, oPlacementAfter)=> {
     let oElement = document.createElement(oTag);
     insertAfter(oElement,oPlacementAfter);
     for (let i = 0; i < oNodes.length; i++) {
@@ -64,8 +66,8 @@ export const removeNextSibling = (elm) => elm.parentNode.removeChild(elm.nextSib
 export const inArrayString = (arr, str) => arr.indexOf(str) > -1;
 export const deleteAnchorRange = (elm, offset) => deleteRange( elm, offset , elm, elm.length );
 export const deleteFocusRange = (elm, offset) => deleteRange( elm, 0 , elm , offset );
-export const getFirstTextNode = (elm) => { while(elm.firstChild != null){  elm = elm.firstChild; } return el; };
-export const getLastTextNode = (elm) => { while(elm.lastChild != null){ elm = elm.lastChild; } return el; };
+export const getFirstTextNode = (elm) => { while(elm.firstChild != null){  elm = elm.firstChild; } return elm; };
+export const getLastTextNode = (elm) => { while(elm.lastChild != null){ elm = elm.lastChild; } return elm; };
 
 export const deleteRange = (start, end, startOffset, endOffset) => {
     const range = document.createRange();
@@ -74,18 +76,32 @@ export const deleteRange = (start, end, startOffset, endOffset) => {
     range.deleteContents();
 };
 
-export const isTextNode = (elm) => elm.nodeType === 3;
+export const deleteExistingRange = (range) => {
+    range.deleteContents();
+};
+
+export const isTextNode = (elm) => { return elm.nodeType === 3};
+
 export const hasTextInside = (elm) =>{
+
     let found = false;
-    if(!el){ return false; }
+    if(!elm){ return false; }
     const isEmpty = (elm) => {
         if(!found) {
-            isTextNode(elm) ?
-                found = (elm.textContent !== '') :
-                Array.from(elm).childNodes.map(ch => isEmpty(ch))
+            if( isTextNode(elm) ){
+                found = (elm.textContent !== '')
+            }
+            else {
+                console.log(elm.childNodes);
+                for (let i = 0; i < elm.childNodes.length; i++) {
+                    isEmpty(elm.childNodes[i])
+                }
+            }
         }
     };
     isEmpty(elm);
+
+    console.log('Has Text Inside: ', found, elm);
     return found;
 };
 export const getPreviousTextSibling = (theElement, root) =>{
@@ -104,7 +120,8 @@ export const getPreviousTextSibling = (theElement, root) =>{
     //if( isOfTag(el, 'br') ){ elm = getPreviousTextSibling(el,oRoot); }
     return getLastTextNode(elm.previousSibling);
 };
-export const getNextTextSibling = (theElement, root) =>
+
+export const getNextTextSibling = (theElement, root, customTags) =>
 {
     let elm = theElement;
     while(elm.nextSibling === null && root.lastChild !== el){
@@ -112,13 +129,15 @@ export const getNextTextSibling = (theElement, root) =>
     }
     if(root.lastChild === elm){ return false; }
     // Avoid Custom elements!!!
-    while(Editor.isCustom(getParentInRoot(elm.nextSibling, root))){ elm = elm.nextSibling; }
+    while(isCustom(getParentInRoot(elm.nextSibling, root), customTags)){ elm = elm.nextSibling; }
     return getFirstTextNode(elm.nextSibling);
 };
+
 export const hasDirectSiblingOfTag = (elm, tagName) => ( elm.nextSibling != null && isOfTag( elm.nextSibling, tagName ));
 export const isOfTag = (elm, tagName) => ( !isTextNode(elm) && elm.tagName.toUpperCase() === tagName.toUpperCase());
 export const newCaretPosition = function(oSelection, oElement, oOffset)
 {
+    console.log(oElement);
     let range = document.createRange();
     range.setStart(oElement, oOffset);
     range.collapse(true);
@@ -285,22 +304,22 @@ export const splitSelection = function(oRoot, customTags)
     let changeStartNode;
     let changeEndNode;
 
-    if(!isTextNode(startNode)){
-        if(startNode === oRoot){
+    if (!isTextNode(startNode)) {
+        if (startNode === oRoot) {
             startNode = oRoot.children[startOffset - 1];
         }
-        if(isCustom(startNode, customTags)){
-            startNode = getNextTextSibling(startNode, oRoot);
+        if (isCustom(startNode, customTags)) {
+            startNode = getNextTextSibling(startNode, oRoot, customTags);
             startOffset = 0;
         }
     }
 
-    if(!isTextNode(endNode)){
-        if(endNode === oRoot){
+    if (!isTextNode(endNode)) {
+        if (endNode === oRoot) {
             endNode = oRoot.children[endOffset - 1];
         }
-        if(this.isCustom(endNode)){
-            endNode = getPreviousTextSibling(startNode, oRoot);
+        if (isCustom(endNode, customTags)) {
+            endNode = getPreviousTextSibling(startNode, oRoot, customTags);
             endOffset = endNode.textContent.length;
         }
     }

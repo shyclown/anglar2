@@ -7,7 +7,7 @@ import {
 export const backspaceEvent = (oSelection, oRoot, customTags) =>
 {
 
-    const oNode = oSelection.focusNode;
+    let oNode = oSelection.focusNode;
     const rootNode = getParentInRoot(oNode,oRoot);
     if(oNode === oRoot){
         event.preventDefault();
@@ -36,9 +36,17 @@ export const backspaceEvent = (oSelection, oRoot, customTags) =>
         let oPrevText = getPreviousTextSibling(oNode, oRoot);
         let targetRoot = getParentInRoot(oPrevText, oRoot); console.log('targetRoot', targetRoot);
         let sourceRoot = getParentInRoot(oNode, oRoot);
+
+        console.log('SourceRoot: ',sourceRoot);
+        hasTextInside(sourceRoot);
+        console.log('Node: ', oNode);
+
         let sameRoot = targetRoot === sourceRoot;
         let oPosition = oPrevText.length;
         let emptyNode = !hasTextInside(oNode); //
+
+        console.log('emptyNode',emptyNode);
+
         let lastNodeInTree = oNode === oRoot.firstChild && oNode === oRoot.lastChild;
         let firstTextNode = oNode === getFirstTextNode(oRoot) || oNode === oRoot.firstChild;
 
@@ -64,9 +72,13 @@ export const backspaceEvent = (oSelection, oRoot, customTags) =>
         // Default Function when not Custom Elements - Not First or Last Node
         //-----------------------------------------------------
         else{
+
+            console.log(sourceRoot);
+
             if(!hasTextInside(sourceRoot)){
                 console.log('Source is Empty');
                 removeElement(sourceRoot);
+                console.log(oSelection, oPrevText);
                 newCaretPosition(oSelection, oPrevText, oPrevText.length);
                 return false;
             }
@@ -87,7 +99,7 @@ export const backspaceEvent = (oSelection, oRoot, customTags) =>
                 if(oPrevious && isOfTag(oPrevious,'br')){ removeElement(oPrevious, oRoot); oPosition = oPrevText.textContent.length; }
 
                 /* Move A TAG as a Element not just text */
-                if(isOfTag(oNode.parentNode, 'a')){ oNode = oNode.parentNode; }
+                if( isOfTag(oNode.parentNode, 'a') ){ oNode = oNode.parentNode; }
 
                 //-----------------------------------------------------
                 // Same Root Element
