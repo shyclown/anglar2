@@ -1,12 +1,20 @@
 import {
-
-    getAllTextNodes, getFirstTextNode,
+    getAllTextNodes,
+    getFirstTextNode,
     getNextTextSibling,
     getParentInRoot,
-    getTopEmpty, hasTextInside, isCustom, isDescendant, isOfTag, mergeTextnodes,
+    getTopEmpty,
+    hasTextInside,
+    isCustom,
+    isDescendant,
+    isOfTag,
+    mergeTextnodes,
     newCaretPosition,
-    removeElement, splitSelection
+    removeElement
 } from "../EditorUtils";
+import {
+    splitSelection
+} from "../selection/splitSelection";
 
 export const deleteEvent = (oSelection, oRoot, customTags) =>
 {
@@ -45,20 +53,24 @@ export const deleteEvent = (oSelection, oRoot, customTags) =>
         const lastNodeInEditor = oNode === firstNotCustomChild() && oNode === lastNotCustomChild();
         const firstTextNode = oNode === getFirstTextNode(oRoot) || oNode === oRoot.firstChild;
 
-        if ( lastNodeInEditor && emptyNode){ return false; }
+        if ( lastNodeInEditor && emptyNode ){ return false; }
 
-        if ( oNode.nextSibling != null && isOfTag(oNode.nextSibling, 'br')){
+        if (
+            oNode.nextSibling != null &&
+            isOfTag(oNode.nextSibling, 'br')
+        ){
             removeElement(oNode.nextSibling);
             mergeTextnodes(oSelection, oRoot, oNode);
         } else {
-            let nextTextNode = getNextTextSibling( oNode, oRoot);
+            console.log(oNode);
+            let nextTextNode = getNextTextSibling( oNode, oRoot, customTags );
             if( nextTextNode )
             {
                 if(nextTextNode.parentNode.tagName === 'A'){
                     oSelection.getRangeAt(0).insertNode(nextTextNode.parentNode);
                 }
                 else{
-                    mergeTextnodes(oSelection, oRoot, oNode);
+                    mergeTextnodes(oSelection, oRoot, oNode, customTags);
                 }
             }
         }
@@ -140,7 +152,9 @@ export const deleteRange = (oRoot, customTags) =>
     if(!sameRootParent && startElement.tagName === endElement.tagName){
         xSelection.startNode.textContent += xSelection.endNode.textContent;
         clearNode(xSelection.endNode, oRoot);
-        console.log(xSelection);
-        newCaretPosition(xSelection, xSelection.startNode, xSelection.startOffset);
+        newCaretPosition(
+            xSelection.startNode,
+            xSelection.startOffset
+        );
     }
 };

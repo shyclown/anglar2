@@ -11,7 +11,7 @@ export const enterEvent = (oSelection, oRoot, event) =>
             insertBefore(p, rootNode);
             p.innerHTML = rootNode.innerHTML;
             removeElement(rootNode);
-            newCaretPosition(sel, p, 0);
+            newCaretPosition(p, 0);
         }
     };
 

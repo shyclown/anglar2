@@ -3,6 +3,8 @@
 * v. 0.01
 */
 
+import {customTags} from "./config";
+
 export const node = (node, root) => {
     let inEditor = false;
     while(node.parentNode != null || inEditor === false){
@@ -18,8 +20,8 @@ export const el = function( oTag, oClass ){
 };
 
 /* TODO */
-export const createInnerLine = (oText,oTag, oPlacement) => {
-    innerLine[oTag.toLowerCase()].bind(this, oText, oPlacement)();
+export const createInnerLine = (oText, oTag, oPlacement) => {
+    innerLine[oTag.toLowerCase()](oText, oPlacement);
 };
 
 export const innerLine = {
@@ -70,10 +72,6 @@ export const deleteRange = (start, end, startOffset, endOffset) => {
     range.deleteContents();
 };
 
-export const deleteExistingRange = (range) => {
-    range.deleteContents();
-};
-
 export const isTextNode = (elm) => { return elm.nodeType === 3};
 
 export const hasTextInside = (elm) =>
@@ -116,26 +114,34 @@ export const getPreviousTextSibling = (theElement, root) =>{
 export const getNextTextSibling = (theElement, root, customTags) =>
 {
     let elm = theElement;
-    while(elm.nextSibling === null && root.lastChild !== el){
+    while ( elm.nextSibling === null && root.lastChild !== elm ){
         elm = elm.parentNode;
     }
+
+
     if (root.lastChild === elm){ return false; }
     // Avoid Custom elements!!!
-    while(isCustom(getParentInRoot(elm.nextSibling, root), customTags)){ elm = elm.nextSibling; }
+    while (
+        isCustom(getParentInRoot(elm.nextSibling, root), customTags)
+    ){
+        elm = elm.nextSibling;
+    }
     return getFirstTextNode(elm.nextSibling);
 };
 
 export const hasDirectSiblingOfTag = (elm, tagName) => ( elm.nextSibling != null && isOfTag( elm.nextSibling, tagName ));
 export const isOfTag = (elm, tagName) => ( !isTextNode(elm) && elm.tagName.toUpperCase() === tagName.toUpperCase());
-export const newCaretPosition = function(oSelection, oElement, oOffset)
-{
-    console.log(oElement);
+
+export const newCaretPosition = function(oElement, oOffset) {
     let range = document.createRange();
     range.setStart(oElement, oOffset);
     range.collapse(true);
-    oSelection.removeAllRanges();
-    oSelection.addRange(range);
+
+    let selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
 };
+
 export const getTopEmpty = (elm, root) => {
     if (!isDescendant(elm, root)){
         console.log('error: getTopEmpty - element is not inside root');
@@ -281,171 +287,6 @@ export const resizeDropped = (readerEvent, callback, size) => {
     }// image.onload
 };// mouse.resizeDropped
 
-
-export const splitSelection = function(oRoot, customTags)
-{
-    const oSelection = document.getSelection();
-    const oRange = oSelection.getRangeAt(0);
-    let startOffset = oRange.startOffset;
-    let endOffset = oRange.endOffset;
-
-    let startNode = oRange.startContainer;
-    let endNode = oRange.endContainer;
-
-    let changeStartNode;
-    let changeEndNode;
-
-    if (!isTextNode(startNode)) {
-        if (startNode === oRoot) {
-            startNode = oRoot.children[startOffset - 1];
-        }
-        if (isCustom(startNode, customTags)) {
-            startNode = getNextTextSibling(startNode, oRoot, customTags);
-            startOffset = 0;
-        }
-    }
-
-    if (!isTextNode(endNode)) {
-        if (endNode === oRoot) {
-            endNode = oRoot.children[endOffset - 1];
-        }
-        if (isCustom(endNode, customTags)) {
-            endNode = getPreviousTextSibling(startNode, oRoot, customTags);
-            endOffset = endNode.textContent.length;
-        }
-    }
-
-    let sameTextNode = startNode === endNode;
-    let wholeStart = startOffset === 0;
-    let wholeEnd = endOffset === endNode.textContent.length;
-    let wholeContent = wholeStart && wholeEnd;
-
-    if (wholeContent)
-    {
-        changeStartNode = startNode;
-        changeEndNode = endNode;
-    }
-    if (!wholeContent && sameTextNode){
-        endNode = startNode.cloneNode('deep');
-        insertAfter(endNode,startNode);
-        changeStartNode = startNode.cloneNode('deep');
-        insertAfter(changeStartNode,startNode);
-        changeStartNode.textContent = changeStartNode.textContent.substr(startOffset, (endOffset - startOffset));
-        changeEndNode = changeStartNode;
-        startNode.textContent = startNode.textContent.substr(0,startOffset);
-        endNode.textContent = endNode.textContent.substr(endOffset);
-    }
-    if (!wholeContent && !sameTextNode)
-    {
-        if (wholeStart){
-            changeStartNode = startNode;
-        }
-        else{
-            changeStartNode = startNode.cloneNode(true);
-            insertAfter(changeStartNode,startNode);
-            changeStartNode.textContent = changeStartNode.textContent.substr(startOffset);
-            startNode.textContent = startNode.textContent.substr(0,startOffset);
-        }
-        if (wholeEnd){
-            changeEndNode = endNode;
-        }
-        else{
-            changeEndNode = endNode.cloneNode(true);
-            insertBefore(changeEndNode, endNode);
-            changeEndNode.textContent = changeEndNode.textContent.substr(0, endOffset);
-            endNode.textContent = endNode.textContent.substr(endOffset);
-        }
-    }
-    oRange.detach();
-    return {
-        'startNode': startNode,
-        'endNode': endNode,
-        'changeStartNode': changeStartNode,
-        'changeEndNode': changeEndNode,
-        'startOffset': startOffset,
-        'endOffset': endOffset
-    }
-};
-
-export const changeSelectionTag = function(oTag, oRoot, customTags)
-{
-    const xSelection = splitSelection(oRoot, customTags);
-    let changeStartNode = xSelection.changeStartNode;
-    let changeEndNode = xSelection.changeEndNode;
-    let rootStart = getParentInRoot(changeStartNode,oRoot);
-    let rootEnd = getParentInRoot(changeEndNode,oRoot);
-
-    // because of ability editing text in custom elements
-    if (
-        isCustom(rootStart, customTags) &&
-        rootStart === rootEnd
-    ){ return false; }
-
-    let placeNodes = [];
-    let placeAfter = rootStart;
-    let currentNode = rootStart;
-    let controlElement = true;
-
-    while(controlElement) {
-        let nextElement = currentNode.nextSibling;
-
-        if(!isCustom(currentNode, customTags)){
-            let nodes = getAllTextNodes(currentNode);
-            if(currentNode === rootStart || currentNode === rootEnd){
-                Array.from(nodes).map( node => {
-                    if(node === changeStartNode){
-                        if(placeNodes.length > 0){
-                            placeAfter = createNewTagElement(placeNodes,rootStart.tagName,placeAfter);
-                        }
-                        placeNodes = [];
-                        placeNodes.push(node);
-                    }
-                    if(node === changeEndNode){
-                        if(changeEndNode !== changeStartNode){
-                            placeNodes.push(node);
-                        }
-                        placeAfter = createNewTagElement(placeNodes,oTag,placeAfter);
-                        placeNodes = [];
-                    }
-                    if(node !== changeStartNode && node !== changeEndNode){
-                        placeNodes.push(node);
-                    }
-                });
-
-                if(currentNode === rootEnd){
-                    if(placeNodes.length > 0){
-                        createNewTagElement(placeNodes,rootEnd.tagName,placeAfter);
-                        placeNodes = [];
-                    }
-                    controlElement = false;
-                }
-            }
-            else{
-                placeNodes = placeNodes.concat(nodes);
-            }
-        }
-
-        if (isCustom(currentNode, customTags)){
-            if (placeNodes.length > 0){
-                createNewTagElement(placeNodes,oTag,placeAfter);
-                placeNodes = [];
-            }
-            if (currentNode === rootEnd){
-                controlElement = false;
-            }
-            placeAfter = nextElement;
-        }
-        currentNode = nextElement;
-
-    }
-
-    if (rootStart !== rootEnd){
-        removeElement(rootEnd);
-    }
-    removeElement(rootStart);
-};
-
-
 export const isDescendant = (oElement, oRoot) => {
     let node = oElement.parentNode;
     while(node != null){
@@ -455,13 +296,13 @@ export const isDescendant = (oElement, oRoot) => {
     return false;
 };
 
-export const mergeTextnodes = (oSelection, oRoot, oNode) =>
+export const mergeTextnodes = (oSelection, oRoot, oNode, customTags) =>
 {
     let oPosition = oNode.length;
-    let nextTextNode = getNextTextSibling( oNode, oRoot);
+    let nextTextNode = getNextTextSibling( oNode, oRoot, customTags);
     oNode.textContent += nextTextNode.textContent;
     nextTextNode.textContent = '';
-    newCaretPosition(oSelection , oNode , oPosition);
+    newCaretPosition(oNode , oPosition);
     removeElement(getTopEmpty(nextTextNode,oRoot));
 };
 

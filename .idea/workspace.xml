@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0366fb9d-41bd-4f08-9db8-47a0ca358a82" name="Default" comment="editor">
+      <change afterPath="$PROJECT_DIR$/fe-land/src/app/editor/selection/changeSelectionTag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fe-land/src/app/editor/selection/splitSelection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe-land/src/app/editor/EditorUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/editor/EditorUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/editor/buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/editor/buttons.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fe-land/src/app/editor/operations/Backspace.js" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/editor/operations/Backspace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/editor/operations/Delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/editor/operations/Delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fe-land/src/app/editor/operations/Enter.js" beforeDir="false" afterPath="$PROJECT_DIR$/fe-land/src/app/editor/operations/Enter.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/EditorUtils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="151" column="2" lean-forward="true" selection-start-line="151" selection-start-column="2" selection-end-line="151" selection-end-column="2" />
+            <state relative-caret-position="-782">
+              <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -117,16 +122,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.html">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/selection/changeSelectionTag.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="9" column="26" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#133#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/operations/Backspace.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/selection/splitSelection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2599">
-              <caret line="117" column="33" lean-forward="true" selection-start-line="117" selection-start-column="33" selection-end-line="117" selection-end-column="33" />
+            <state relative-caret-position="207">
+              <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#149#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,8 +149,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/EditorArea.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="230">
+              <caret line="60" column="47" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="47" />
               <folding>
                 <element signature="e#0#104#0" expanded="true" />
               </folding>
@@ -144,42 +159,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.ts">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/operations/Enter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="-46">
+              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.html">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/buttons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/project/project-manager-view/project-manager-view.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+            <state relative-caret-position="-1058">
+              <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
               <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/operations/Backspace.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="166" selection-end-line="166" />
+              <folding>
+                <element signature="e#0#228#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/operations/Delete.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-690">
+              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -188,7 +204,7 @@
         <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/project/project-manager-view/project-manager-view.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="56" />
+              <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -204,10 +220,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>project-manager</find>
-      <find>entity-view</find>
-      <find>project</find>
-      <find>oRange</find>
       <find>oElement</find>
       <find>isCustom</find>
       <find>prototype.area</find>
@@ -234,6 +246,10 @@
       <find>deleteRange</find>
       <find>Source us</find>
       <find>Editor</find>
+      <find>removeAllRan</find>
+      <find>splitSelection</find>
+      <find>newCaretPosition(</find>
+      <find>console</find>
     </findStrings>
     <replaceStrings>
       <replace>Tag</replace>
@@ -251,8 +267,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/components/chip-input/chip-input.component.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/project/project-manager-view/project-manager-view.component.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/project/project-view.module.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/project/project-manager-view/project-manager-view.component.scss" />
@@ -291,17 +305,19 @@
         <option value="$PROJECT_DIR$/fe-land/src/app/editor/Editor.js" />
         <option value="$PROJECT_DIR$/fe-land/src/app/editor/operations/ChangeSelectionTag.js" />
         <option value="$PROJECT_DIR$/fe-land/src/app/editor/EditorImage.js" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/editor/operations/Enter.js" />
         <option value="$PROJECT_DIR$/fe-land/src/app/editor/config.js" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/editor/buttons.js" />
         <option value="$PROJECT_DIR$/fe-land/src/app/editor/EditorArea.js" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/editor/operations/Delete.js" />
         <option value="$PROJECT_DIR$/fe-land/src/main.ts" />
         <option value="$PROJECT_DIR$/fe-land/src/index.html" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.html" />
         <option value="$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.ts" />
-        <option value="$PROJECT_DIR$/fe-land/src/app/editor/EditorUtils.js" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/editor/buttons.js" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/editor/selection/changeSelectionTag.js" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/editor/operations/Enter.js" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/editor/operations/Delete.js" />
         <option value="$PROJECT_DIR$/fe-land/src/app/editor/operations/Backspace.js" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/editor/selection/splitSelection.js" />
+        <option value="$PROJECT_DIR$/fe-land/src/app/editor/EditorUtils.js" />
       </list>
     </option>
   </component>
@@ -400,7 +416,7 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="987" />
+    <option name="width" value="1203" />
     <option name="height" value="1160" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -409,6 +425,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -582,6 +599,24 @@
               <item name="fe-land" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="editor" type="462c0819:PsiDirectoryNode" />
+              <item name="selection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="fe-land" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="editor" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="landfield" type="b2602c69:ProjectViewProjectNode" />
+              <item name="landfield" type="462c0819:PsiDirectoryNode" />
+              <item name="fe-land" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="guards" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -592,7 +627,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -786,7 +820,8 @@
       <workItem from="1547748387363" duration="15058000" />
       <workItem from="1547823172870" duration="7928000" />
       <workItem from="1547886145294" duration="17913000" />
-      <workItem from="1547939472749" duration="11518000" />
+      <workItem from="1547939472749" duration="12132000" />
+      <workItem from="1548091399822" duration="7826000" />
     </task>
     <task id="LOCAL-00001" summary="init src">
       <created>1532195183376</created>
@@ -1068,21 +1103,29 @@
       <option name="project" value="LOCAL" />
       <updated>1547998409227</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="editor">
+      <created>1548020822188</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1548020822188</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="766387000" />
+    <option name="totallyTimeSpent" value="774827000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="987" height="1160" extended-state="0" />
+    <frame x="0" y="0" width="1203" height="1160" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34196332" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32983378" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4977778" weight="0.32941177" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49840087" weight="0.33299696" />
+      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49840087" visible="true" weight="0.3323077" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4788889" weight="0.20307693" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
@@ -1090,7 +1133,7 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4339019" visible="true" weight="0.2779487" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4339019" weight="0.2779487" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4989339" weight="0.31584257" />
       <window_info anchor="bottom" id="TypeScript" order="12" sideWeight="0.49445677" weight="0.33299696" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5660981" side_tool="true" weight="0.26639757" />
@@ -1098,7 +1141,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.03236246" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.048993874" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1170,30 +1213,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/fe-land/src/app/editor/EditorArea.js</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/be-land/app/Item.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be-land/app/Http/Controllers/TagController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/be-land/database/migrations/2019_01_16_193414_add_user_data.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -1435,34 +1460,10 @@
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/config.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/buttons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/operations/Delete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2967">
-          <caret line="137" column="5" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/operations/Enter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1476,9 +1477,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/project/project-manager-view/project-manager-view.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
+        <state relative-caret-position="897">
           <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1491,41 +1516,34 @@
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/project/project-manager-view/project-manager-view.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="56" />
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/buttons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1058">
+          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/operations/Enter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/EditorArea.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="230">
+          <caret line="60" column="47" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="47" />
           <folding>
             <element signature="e#0#104#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/views/public-view/public-view.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -1536,20 +1554,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/operations/Delete.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-690">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/operations/Backspace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="166" selection-end-line="166" />
+          <folding>
+            <element signature="e#0#228#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/selection/splitSelection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/EditorUtils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="151" column="2" lean-forward="true" selection-start-line="151" selection-start-column="2" selection-end-line="151" selection-end-column="2" />
+        <state relative-caret-position="-782">
+          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/operations/Backspace.js">
+    <entry file="file://$PROJECT_DIR$/fe-land/src/app/editor/selection/changeSelectionTag.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2599">
-          <caret line="117" column="33" lean-forward="true" selection-start-line="117" selection-start-column="33" selection-end-line="117" selection-end-column="33" />
+        <state relative-caret-position="100">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#133#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

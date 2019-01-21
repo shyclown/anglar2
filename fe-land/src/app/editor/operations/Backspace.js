@@ -1,29 +1,34 @@
 import {
-    deleteRange, getFirstTextNode, getNextTextSibling,
+    getFirstTextNode, getNextTextSibling,
     getParentInRoot, getPreviousTextSibling, getTopEmpty, hasTextInside,
     isCustom, isOfTag, isTextNode, newCaretPosition, removeElement
 } from "../EditorUtils";
+import {
+    deleteRange
+} from "./Delete"
 
+/*
+*  Backspace Event
+* */
 export const backspaceEvent = (oSelection, oRoot, customTags) =>
 {
 
     let oNode = oSelection.focusNode;
     const rootNode = getParentInRoot(oNode,oRoot);
-    if(oNode === oRoot){
+    if (oNode === oRoot){
         event.preventDefault();
         console.log('error: selected node is root node'); return false;
     }
     //-----------------------------------------------------
-    // Selection NOT Colapsed
+    // Selection NOT Collapsed
     //-----------------------------------------------------
-    if(!oSelection.isCollapsed){
+    if (!oSelection.isCollapsed){
         if(isCustom(rootNode, customTags)){
-            console.log('delete range inside custom');
-            // default
+            console.log('Delete range is inside custom');
         }
         else{
             event.preventDefault();
-            deleteRange(oRoot);
+            deleteRange(oRoot, customTags);
         }
     }
     //-----------------------------------------------------
@@ -34,7 +39,7 @@ export const backspaceEvent = (oSelection, oRoot, customTags) =>
         console.log('Backspace - selection is Collapsed');
         event.preventDefault();
         let oPrevText = getPreviousTextSibling(oNode, oRoot);
-        let targetRoot = getParentInRoot(oPrevText, oRoot); console.log('targetRoot', targetRoot);
+        let targetRoot = getParentInRoot(oPrevText, oRoot);
         let sourceRoot = getParentInRoot(oNode, oRoot);
         hasTextInside(sourceRoot);
         let sameRoot = targetRoot === sourceRoot;
@@ -57,7 +62,7 @@ export const backspaceEvent = (oSelection, oRoot, customTags) =>
                 oPrevText.textContent += oNode.textContent;
                 oNode.textContent = '';
                 removeElement(getTopEmpty(oNode, oRoot));
-                newCaretPosition(oSelection, oPrevText, oPosition);
+                newCaretPosition(oPrevText, oPosition);
             }
         }
 
@@ -70,7 +75,7 @@ export const backspaceEvent = (oSelection, oRoot, customTags) =>
         else{
             if (!hasTextInside(sourceRoot)){
                 removeElement(sourceRoot);
-                newCaretPosition(oSelection, oPrevText, oPrevText.length);
+                newCaretPosition(oPrevText, oPrevText.length);
                 return false;
             }
             if (!hasTextInside(targetRoot)){
@@ -98,7 +103,7 @@ export const backspaceEvent = (oSelection, oRoot, customTags) =>
                 //-----------------------------------------------------
                 if (sameRoot){
                     console.log('In Same Root');
-                    if(isTextNode(oPrevText) && isTextNode(oNode)){
+                    if (isTextNode(oPrevText) && isTextNode(oNode)){
                         oPrevText.textContent += oNode.textContent;
                         removeElement( oNode );
                     }
@@ -106,24 +111,42 @@ export const backspaceEvent = (oSelection, oRoot, customTags) =>
                 //-----------------------------------------------------
                 // Different root Element
                 //-----------------------------------------------------
-                else{
+                /*
+                *
+                *
+                * */
+                else {
                     console.log('Different Roots');
                     if (oNode === sourceRoot){
+                        // If selected node is root we grab first child
                         oNode = sourceRoot.firstChild;
                     }
+
                     let prevNode = oPrevText;
                     if (isOfTag(prevNode.parentNode,'a')){
                         prevNode = prevNode.parentNode;
                     }
-                    while(oNode){
+                    while (oNode){
                         let nextNode = oNode.nextSibling;
-                        if(isTextNode(oNode) && isTextNode(prevNode)){ prevNode.textContent += oNode.textContent; removeElement( oNode ); }
-                        else if(!isTextNode(oNode) || !isTextNode(prevNode)){ targetRoot.appendChild(oNode); prevNode = oNode; }
+                        if (
+                            isTextNode(oNode) &&
+                            isTextNode(prevNode)
+                        ){
+                            prevNode.textContent += oNode.textContent;
+                            removeElement( oNode );
+                        }
+                        else if (
+                            !isTextNode(oNode) ||
+                            !isTextNode(prevNode)
+                        ){
+                            targetRoot.appendChild(oNode);
+                            prevNode = oNode;
+                        }
                         oNode = nextNode;
                     }
                     removeElement(getTopEmpty(sourceRoot, oRoot));
                 }
-                newCaretPosition(oSelection, oPrevText, oPosition);
+                newCaretPosition(oPrevText, oPosition);
             }
             //-----------------------------------------------------
             // First Text Node in Root
@@ -134,7 +157,7 @@ export const backspaceEvent = (oSelection, oRoot, customTags) =>
                 // if its not the last we remove it if empty and move to next
                 else if (!lastNodeInTree && emptyNode)
                 {
-                    newCaretPosition(oSelection, getNextTextSibling(oNode, oRoot), 0);
+                    newCaretPosition(getNextTextSibling(oNode, oRoot), 0);
                     removeElement( getTopEmpty(oNode, oRoot) );
                 }
             }

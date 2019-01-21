@@ -1,5 +1,6 @@
-import {btnEvent, changeSelectionTag} from "./EditorUtils";
+import {btnEvent} from "./EditorUtils";
 import {customTags} from "./config";
+import {changeSelectionTag} from "./selection/changeSelectionTag";
 
 
 export const buttons = (root) => {
