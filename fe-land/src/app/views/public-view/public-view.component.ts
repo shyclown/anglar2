@@ -15,12 +15,18 @@ export class PublicViewComponent implements OnInit {
     /* Init editor */
     const editor = new EditorArea(
         {
-          input_id: 'inputTest',
-          form_id: 'formTest',
-          upload_file_url: 'api/file/upload',
+            input_id: 'inputTest',
+            form_id: 'formTest',
+            uploadUrl: 'api/file/upload',
+            dropFileAction: (data, callback)=>{
+                /* Callback requires file url. */
+                callback();
+                console.log(data);
+            },
+            dropFileCallback: (data)=>{ console.log(data); }
         }
-        );
-    editor.setDropFileCallback((data)=>{console.log(data)});
+    );
+
     console.log(editor);
   }
 

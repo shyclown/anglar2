@@ -14,7 +14,7 @@ export const css = {
             label: 'switch_label'
         }
     },
-    imagefigure:{
+    imageFigure:{
         figure: 'figure',
         moveBtn: 'icon_btn moveBtn',
         moveIcon:'icon fa fa-arrows',

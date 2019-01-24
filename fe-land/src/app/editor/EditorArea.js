@@ -11,13 +11,25 @@ import {enterEvent} from "./operations/Enter";
 
 export default class EditorArea {
 
-    constructor(data) {
-        this.drop_file_callback = data && data.drop_file_callback || false;
-        this.image_url = data && data.image_url || '';
-        this.upload_file_url = data && data.upload_file_url || '' ;
+    constructor(config) {
+        this.checkRequiredConfig(config);
+        /* config */
+        this.form_id = config && config.form_id;
+        this.input_id = config && config.input_id;
+
+        this.upload_file_url = config && config.upload_file_url || '' ;
+
+        /* custom function handling upload */
+        this.onImageUpload = config && config.onImageUpload || false;
+        this.uploadUrl = config && config.uploadUrl || false;
+
+        /* provided external actions */
+        this.dropFileAction = config && config.dropFileAction || false;
+        this.dropFileCallback = config && config.dropFileCallback || false;
+
+        this.image_url = config && config.image_url || '';
+        this.customDropHandler = config && config.customDropHandler || false;
         // Editor.area
-        this.input_id = data && data.input_id;
-        this.form_id = data && data.form_id;
         this.input_el = document.getElementById(this.input_id);
         this.form_el = document.getElementById(this.form_id);
 
@@ -34,7 +46,13 @@ export default class EditorArea {
         this.root.normalize();
     }
 
-    setDropFileCallback(fn){ this.drop_file_callback = fn };
+    checkRequiredConfig(config){
+        ['uploadUrl'].map(v => {
+            if(!config[v]){
+                console.warn("Missing required config value: "+ v);
+            }
+        })
+    };
 
     //Editor.attachImageControls.bind(this)();
     attachEvents() {
@@ -118,24 +136,36 @@ export default class EditorArea {
             drop: function (event) {
                 removeDefault(event);
                 // if provided upload function
-                if (area.drop_file_callback) {
-                    area.drop_file_callback(event);
+                if (area.customDropHandler) {
+                    area.customDropHandler(event);
                 } else {
                     // default upload function if enabled
                     const data = event.dataTransfer.files;
                     const reader = new FileReader();
                     reader.onload = function (readerEvent) {
-                        const dataUrl = resizeDropped(readerEvent, callback);
+
+                        /* resize image before upload */
+
+
                         function callback(resultUrl) {
+                            console.log('callback',resultUrl);
                             const oData = {action: 'upload', image: resultUrl};
                             const uploadProgress = function (percent) {
                                 console.log(percent * 100);
                             };
-                            const callbackAjax = function (response) {
-                                area.afterImageUpload(response, true);
+                            const callbackAjax = function (imageUrl) {
+                                if (!imageUrl){
+                                    console.warn('Ajax request callback requires imageUrl.')
+                                }else{
+                                    area.afterImageUpload(imageUrl, true);
+                                }
                             };
-                            ajax(area.upload_file_url, oData, uploadProgress, callbackAjax);
+
+                            area.dropFileAction &&  area.dropFileAction(data, callbackAjax);
+                            //area.uploadUrl && ajax(area.uploadUrl, oData, uploadProgress, callbackAjax);
                         }
+
+                        resizeDropped(readerEvent, callback,600);
                     };
                     reader.onprogress = function (ev) {
                         console.log(ev.loaded / (ev.total / 100));
@@ -176,8 +206,6 @@ export default class EditorArea {
     createAllButtons() {
 
         let allButtons = buttons(this.root);
-
-
         for (let item in allButtons)
         {
             const theButton = allButtons[item];
@@ -251,10 +279,10 @@ export default class EditorArea {
         this.placeholder = void 0;
     };
 
-    afterImageUpload(response) {
-        response = response.data;
-        let figure = new imageFigure(this.image_url + response.file_src, 'new item', this.root);
+    afterImageUpload(imageUrl) {
+        let figure = imageFigure(imageUrl, 'new item', this.root);
         this.root.insertBefore(figure.el, this.placeholder.el);
+        this.removePlaceholder();
     };
 }
 

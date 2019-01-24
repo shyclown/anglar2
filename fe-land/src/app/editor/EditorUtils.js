@@ -258,33 +258,34 @@ export const elementUnderMouse = (event) =>{
     return document.elementFromPoint(pos.x - window.pageXOffset, pos.y - window.pageYOffset);
 };
 
-export const resizeDropped = (readerEvent, callback, size) => {
-
-    let image = new Image();
-    image.src = readerEvent.target.result;
-
-    image.onload = function () {
-        let canvas = document.createElement('canvas'),
-            max_size = 450,
-            width = image.width,
-            height = image.height;
-        if (width > height) {
-            if (width > max_size) {
-                height *= max_size / width;
-                width = max_size;
-            }
-        } else {
-            if (height > max_size) {
-                width *= max_size / height;
-                height = max_size;
-            }
+const resizeLoadedImage = (image, size, callback) => {
+    let canvas = document.createElement('canvas'),
+        max_size = size,
+        width = image.width,
+        height = image.height;
+    if (width > height) {
+        if (width > max_size) {
+            height *= max_size / width;
+            width = max_size;
         }
-        canvas.width = width;
-        canvas.height = height;
-        canvas.getContext('2d').drawImage(image, 0, 0, width, height);
-        callback(canvas.toDataURL('image/png'));
-    }// image.onload
-};// mouse.resizeDropped
+    } else {
+        if (height > max_size) {
+            width *= max_size / height;
+            height = max_size;
+        }
+    }
+    canvas.width = width;
+    canvas.height = height;
+    console.log(canvas);
+    canvas.getContext('2d').drawImage(image, 0, 0, width, height);
+    callback( canvas.toDataURL('image/png') );
+};
+
+export const resizeDropped = (readerEvent, callback, size = 450) => {
+    let image = new Image();
+    image.onload = () => resizeLoadedImage(image, size, callback);
+    image.src = readerEvent.target.result;
+};
 
 export const isDescendant = (oElement, oRoot) => {
     let node = oElement.parentNode;

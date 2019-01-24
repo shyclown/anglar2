@@ -4,19 +4,24 @@ import {
     insertAfter,
     removeElement
 } from "../EditorUtils";
-import {css, texts} from "../config";
+import {
+    css,
+    texts
+} from "../config";
+
+const style = css.imageFigure;
 
 export const imageFigure = (source, caption, root) => {
-    let css = css.imagefigure;
-    let figure = el('figure',css.figure);
+
+    let figure = el('figure',style.figure);
     figure.setAttribute('contenteditable', false);
 
     let figureImage = new Image();
-    let figureCaption = el('figcaption',css.figure_text);
+    let figureCaption = el('figcaption',style.figure_text);
     figureCaption.setAttribute('contenteditable', true);
     figureCaption.innerHTML = caption;
     figureImage.src = source;
-    figure.className = css.image;
+    figure.className = style.image;
     figure.appendChild(figureImage);
     figure.appendChild(figureCaption);
     //  root.appendChild(figure);
@@ -30,8 +35,8 @@ export const imageFigure = (source, caption, root) => {
         return btn;
     };
 
-    const moveBtn = createButton(css.moveBtn,css.moveIcon);
-    const deleteBtn = createButton(css.deleteBtn,css.deleteIcon);
+    const moveBtn = createButton(style.moveBtn,style.moveIcon);
+    const deleteBtn = createButton(style.deleteBtn,style.deleteIcon);
 
     let placeholder;
 
@@ -64,6 +69,7 @@ export const imageFigure = (source, caption, root) => {
 
 export const imagePlaceholder = (root) =>
 {
+    console.log('placeholder');
     let placeholder = el('div','placeholder');
     placeholder.innerHTML = texts.placeholder;
     let oldPosition = true;
@@ -96,6 +102,7 @@ export const imagePlaceholder = (root) =>
             root.addEventListener('dragover',followMouse,false);
         },
         remove: function(){
+            console.log('removePlaceholder');
             root.removeEventListener('mousemove', followMouse, false);
             root.removeEventListener('dragover',followMouse, false);
             removeElement(placeholder);
