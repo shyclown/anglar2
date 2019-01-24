@@ -29,42 +29,8 @@ Route::get('/user', function() {
     return 'a';
 })->middleware('auth:api');
 
-
-
-
-Route::get('/convert/{nr}/{base}', function ($nr, $base){
-
-    $result = null;
-    $X = $nr;
-    $Y = $base;
-    $Z = [];
-    $M = -1;
-    $A = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-
-        for ($i = $X; 0 < $i; $i = floor($i / $Y)) {
-            if($i % $Y >= 10) {
-                $Z[] = $A[$i % $Y - 10];
-            } else {
-                $Z[] = $i % $Y;
-            }
-            $M = $M + 1;
-        }
-
-        $result = '';
-        for ($j = $M; $j >= 0; $j--) {
-            $result = $result . strval( $Z[$j] );
-        }
-
-
-
-
-    return response()->json([
-        'nr'=> $nr,
-        'base'=> $base,
-        'result'=> $result
-    ]);
-
-});
+Route::post('/file/upload', 'FileController@upload')
+    ->middleware('auth:api');
 
 Route::group(['middleware' => 'auth:api'], function() {
 

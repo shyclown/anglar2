@@ -46,23 +46,21 @@ export const splitSelection = function(oRoot, customTags)
     let wholeEnd = endOffset === endNode.textContent.length;
     let wholeContent = wholeStart && wholeEnd;
 
-    if (wholeContent)
-    {
+    if (wholeContent){
         changeStartNode = startNode;
         changeEndNode = endNode;
     }
     if (!wholeContent && sameTextNode){
-        endNode = startNode.cloneNode('deep');
+        endNode = startNode.cloneNode(true);
         insertAfter(endNode,startNode);
-        changeStartNode = startNode.cloneNode('deep');
+        changeStartNode = startNode.cloneNode(true);
         insertAfter(changeStartNode,startNode);
         changeStartNode.textContent = changeStartNode.textContent.substr(startOffset, (endOffset - startOffset));
         changeEndNode = changeStartNode;
         startNode.textContent = startNode.textContent.substr(0,startOffset);
         endNode.textContent = endNode.textContent.substr(endOffset);
     }
-    if (!wholeContent && !sameTextNode)
-    {
+    if (!wholeContent && !sameTextNode){
         if (wholeStart){
             changeStartNode = startNode;
         }

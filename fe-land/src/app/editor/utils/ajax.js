@@ -16,8 +16,10 @@ export const ajax = (target, data, progress, callback) => {
     request.send(createForm(data));
 };
 
-const createForm = (oArray) => {
+const createForm = (data) => {
     const oForm = new FormData();
-    oArray.map((v, i) => { oForm.append(i,v) });
+    for(let key in data){
+        oForm.append(key,data[key]);
+    }
     return oForm;
 };

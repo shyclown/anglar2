@@ -19,7 +19,6 @@ export const el = function( oTag, oClass ){
     return elm;
 };
 
-/* TODO */
 export const createInnerLine = (oText, oTag, oPlacement) => {
     innerLine[oTag.toLowerCase()](oText, oPlacement);
 };

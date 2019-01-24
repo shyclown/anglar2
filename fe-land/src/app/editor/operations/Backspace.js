@@ -12,7 +12,6 @@ import {
 * */
 export const backspaceEvent = (oSelection, oRoot, customTags) =>
 {
-
     let oNode = oSelection.focusNode;
     const rootNode = getParentInRoot(oNode,oRoot);
     if (oNode === oRoot){
@@ -111,10 +110,6 @@ export const backspaceEvent = (oSelection, oRoot, customTags) =>
                 //-----------------------------------------------------
                 // Different root Element
                 //-----------------------------------------------------
-                /*
-                *
-                *
-                * */
                 else {
                     console.log('Different Roots');
                     if (oNode === sourceRoot){

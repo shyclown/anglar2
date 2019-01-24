@@ -2,7 +2,6 @@ import {btnEvent} from "./EditorUtils";
 import {customTags} from "./config";
 import {changeSelectionTag} from "./selection/changeSelectionTag";
 
-
 export const buttons = (root) => {
     return {
         Remove_formating: {

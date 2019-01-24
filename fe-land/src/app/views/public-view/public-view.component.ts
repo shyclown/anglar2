@@ -13,7 +13,14 @@ export class PublicViewComponent implements OnInit {
 
   ngOnInit() {
     /* Init editor */
-    const editor = new EditorArea({ input_id: 'inputTest', form_id: 'formTest'});
+    const editor = new EditorArea(
+        {
+          input_id: 'inputTest',
+          form_id: 'formTest',
+          upload_file_url: 'api/file/upload',
+        }
+        );
+    editor.setDropFileCallback((data)=>{console.log(data)});
     console.log(editor);
   }
 

@@ -1,5 +1,5 @@
 import {el, getParentInRoot, insertAfter, isDescendant, pasteEvent, resizeDropped} from "./EditorUtils";
-import {imageFigure} from "./operations/Image";
+import {imageFigure, imagePlaceholder} from "./operations/Image";
 import {ajax} from "./utils/ajax";
 import {css, customTags, texts} from "./config";
 import {buttons} from "./buttons";
@@ -14,7 +14,7 @@ export default class EditorArea {
     constructor(data) {
         this.drop_file_callback = data && data.drop_file_callback || false;
         this.image_url = data && data.image_url || '';
-        this.upload_file = 'system/php/upload_image.php';
+        this.upload_file_url = data && data.upload_file_url || '' ;
         // Editor.area
         this.input_id = data && data.input_id;
         this.form_id = data && data.form_id;
@@ -33,6 +33,8 @@ export default class EditorArea {
         this.input_el.type = 'hidden';
         this.root.normalize();
     }
+
+    setDropFileCallback(fn){ this.drop_file_callback = fn };
 
     //Editor.attachImageControls.bind(this)();
     attachEvents() {
@@ -106,8 +108,9 @@ export default class EditorArea {
                 }
             },
             dragenter: function (event) {
+                console.log('dragenter');
                 if (!area.placeholder) {
-                    area.placeholder = area.imagePlaceholder(area.part.content_wrap);
+                    area.placeholder = imagePlaceholder(area.part.content_wrap);
                     console.log(area.placeholder);
                     area.placeholder.follow();
                 }
@@ -116,7 +119,7 @@ export default class EditorArea {
                 removeDefault(event);
                 // if provided upload function
                 if (area.drop_file_callback) {
-                    area.drop_file_callback();
+                    area.drop_file_callback(event);
                 } else {
                     // default upload function if enabled
                     const data = event.dataTransfer.files;
@@ -131,7 +134,7 @@ export default class EditorArea {
                             const callbackAjax = function (response) {
                                 area.afterImageUpload(response, true);
                             };
-                            new ajax(area.upload_file, oData, uploadProgress, callbackAjax);
+                            ajax(area.upload_file_url, oData, uploadProgress, callbackAjax);
                         }
                     };
                     reader.onprogress = function (ev) {
@@ -210,6 +213,7 @@ export default class EditorArea {
     oSubmit() {
         return this.inEditMode();
     }
+
     update_content(newContent) {
         this.root.innerHTML = newContent;
     }
@@ -220,7 +224,9 @@ export default class EditorArea {
         const oSelection = document.getSelection();
         const oRange = oSelection.getRangeAt(0);
         const oRootTag = oRange.endContainer.parentNode.tagName;
-        if (isDescendant(oRange.endContainer, oRoot)) {
+        if (
+            isDescendant(oRange.endContainer, oRoot)
+        ) {
             if (oRange.endContainer.parentNode.tagName === 'A') {
                 insertAfter(oElement, oRange.endContainer.parentNode);
             } else if (oRootTag === 'P' || oRootTag === 'LI') {
@@ -236,7 +242,7 @@ export default class EditorArea {
                 }, false);
             }
         } else {
-            console.log('nothing selected');
+            // Nothing selected
         }
     };
 
