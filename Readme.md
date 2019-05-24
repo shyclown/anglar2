@@ -1,4 +1,4 @@
-Setting up the project
+**Setting up the project**
 
 - install node.js
 - install wampserver
@@ -6,30 +6,30 @@ Setting up the project
 - setup host
 - setup client proxy in htaccess
 
-##Install Laravel
+**Install Laravel**
 ```
 php composer global require "laravel/installer"
 php composer install
 ```
 
-##Install Anguar2+
+**Install Anguar2+**
 download Angular CLI via npm 
 ```angular2html
 npm i -g @angular/cli
 ```
 
-####Install package.js in fe-frontend
+***Install package.js in fe-frontend***
 ```
 npm install 
 ``` 
 
-#Virtual Host
+**Virtual Host**
 ```
 <VirtualHost *:80>
 	ServerName landfield.localhost
 	DocumentRoot "c:/wamp64/www/landfield/be-land/public/"
 ```
-  ####Api
+  ***Api***
 ```
     <Directory  "c:/wamp64/www/landfield/">
         Options +Indexes +Includes +FollowSymLinks +MultiViews
@@ -40,7 +40,7 @@ npm install
 	
 
   
-  ####Proxy
+  ***Proxy***
   Requires to have proxy modules enabled:
   
   ```
